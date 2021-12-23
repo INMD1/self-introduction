@@ -1,4 +1,4 @@
 module.exports = {
-    publicPath: '/Introduce_Myself/',
+    publicPath: '/self-introduction/',
     outputDir: 'dist' 
 }
