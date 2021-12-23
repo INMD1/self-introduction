@@ -1,4 +1,4 @@
 module.exports = {
-    publicPath: '/self-introduction/',
+    publicPath: 'powerinmd.me',
     outputDir: 'dist' 
 }
