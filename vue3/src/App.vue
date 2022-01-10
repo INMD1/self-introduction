@@ -5,13 +5,13 @@
       style="background: rgba(255, 255, 255, 0)"
     >
       <div class="container">
-        <a class="navbar-brand" href="#" style="color: var(--bs-white)">INMD1</a
+        <a class="navbar-brand" href="#" style="color: var(--bs-white);  font-size: 30px;">INMD1</a
         ><button
           class="navbar-toggler"
           data-bs-toggle="collapse"
           data-bs-target="#navcol-2"
         >
-          <span class="visually-hidden">Toggle navigation</span
+          <span class="visually-hidden" >Toggle navigation</span
           ><span class="navbar-toggler-icon"></span>
         </button>
         <div id="navcol-2" class="collapse navbar-collapse">
@@ -43,8 +43,11 @@
     </nav>
   </header>
   <article style="background-image: linear-gradient(to right, #cc7412, #f4a11d)">
-    <div class="py-5 h-100 align-items-center text-center d-flex img-fluid">
-        <div class="container-fluid"><img class="hero" :src="require('./assets/img/lenstravelier-EdhmOmzBdoI-unsplash.jpg')" /></div>
+    <div class="py-5 h-100 align-items-center d-flex ">
+      <div class="hero mx-auto">
+          <img :src="require('./assets/img/lenstravelier-EdhmOmzBdoI-unsplash.jpg')">
+          <h1 class="hello">Hello world</h1>
+      </div>
     </div>
   </article>
   <article><about /></article>
@@ -75,8 +78,10 @@ export default {
     project,
   },
   mounted(){
-      let tl = gsap.timeline();
-      tl.fromTo('.hero',1, {height: "0px"} , {height: "700px", ease: 'Power2.easeInOut'})
+    //불규칙한 애니메이션 수정하기
+       let tl = gsap.timeline();
+       tl.fromTo('.hero', 1, {height: "0%"} , {height: "60%", ease: 'Power2.easeInOut'})
+         .fromTo('.hero', 1.2, { width: '100%'}, { width: '80%',  ease: 'Power2.easeInOut'})
   }
 };
 </script>

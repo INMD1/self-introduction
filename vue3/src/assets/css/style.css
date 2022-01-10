@@ -22,13 +22,6 @@ article {
     height: 100vh;
 }
 
-article:nth-child(1) {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
-}
-
 .page-card {
     max-width: auto;
     height: 220px;
@@ -42,14 +35,25 @@ article:nth-child(1) {
     margin-bottom: 0;
   }
   
+
 .hero {
     height: 60%;
     width: 100%;
     position: relative;
 }
+
 .hero img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+.hello {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    font-size: 80px;
+    transform: translate(-20%, 70%);
+    color: white;
 }
 
