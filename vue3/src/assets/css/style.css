@@ -23,17 +23,16 @@ article {
 }
 
 article:nth-child(1) {
-    background-image: url("https://wallpaperaccess.com/full/3497712.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
 }
 
-section:nth-child(2) {
-    background: cyan;
-    color: white;
-}
+.page-card {
+    max-width: auto;
+    height: 220px;
+}   
 
 .footer-basic .copyright {
     margin-top: 10px;
@@ -43,5 +42,14 @@ section:nth-child(2) {
     margin-bottom: 0;
   }
   
+.hero {
+    height: 60%;
+    width: 100%;
+    position: relative;
+}
+.hero img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 
-  
