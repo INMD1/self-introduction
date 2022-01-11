@@ -13,7 +13,14 @@
                             <div class="col">
                                 <div class="card">
                                     <div class="card-body">
-                                        <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                                        <h4><i class="fa fa-book"></i>INMD1</h4>
+                                        <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio,<br /></p>
+                                        <p class="mb-0 f6 color-fg-muted">
+                                            <span class="d-inline-block mr-3">
+                                                <span class="repo-language-color" style="background-color: #f1e05a"></span>
+                                                <span> javascript</span>
+                                            </span>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -56,3 +63,18 @@
             </div>
         </div>
 </template>
+<script>
+import axios from "axios";
+
+export default {
+    data() {
+        return {
+
+        }
+    },
+    async mounted() {
+        const pinned_repo = await axios.get("https://gh-pinned-repos-5l2i19um3.vercel.app/?username=INMD1");
+        console.log(pinned_repo.data)
+    }
+}
+</script>

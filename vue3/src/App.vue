@@ -42,11 +42,12 @@
       </div>
     </nav>
   </header>
-  <article style="background-image: linear-gradient(to right, #cc7412, #f4a11d)">
-    <div class="py-5 h-100 align-items-center d-flex ">
+  <article style="  background: linear-gradient(to right, #eacda3, #d6ae7b);">
+    <div class="py-5 h-100 align-items-center d-flex">
       <div class="hero mx-auto">
           <img :src="require('./assets/img/lenstravelier-EdhmOmzBdoI-unsplash.jpg')">
-          <h1 class="hello">Hello world</h1>
+          <p class="hello">Hello world</p>
+          <p class="hello_body">여러분들을 만나서 반가워요. 저에 대해서 한번 알아보까요?</p>
       </div>
     </div>
   </article>
@@ -80,8 +81,11 @@ export default {
   mounted(){
     //불규칙한 애니메이션 수정하기
        let tl = gsap.timeline();
-       tl.fromTo('.hero', 1, {height: "0%"} , {height: "60%", ease: 'Power2.easeInOut'})
+       tl.fromTo('.hero', 1, {height: "0vh"} , {height: "60vh", ease: 'Power2.easeInOut'})
          .fromTo('.hero', 1.2, { width: '100%'}, { width: '80%',  ease: 'Power2.easeInOut'})
+          .fromTo('.hello', 2, { opacity: 0 } , { opacity: 1 },  "-=0.5")
+         .fromTo('.hello_body', 2, { opacity: 0, x: 30 } , { opacity: 1, x: 30 },  "-=0.5")
+
   }
 };
 </script>

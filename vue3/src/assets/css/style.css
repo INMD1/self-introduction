@@ -21,7 +21,6 @@ article {
     background-color: #373B44;
     height: 100vh;
 }
-
 .page-card {
     max-width: auto;
     height: 220px;
@@ -48,12 +47,30 @@ article {
     object-fit: cover;
 }
 
-.hello {
+.hello{
     position: absolute;
-    top: 50%;
-    left: 15%;
+    top: 55%;
+    left: 10%;
     font-size: 80px;
     transform: translate(-20%, 70%);
     color: white;
 }
 
+.hello_body {
+    position: absolute;
+    top: 85%;
+    left: 2%;
+    font-size: 22px;
+    transform: translate(-20%, 70%);
+    color: white;
+}
+
+.repo-language-color {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--color-primer-border-contrast);
+    border-radius: 50%;
+}
