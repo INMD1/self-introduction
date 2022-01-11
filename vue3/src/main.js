@@ -3,7 +3,7 @@ import App from './App.vue'
 
 import Particles from "particles.vue3";
 
-import "bootstrap-icons/icons/"
+import "bootstrap-icons/font/bootstrap-icons.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
 

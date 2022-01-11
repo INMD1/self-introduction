@@ -62,15 +62,14 @@
     </p>
     <p class="copyright">Company Name © 2022</p>
   </footer>
+  
 </template>
 
 <script>
 import about from "./components/about.vue";
 import skill from "./components/skill.vue";
 import project from "./components/project.vue";
-
 import  gsap from "gsap";
-
 export default {
   name: "App",
   components: {
@@ -85,7 +84,6 @@ export default {
          .fromTo('.hero', 1.2, { width: '100%'}, { width: '80%',  ease: 'Power2.easeInOut'})
           .fromTo('.hello', 2, { opacity: 0 } , { opacity: 1 },  "-=0.5")
          .fromTo('.hello_body', 2, { opacity: 0, x: 30 } , { opacity: 1, x: 30 },  "-=0.5")
-
   }
 };
 </script>
