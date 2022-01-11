@@ -104,19 +104,9 @@
                                 <h5 class="mb-0">지금까지 만든 프로젝트</h5>
                             </div>
                             <div class="card-body" style="overflow:scroll;">
-                                <div class="col py-2 border border-dark" v-for="item in all_data" :key="item"> 
+                                <div class="col py-2 " v-for="item in all_data" :key="item"> 
                                         <a v-bind:href="item.svn_url" style="color: black;"><h4><i class="bi bi-journal-bookmark"> </i>  {{ item.name }} </h4></a>
                                         <p>{{ item.description }}</p>
-                                        <div class="row">
-                                            <div class="col" >
-                                                 <p class="mb-0 f6 color-fg-muted">
-                                                     <span class="d-inline-block mr-3">
-                                                        <span class="repo-language-color" v-bind:style="{ backgroundColor: this.color_data[2] }"></span>
-                                                        <span> {{ item.language }}</span>
-                                                    </span>
-                                                 </p>
-                                            </div>
-                                        </div>
                                     </div>
                             </div>
                         </div>
@@ -147,13 +137,11 @@ export default {
         const all_repo = await axios.get("https://api.github.com/users/INMD1/repos");
         this.repo_data = pinned_repo.data;
         this.all_data = all_repo.data;
-        console.log(all_repo.data[0].name);
+        
         for (let data = 0; data < Object.keys(pinned_repo.data).length; data++) {
              this.color_data[data] = lang_color.data[`${pinned_repo.data[data].language }`].color
         }
-        for (let data = 0; data < Object.keys(all_repo.data).length; data++) {
-             this.all_color_data[data] = lang_color.data[`${all_repo.data[data].language }`].color
-        }
+
     }
 }
 </script>

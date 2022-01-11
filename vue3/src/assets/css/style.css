@@ -21,6 +21,11 @@ article {
     background-color: #373B44;
     height: 100vh;
 }
+
+a {
+    text-decoration: none;
+}
+
 .page-card {
     max-width: auto;
     height: 220px;
