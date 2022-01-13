@@ -9,7 +9,7 @@
                 </div>
                 <div class="row py-5">
                     <div class="col-md-8">
-                        <div class="row">
+                        <div class="row row-cols-2">
                             <div class="col">
                                 <div class="card card-set">
                                     <div class="card-body">
@@ -20,12 +20,12 @@
                                                  <p class="mb-0 f6 color-fg-muted">
                                                      <span class="d-inline-block mr-3">
                                                         <span class="repo-language-color" v-bind:style="{ backgroundColor: this.color_data[0] }"></span>
-                                                        <span> {{ this.repo_data[0].language }}</span>
+                                                        <span>ㅤ{{ this.repo_data[0].language }}</span>
                                                     </span>
                                                  </p>
                                             </div>
                                             <div class="col">
-                                                <p>test</p>
+                                                <i class="bi bi-star-fill"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -41,12 +41,12 @@
                                                  <p class="mb-0 f6 color-fg-muted">
                                                      <span class="d-inline-block mr-3">
                                                         <span class="repo-language-color" v-bind:style="{ backgroundColor: this.color_data[1] }"></span>
-                                                        <span> {{ this.repo_data[1].language }}</span>
+                                                        <span>ㅤ{{ this.repo_data[1].language }}</span>
                                                     </span>
                                                  </p>
                                             </div>
                                             <div class="col">
-                                                <p>test</p>
+                                                <i class="bi bi-star-fill"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -64,12 +64,12 @@
                                                  <p class="mb-0 f6 color-fg-muted">
                                                      <span class="d-inline-block mr-3">
                                                         <span class="repo-language-color" v-bind:style="{ backgroundColor: this.color_data[2] }"></span>
-                                                        <span> {{ this.repo_data[2].language }}</span>
+                                                        <span>ㅤ{{ this.repo_data[2].language }}</span>
                                                     </span>
                                                  </p>
                                             </div>
                                             <div class="col">
-                                                <p>test</p>
+                                                <i class="bi bi-star-fill"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -78,19 +78,19 @@
                             <div class="col">
                                 <div class="card card-set">
                                     <div class="card-body">
-                                        <h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[3].repo }} </h4>
+                                        <h4><i class="bi bi-journal-bookmark"></i> {{ this.repo_data[3].repo }} </h4>
                                         <p>{{ this.repo_data[3].description }}</p>
                                         <div class="row">
                                             <div class="col">
                                                  <p class="mb-0 f6 color-fg-muted">
                                                      <span class="d-inline-block mr-3">
                                                         <span class="repo-language-color" v-bind:style="{ backgroundColor: this.color_data[3] }"></span>
-                                                        <span> {{ this.repo_data[3].language }}</span>
+                                                        <span>ㅤ{{ this.repo_data[3].language }}</span>
                                                     </span>
                                                  </p>
                                             </div>
                                             <div class="col">
-                                                <p>test</p>
+                                                <p><i class="bi bi-star-fill"></i> stars: {{this.repo_data[3].stars}}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -99,7 +99,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card" style="height: 350px;">
+                        <div class="card" style="height: 356px;">
                             <div class="card-header">
                                 <h5 class="mb-0">지금까지 만든 프로젝트</h5>
                             </div>
@@ -107,7 +107,7 @@
                                 <div class="col py-2 " v-for="item in all_data" :key="item"> 
                                         <a v-bind:href="item.svn_url" style="color: black;"><h4><i class="bi bi-journal-bookmark"> </i>  {{ item.name }} </h4></a>
                                         <p>{{ item.description }}</p>
-                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

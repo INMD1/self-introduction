@@ -2,10 +2,10 @@
   <header>
     <nav
       class="navbar navbar-light navbar-expand-lg fixed-top navigation-clean"
-      style="background: rgba(255, 255, 255, 0)"
+      style="  background-color: rgba(255, 255, 255, 0.3);"
     >
       <div class="container">
-        <a class="navbar-brand" href="#" style="color: var(--bs-white);  font-size: 30px;">INMD1</a
+        <a class="navbar-brand title" href="#">INMD1</a
         ><button
           class="navbar-toggler"
           data-bs-toggle="collapse"
@@ -17,23 +17,18 @@
         <div id="navcol-2" class="collapse navbar-collapse">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="#" style="color: var(--bs-white)"
-                >intro</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" style="color: var(--bs-white)"
+              <a class="nav-link" href="#about" style="color: var(--bs-black)"
                 >about</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" style="color: var(--bs-white)"
+              <a class="nav-link" href="#skill" style="color: var(--bs-black)"
                 >skill</a
               >
             </li>
             <li class="nav-item"></li>
             <li class="nav-item">
-              <a class="nav-link" href="#" style="color: var(--bs-white)"
+              <a class="nav-link" href="#project" style="color: var(--bs-black)"
                 >project</a
               >
             </li>
@@ -51,9 +46,9 @@
       </div>
     </div>
   </article>
-  <article><about /></article>
-  <article style="background: var(--bs-green)"><skill /></article>
-  <article><project /></article>
+  <article id="about"><about /></article>
+  <article id="skill" style="background: var(--bs-green)"><skill /></article>
+  <article id="project"><project /></article>
 
   <footer class="footer-basic py-3">
     <div class="social"></div>

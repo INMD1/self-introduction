@@ -5,12 +5,6 @@ body {
     width: 100%;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-}
 
 article {
     width: 100%;
@@ -81,5 +75,11 @@ a {
 }
 
 .card-set {
-    height: 91%;
+    height: 170px;
+}
+
+.title {
+    color: var(--bs-black);
+    font-weight:900;
+    font-size: 30px;
 }
