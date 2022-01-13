@@ -13,8 +13,6 @@
                   <h4 class="card-title" style="font-weight: bold">
                     주로 쓰는 언어(제작중)
                   </h4>
-
-                  <!-- <canvas id="skillpi"></canvas> -->
                 </div>
               </div>
             </div>
