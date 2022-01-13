@@ -2,7 +2,7 @@
   <header>
     <nav
       class="navbar navbar-light navbar-expand-lg fixed-top navigation-clean"
-      style="  background-color: rgba(255, 255, 255, 0.3);"
+      style="background-color: rgba(255, 255, 255, 0.3);"
     >
       <div class="container">
         <a class="navbar-brand title" href="#">INMD1</a
@@ -11,8 +11,7 @@
           data-bs-toggle="collapse"
           data-bs-target="#navcol-2"
         >
-          <span class="visually-hidden" >Toggle navigation</span
-          ><span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div id="navcol-2" class="collapse navbar-collapse">
           <ul class="navbar-nav ms-auto">
@@ -40,7 +39,7 @@
   <article style="  background: linear-gradient(to right, #eacda3, #d6ae7b);">
     <div class="py-5 h-100 align-items-center d-flex">
       <div class="hero mx-auto">
-          <img :src="require('./assets/img/lenstravelier-EdhmOmzBdoI-unsplash.jpg')">
+          <img :src="require('./assets/img/20220113_200043.jpg')">
           <p class="hello">Hello world</p>
           <p class="hello_body">여러분들을 만나서 반가워요. 저에 대해서 한번 알아보까요?</p>
       </div>

@@ -13,7 +13,7 @@
                             <div class="col">
                                 <div class="card card-set">
                                     <div class="card-body">
-                                        <h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[0].repo }} </h4>
+                                        <a v-bind:href="this.repo_data[0].link" style="color: black;"><h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[0].repo }} </h4></a>
                                         <p>{{ this.repo_data[0].description }}</p>
                                         <div class="row">
                                             <div class="col">
@@ -25,7 +25,7 @@
                                                  </p>
                                             </div>
                                             <div class="col">
-                                                <i class="bi bi-star-fill"></i>
+                                                <p><i class="bi bi-star-fill"></i> stars: {{this.repo_data[0].stars}}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -34,7 +34,7 @@
                             <div class="col">
                                 <div class="card card-set">
                                     <div class="card-body">
-                                        <h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[1].repo }} </h4>
+                                        <a v-bind:href="this.repo_data[1].link" style="color: black;"><h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[1].repo }} </h4></a>
                                         <p>{{ this.repo_data[1].description }}</p>
                                         <div class="row">
                                             <div class="col">
@@ -46,7 +46,7 @@
                                                  </p>
                                             </div>
                                             <div class="col">
-                                                <i class="bi bi-star-fill"></i>
+                                                <p><i class="bi bi-star-fill"></i> stars: {{this.repo_data[1].stars}}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -57,7 +57,7 @@
                             <div class="col">
                                 <div class="card card-set">
                                     <div class="card-body">
-                                        <h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[2].repo }} </h4>
+                                        <a v-bind:href="this.repo_data[2].link" style="color: black;"><h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[2].repo }} </h4></a>
                                         <p>{{ this.repo_data[2].description }}</p>
                                         <div class="row">
                                             <div class="col">
@@ -69,7 +69,7 @@
                                                  </p>
                                             </div>
                                             <div class="col">
-                                                <i class="bi bi-star-fill"></i>
+                                                <p><i class="bi bi-star-fill"></i> stars: {{this.repo_data[2].stars}}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -78,7 +78,7 @@
                             <div class="col">
                                 <div class="card card-set">
                                     <div class="card-body">
-                                        <h4><i class="bi bi-journal-bookmark"></i> {{ this.repo_data[3].repo }} </h4>
+                                        <a v-bind:href="this.repo_data[3].link" style="color: black;"><h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[3].repo }} </h4></a>
                                         <p>{{ this.repo_data[3].description }}</p>
                                         <div class="row">
                                             <div class="col">

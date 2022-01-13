@@ -30,8 +30,8 @@
                       aria-valuenow="50"
                       aria-valuemin="0"
                       aria-valuemax="100"
-                      style="width: 50%"
-                    > 50% </div>
+                      style="width: 40%; background:#555555"
+                    > </div>
                   </div>
                   <h3 class="text-start py-2">Java</h3>
                   <div class="progress">
@@ -40,8 +40,8 @@
                       aria-valuenow="50"
                       aria-valuemin="0"
                       aria-valuemax="100"
-                      style="width: 50%"
-                    > 50% </div>
+                      style="width: 30%; background:#b07219"
+                    > </div>
                   </div>
                   <h3 class="text-start py-2">vue</h3>
                   <div class="progress">
@@ -50,8 +50,8 @@
                       aria-valuenow="50"
                       aria-valuemin="0"
                       aria-valuemax="100"
-                      style="width: 50%"
-                    > 50% </div>
+                      style="width: 60%; background:#41b883"
+                    > </div>
                   </div>
                   <h3 class="text-start py-2">javascript</h3>
                   <div class="progress">
@@ -60,8 +60,8 @@
                       aria-valuenow="50"
                       aria-valuemin="0"
                       aria-valuemax="100"
-                      style="width: 50%"
-                    > 50% </div>
+                      style="width: 70%; background:#f1e05a"
+                    > </div>
                   </div>
                   <h3 class="text-start py-2">html</h3>
                   <div class="progress">
@@ -70,8 +70,8 @@
                       aria-valuenow="50"
                       aria-valuemin="0"
                       aria-valuemax="100"
-                      style="width: 50%"
-                    > 50% </div>
+                      style="width: 90%; background:#e34c26"
+                    > </div>
                   </div>
                   <h3 class="text-start py-2">CSS</h3>
                   <div class="progress">
@@ -80,8 +80,8 @@
                       aria-valuenow="50"
                       aria-valuemin="0"
                       aria-valuemax="100"
-                      style="width: 50%"
-                    > 50% </div>
+                      style="width: 40%; background:#563d7c"
+                    > </div>
                   </div>
                 </div>
               </div>
