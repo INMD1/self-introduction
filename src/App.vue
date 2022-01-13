@@ -40,8 +40,10 @@
     <div class="py-5 h-100 align-items-center d-flex">
       <div class="hero mx-auto">
           <img :src="require('./assets/img/20220113_200043.webp')">
-          <p class="hello">Hello world</p>
-          <p class="hello_body">여러분들을 만나서 반가워요. 저에 대해서 한번 알아보까요?</p>
+          <div class="row  hello">
+            <h1 style="font-size: 10vh;"> Hello world </h1>
+            <p>여러분들 반가워요 저에 대해서 알아볼까요?</p>
+          </div>
       </div>
     </div>
   </article>

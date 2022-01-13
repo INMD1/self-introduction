@@ -42,7 +42,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Blog</h4><img class="page-card" src="../assets/img/blogpage.png" />
-                                    <p class="card-text" style="font-size: 20px;font-weight: bold;">블로그는 일상, 정보, 프로젝트 개발일지를 적어놓아요</p><button class="btn btn-primary" onclick="location.href='https://amview.powerinmd.com/' " type="button">방문하기</button>
+                                    <p class="card-text" style="font-size: 20px;font-weight: bold;">블로그는 일상, 정보, 프로젝트 개발일지를 적어놓아요</p><button class="btn btn-primary" onclick="location.href='https://blog.powerinmd.com/' " type="button">방문하기</button>
                                 </div>
                             </div>
                         </div>

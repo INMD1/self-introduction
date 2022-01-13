@@ -13,7 +13,9 @@
                   <h4 class="card-title" style="font-weight: bold">
                     주로 쓰는 언어
                   </h4>
-                  <canvas class="col" id="skillpi"></canvas>
+                  <div class="chart-container">
+                      <canvas id="skillpi"  style="height:44vh; width:30vw"></canvas>
+                  </div>
                 </div>
               </div>
             </div>
@@ -113,6 +115,10 @@ export default {
             },
           ],
         },
+        options : {
+          responsive: false,
+          aspectRatio: 1,
+        }
       };
 
       this.cpuchart = new Chart(pie, skillconfig);

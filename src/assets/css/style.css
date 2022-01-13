@@ -22,7 +22,7 @@ a {
 
 .page-card {
     max-width: auto;
-    height: 220px;
+    height: 23vh;
 }   
 
 .footer-basic .copyright {
@@ -35,7 +35,7 @@ a {
   
 
 .hero {
-    height: 60%;
+    height: 60vh;
     width: 100%;
     position: relative;
 }
@@ -48,21 +48,13 @@ a {
 
 .hello{
     position: absolute;
-    top: 55%;
-    left: 10%;
-    font-size: 80px;
-    transform: translate(-20%, 70%);
+    top: 15%;
+    left: 18%;
+    transform: translate(-20%, 56%);
     color: white;
 }
 
-.hello_body {
-    position: absolute;
-    top: 85%;
-    left: 2%;
-    font-size: 22px;
-    transform: translate(-20%, 70%);
-    color: white;
-}
+
 
 .repo-language-color {
     position: relative;
