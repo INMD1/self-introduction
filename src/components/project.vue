@@ -2,7 +2,7 @@
             <div class="h-100 r d-flex align-items-center">
             <div class="container">
                 <div class="row text-center">
-                    <div class="col">
+                    <div class="col py-5">
                         <h1 style="color: var(--bs-gray-100);font-weight: bold;font-size: 81px;">Project</h1>
                         <p style="color: rgb(255,255,255);font-size: 23px;">제가 만들 프로젝트 들이에요. 한번 보고가는건 어때요?</p>
                     </div>
@@ -11,7 +11,7 @@
                     <div class="col-md-8">
                         <div class="row row-cols-2">
                             <div class="col">
-                                <div class="card card-set">
+                                <div class="card">
                                     <div class="card-body">
                                         <a v-bind:href="this.repo_data[0].link" style="color: black;"><h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[0].repo }} </h4></a>
                                         <p>{{ this.repo_data[0].description }}</p>
@@ -32,7 +32,7 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="card card-set">
+                                <div class="card">
                                     <div class="card-body">
                                         <a v-bind:href="this.repo_data[1].link" style="color: black;"><h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[1].repo }} </h4></a>
                                         <p>{{ this.repo_data[1].description }}</p>
@@ -55,7 +55,7 @@
                         </div>
                         <div class="row py-3">
                             <div class="col">
-                                <div class="card card-set">
+                                <div class="card" style="height: 11rem;">
                                     <div class="card-body">
                                         <a v-bind:href="this.repo_data[2].link" style="color: black;"><h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[2].repo }} </h4></a>
                                         <p>{{ this.repo_data[2].description }}</p>
@@ -76,7 +76,7 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="card card-set">
+                                <div class="card">
                                     <div class="card-body">
                                         <a v-bind:href="this.repo_data[3].link" style="color: black;"><h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[3].repo }} </h4></a>
                                         <p>{{ this.repo_data[3].description }}</p>

@@ -9,10 +9,11 @@
           <div class="row">
             <div class="col-md-6">
               <div class="card">
-                <div class="card-body">
+                <div class="card-body-edit">
                   <h4 class="card-title" style="font-weight: bold">
                     주로 쓰는 언어(제작중)
                   </h4>
+                  <canvas id="skillpi" width=auto; height="50vw"></canvas>
                 </div>
               </div>
             </div>
@@ -111,6 +112,9 @@ export default {
               borderWidth: 1,
             },
           ],
+        },
+        options: {
+          response: false    
         }
       };
 
