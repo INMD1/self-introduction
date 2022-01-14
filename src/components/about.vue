@@ -11,7 +11,8 @@
                             <div class="row d-flex">
                                 <div class="col-6">
                                     <p style="font-size: 20px; font-weight: bold; color: rgb(255,255,255);">📧 이메일</p>
-                                    <p style="color: rgb(255,255,255);font-weight: bold;font-size: 18px;">lyw541594@gmail.com<br /></p>
+                                    <p style="color: rgb(255,255,255);font-weight: bold;font-size: 18px;">lyw541594@
+                                        gmail.com<br /></p>
                                 </div>
                                 <div class="col">
                                     <p style="font-size: 20px; font-weight: bold; color: rgb(255,255,255);"><svg class="bi bi-discord" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" style="color: rgb(88,101,242);">
