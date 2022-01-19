@@ -27,11 +27,11 @@
                 <div class="col-md-2 mx-auto p-3"><img class="myicon d-block rounded-circle img-fluid" src="../assets/img/icon.png" /></div>
             </div>
             <div class="row">
-                <div class="col py-4">
+                <div class="col py-4 py-2">
                     <h1 style="color: rgb(255,255,255);">사이트</h1>
                     <p style="color: rgb(255,255,255);">제가 만든 사이트들이에요 한번 방문해보세요!</p>
                     <div class="row align-items-center">
-                        <div class="col-md-4">
+                        <div class="col-md-4 py-2">
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">github 저장소</h4><img class="page-card" src="../assets/img/githunpage.png" />
@@ -39,7 +39,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 py-2">
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Blog</h4><img class="page-card" src="../assets/img/blogpage.png" />
@@ -47,7 +47,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 py-2">
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">amview</h4><img class="page-card" src="../assets/img/amview.png" />

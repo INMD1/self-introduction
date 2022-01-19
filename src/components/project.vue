@@ -132,7 +132,7 @@ export default {
     },
     async mounted() {
 
-        const pinned_repo = await axios.get("https://gh-pinned-repos-5l2i19um3.vercel.app/?username=INMD1");
+        const pinned_repo = await axios.get("https://gh-pinned-repos.egoist.sh/?username=INMD1");
         const lang_color = await axios.get("https://raw.githubusercontent.com/ozh/github-colors/master/colors.json");
         const all_repo = await axios.get("https://api.github.com/users/INMD1/repos");
         this.repo_data = pinned_repo.data;

@@ -7,7 +7,7 @@
             저는 이런 언어를 쓸줄 알아요
           </h2>
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6  py-2">
               <div class="card">
                 <div class="card-body-edit">
                   <h4 class="card-title" style="font-weight: bold">
@@ -17,7 +17,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6  py-2">
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title" style="font-weight: bold">
