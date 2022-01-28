@@ -1,4 +1,4 @@
-# self-introduction-beta
+# vue3
 
 ## Project setup
 ```
