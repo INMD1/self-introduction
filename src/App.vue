@@ -30,11 +30,11 @@
   <article id="skill" style="background: var(--bs-green)"><skill /></article>
   <article id="project"><project /></article> -->
 
-  <footer class="footer-basic">
-    <p class="text-center py-2">
-      Web Made with <span style="color: #e25555">❤</span> by INMD1ㅤ
-    </p>
-  </footer>
+  <v-footer padless>
+    <v-col class="text-center" cols="12">
+      Web Made with <span style="color: #e25555">❤</span> by INMD1
+    </v-col>
+  </v-footer>
 </template>
 
 <script>
