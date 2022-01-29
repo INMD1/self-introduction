@@ -1,40 +1,38 @@
 <template>
-  <header>
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top navigation-clean" style="background-color: #00ff0000">
-      <div class="container">
-        <a class="navbar-brand title" href="#">INMD1</a>
-        <div id="navcol-2" class="collapse navbar-collapse">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#about" style="color: var(--bs-black)">
-                about</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#skill" style="color: var(--bs-black)">
-                skill</a>
-            </li>
-            <li class="nav-item"></li>
-            <li class="nav-item">
-              <a class="nav-link" href="#project" style="color: var(--bs-black)">
-                project</a>
-            </li>
-          </ul>
-        </div>
+<v-app>
+  <nav class="navbar navbar-expand-lg fixed-top" v-bind:style="{background: topcolor, transition: 'all ease 0.3s 0s' }">
+    <div class="container">
+      <a class="navbar-brand title" href="#">INMD1</a>
+      <div class="navbar-nav">
+        <a class="nav-item nav-link menu" href="#">Home</a>
+        <a class="nav-item nav-link menu" href="#">skill</a>
+        <a class="nav-item nav-link menu" href="#">project</a>
       </div>
-    </nav>
-  </header>
-  <article style="background: linear-gradient(to right, #eacda3, #d6ae7b);">
-
+    </div>
+  </nav>
+  <article>
+    <div class="py-5 h-100 align-items-center text-center d-flex img-fluid">
+      <div class="container">
+          <div class="row">
+              <div class="col">
+                  <p class="title_B">안녕하세요,</p>
+                  <p class="title_B">저는 <span style="color: #6699ff;">INMD1</span> 이고</p>
+                  <p class="title_B">개발자를 <span style="color: #003366;">꿈꾸는 </span>사람 입니다.</p>
+              </div>
+              <div class="col-lg-5"><img class="rounded-circle" :src="require('./assets/img/icon.png')" style="width: 30vh; filter: drop-shadow(5px 5px 5px #000);" /></div>
+          </div>
+      </div>
+    </div>
   </article>
   <!-- <article id="about"><about /></article>
   <article id="skill" style="background: var(--bs-green)"><skill /></article>
-  <article id="project"><project /></article> -->
-
+  <article id="project"><project /></article> --> 
   <v-footer padless>
     <v-col class="text-center" cols="12">
-      Web Made with <span style="color: #e25555">❤</span> by INMD1
+       Web Made with <span style="color: #e25555">❤</span> by INMD1
     </v-col>
   </v-footer>
+</v-app>
 </template>
 
 <script>
@@ -51,11 +49,21 @@ export default {
   // },
   data() {
     return {
-      
+      topcolor: "#00ff0000",
+      scrollPostion: 0
     }
   },
-  method: {
-    
+  created () {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll () {
+      if(window.pageYOffset < 5){
+        this.topcolor = "#00ff0000"
+      }else if(window.pageYOffset > 5){
+        this.topcolor = "white"
+      }
+    }
   }
 };
 </script>
