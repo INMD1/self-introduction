@@ -1,71 +1,51 @@
 <template>
-  <header>
-    <nav
-      class="navbar navbar-light navbar-expand-lg fixed-top navigation-clean"
-      style="background-color: rgba(255, 255, 255, 0.3);"
-    >
-      <div class="container">
-        <a class="navbar-brand title" href="#">INMD1</a
-        ><button
-          class="navbar-toggler"
-          data-bs-toggle="collapse"
-          data-bs-target="#navcol-2"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="navcol-2" class="collapse navbar-collapse">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#about" style="color: var(--bs-black)"
-                >about</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#skill" style="color: var(--bs-black)"
-                >skill</a
-              >
-            </li>
-            <li class="nav-item"></li>
-            <li class="nav-item">
-              <a class="nav-link" href="#project" style="color: var(--bs-black)"
-                >project</a
-              >
-            </li>
-          </ul>
-        </div>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-light" v-bind:style="{background: topcolor, transition: 'all ease 0.3s 0s' }">
+    <div class="container">
+      <a class="navbar-brand title" href="#">INMD1</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link menu" href="#home">Home</a>
+        <a class="nav-item nav-link menu" href="#about">About</a>
+        <a class="nav-item nav-link menu" href="#skill">Skill</a>
+        <a class="nav-item nav-link menu" href="#project">project</a>
       </div>
-    </nav>
-  </header>
-  <article style="  background: linear-gradient(to right, #eacda3, #d6ae7b);">
-    <div class="py-5 h-100 align-items-center d-flex">
-      <div class="hero mx-auto">
-          <img :src="require('./assets/img/20220113_200043.webp')">
-          <div class="row  hello">
-            <h1 style="font-size: 10vh;"> Hello world </h1>
-            <p>여러분들 반가워요 저에 대해서 알아볼까요?</p>
+      </div>
+    </div>
+  </nav>
+  <article id="home" style="background-color: #C4D4F2;">
+    <div class="py-5 h-100 align-items-center text-center d-flex img-fluid">
+      <div class="container">
+          <div class="row">
+              <div class="col">
+                  <p class="title_B">안녕하세요,</p>
+                  <p class="title_B">저는 <span style="color: #22577E;">INMD1</span> 이고</p>
+                  <p class="title_B"><span style="color: #064635;">개발자</span>를 <span style="color: #1572A1;">꿈꾸는 </span>사람 입니다.</p>
+              </div>
+              <div class="col-lg-5"><img class="rounded-circle" :src="require('./assets/img/icon.png')" style="width: 30vh; filter: drop-shadow(5px 5px 5px #000);" /></div>
           </div>
       </div>
     </div>
   </article>
   <article id="about"><about /></article>
-  <article id="skill" style="background: var(--bs-green)"><skill /></article>
-  <article id="project"><project /></article>
-
-  <footer class="footer-basic py-3">
-    <div class="social"></div>
-    <p class="text-center">
-      이 사이트는 포트폴리오 사이트를 목적으로 제작이 되었서요!
-    </p>
-    <p class="copyright">Company Name © 2022</p>
-  </footer>
+  <article id="skill" style="background: #87A7B3"><skill /></article>
+  <article id="project" style="background: #435560"><project /></article>
   
+  <footer padless>
+    <div class="col-12 py-2">
+       <p class="menu" style="text-align: center;">이 사이트는 포트폴리오 용도로 제작 되었습니다.</p>
+       <p class="menu" style="text-align: center;">Web Made with <span style="color: #e25555">❤</span> by INMD1</p>
+    </div>
+  </footer>
 </template>
 
 <script>
 import about from "./components/about.vue";
 import skill from "./components/skill.vue";
 import project from "./components/project.vue";
-import  gsap from "gsap";
+
 export default {
   name: "App",
   components: {
@@ -73,13 +53,23 @@ export default {
     skill,
     project,
   },
-  mounted(){
-    //불규칙한 애니메이션 수정하기
-       let tl = gsap.timeline();
-       tl.fromTo('.hero', 1, {height: "0vh"} , {height: "60vh", ease: 'Power2.easeInOut'})
-         .fromTo('.hero', 1.2, { width: '100%'}, { width: '80%',  ease: 'Power2.easeInOut'})
-          .fromTo('.hello', 2, { opacity: 0 } , { opacity: 1 },  "-=0.5")
-         .fromTo('.hello_body', 2, { opacity: 0, x: 30 } , { opacity: 1, x: 30 },  "-=0.5")
+  data() {
+    return {
+      topcolor: "#00ff0000",
+      scrollPostion: 0
+    }
+  },
+  created () {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll () {
+      if(window.pageYOffset < 5){
+        this.topcolor = "#00ff0000"
+      }else if(window.pageYOffset > 5){
+        this.topcolor = "white"
+      }
+    }
   }
 };
 </script>

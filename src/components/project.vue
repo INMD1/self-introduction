@@ -11,7 +11,7 @@
                     <div class="col-md-8">
                         <div class="row row-cols-2">
                             <div class="col">
-                                <div class="card">
+                                <div class="card cardd">
                                     <div class="card-body">
                                         <a v-bind:href="this.repo_data[0].link" style="color: black;"><h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[0].repo }} </h4></a>
                                         <p>{{ this.repo_data[0].description }}</p>
@@ -32,7 +32,7 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="card">
+                                <div class="card cardd">
                                     <div class="card-body">
                                         <a v-bind:href="this.repo_data[1].link" style="color: black;"><h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[1].repo }} </h4></a>
                                         <p>{{ this.repo_data[1].description }}</p>
@@ -55,7 +55,7 @@
                         </div>
                         <div class="row py-3">
                             <div class="col">
-                                <div class="card" style="height: 11rem;">
+                                <div class="card cardd">
                                     <div class="card-body">
                                         <a v-bind:href="this.repo_data[2].link" style="color: black;"><h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[2].repo }} </h4></a>
                                         <p>{{ this.repo_data[2].description }}</p>
@@ -76,7 +76,7 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="card">
+                                <div class="card cardd">
                                     <div class="card-body">
                                         <a v-bind:href="this.repo_data[3].link" style="color: black;"><h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[3].repo }} </h4></a>
                                         <p>{{ this.repo_data[3].description }}</p>
@@ -99,7 +99,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card" style="height: 356px;">
+                        <div class="card" style="height: 364px;">
                             <div class="card-header">
                                 <h5 class="mb-0">지금까지 만든 프로젝트</h5>
                             </div>
@@ -142,6 +142,7 @@ export default {
              this.color_data[data] = lang_color.data[`${pinned_repo.data[data].language }`].color
         }
 
+        console.log(this.color_data);
     }
 }
 </script>
