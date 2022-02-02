@@ -8,6 +8,11 @@
     src: url("../font/BalsamiqSans-Bold.ttf");
 }
 
+@font-face {
+    font-family: "bamin";
+    src: url("../font/BMHANNAAir_ttf.ttf");
+}
+
 html,
 body {
     margin: 0;
@@ -73,8 +78,6 @@ a {
     transition: 0.7s;
     z-index: 1;
 }
-
-
 
  .card_1 .icon .bi {
     position: absolute;
@@ -163,7 +166,34 @@ a {
     color: #414141;
 } 
 
- a {
+a {
     text-decoration: none;
     color: #414141;
+}
+
+.skill_top {
+    font-weight: 900;
+    font-size: 40px;
+    font-family: A1B;
+}
+
+.skill_low {
+    font-weight: 600;
+    font-family: bamin;
+    font-size: 20px;
+}
+
+.img_p {
+    height: 68vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card_S {
+    width: 90%;
+}
+
+.cardd {
+    width: 90%;
+    height: 18vh;
 }

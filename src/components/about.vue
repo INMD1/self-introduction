@@ -28,13 +28,13 @@
             </div>
             <br>
                 <h1 style="color: rgb(255,255,255);">사이트</h1>
-                <p style="color: rgb(255,255,255);">제가 만든 사이트들이에요 한번 방문해보세요!</p>
+                <p style="color: rgb(255,255,255);">저와 관련된 사이트 들이에요. 한번 들어가보세요!</p>
                 <div class="row align-items-center">
                     <div class="col-sm mb-4">
                         <div class="card_1">
                             <div class="face face1">
                                 <div class="content">
-                                    <div class="icon">
+                                    <div class="icon" style="background: #171515;">
                                         <i class="bi bi-github" aria-hidden="true"></i>
                                         <h3 class="i_t">Github</h3>
                                     </div>

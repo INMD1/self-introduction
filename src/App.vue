@@ -7,15 +7,15 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <div class="navbar-nav">
-        <a class="nav-item nav-link menu" href="#">Home</a>
-        <a class="nav-item nav-link menu" href="#">About</a>
-        <a class="nav-item nav-link menu" href="#">Skill</a>
-        <a class="nav-item nav-link menu" href="#">project</a>
+        <a class="nav-item nav-link menu" href="#home">Home</a>
+        <a class="nav-item nav-link menu" href="#about">About</a>
+        <a class="nav-item nav-link menu" href="#skill">Skill</a>
+        <a class="nav-item nav-link menu" href="#project">project</a>
       </div>
       </div>
     </div>
   </nav>
-  <article style="background-color: #D3DEDC;">
+  <article id="home" style="background-color: #C4D4F2;">
     <div class="py-5 h-100 align-items-center text-center d-flex img-fluid">
       <div class="container">
           <div class="row">
@@ -30,8 +30,8 @@
     </div>
   </article>
   <article id="about"><about /></article>
-  <!--<article id="skill" style="background: var(--bs-green)"><skill /></article>
-  <article id="project"><project /></article>-->
+  <article id="skill" style="background: #87A7B3"><skill /></article>
+  <article id="project" style="background: #435560"><project /></article>
   
   <footer padless>
     <div class="col-12 py-2">
@@ -43,15 +43,15 @@
 
 <script>
 import about from "./components/about.vue";
-// import skill from "./components/skill.vue";
-// import project from "./components/project.vue";
+import skill from "./components/skill.vue";
+import project from "./components/project.vue";
 
 export default {
   name: "App",
   components: {
     about,
-    // skill,
-    // project,
+    skill,
+    project,
   },
   data() {
     return {
