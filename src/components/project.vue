@@ -54,7 +54,7 @@
                             </div>
                         </div>
                         <div class="row py-3">
-                            <div class="col">
+                            <div class="col py-2">
                                 <div class="card cardd">
                                     <div class="card-body">
                                         <a v-bind:href="this.repo_data[2].link" style="color: black;"><h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[2].repo }} </h4></a>
