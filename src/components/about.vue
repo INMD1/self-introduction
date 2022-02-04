@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-md-8 p-3">
                     <h2 class="text-start" style="color: rgb(255,255,255);font-weight: bold;">여러분들 반가워요!</h2>
-                    <p class="text-start" style="font-size: 20px; font-family: Allerta, sans-serif;color: rgb(255,255,255);">안녕하세요! 중학교때부터 앱인벤터라는 블록 코딩이라는 것을 시작해서 고등학교때는 웹 사이트를 제작을 하고 점점 성장해 대학교에 와서는 서버 운용, 프로그램, 제작 등등 할수 있고 더 많은 걸 하기 위해 조금더 성장하고 있는 INMD입니다!</p>
+                    <p class="text-start" style="font-size: 20px; font-family: bamin, sans-serif;color: rgb(255,255,255);">안녕하세요! 중학교때부터 앱인벤터라는 블록 코딩이라는 것을 시작해서 고등학교때는 웹 사이트를 제작을 하고 점점 성장해 대학교에 와서는 서버 운용, 프로그램, 제작 등등 할수 있고 더 많은 걸 하기 위해 조금더 성장하고 있는 INMD입니다!</p>
                     <div class="row">
                         <div class="col">
                             <h1 class="text-start" style="font-size: 20px; color: var(--bs-gray-100); font-weight: bold;">연락처</h1>
@@ -24,7 +24,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2 mx-auto p-3"><img class="myicon d-block rounded-circle img-fluid" src="../assets/img/icon.png" /></div>
+                <div class="col-md-2 mx-auto p-3"><img class="myicon d-block rounded-circle img-fluid" src="https://avatars.githubusercontent.com/u/87979171?v=4" /></div>
             </div>
             <br>
                 <h1 style="color: rgb(255,255,255);">사이트</h1>

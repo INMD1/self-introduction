@@ -24,7 +24,7 @@
                   <p class="title_B">저는 <span style="color: #22577E;">INMD1</span> 이고</p>
                   <p class="title_B"><span style="color: #064635;">개발자</span>를 <span style="color: #1572A1;">꿈꾸는 </span>사람 입니다.</p>
               </div>
-              <div class="col-lg-5"><img class="rounded-circle" :src="require('./assets/img/icon.png')" style="width: 30vh; filter: drop-shadow(5px 5px 5px #000);" /></div>
+              <div class="col-lg-5"><img class="rounded-circle" src="https://avatars.githubusercontent.com/u/87979171?v=4" style="width: 30vh; filter: drop-shadow(5px 5px 5px #000);" /></div>
           </div>
       </div>
     </div>
