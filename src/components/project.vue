@@ -19,7 +19,7 @@
                                             <div class="col">
                                                  <p class="mb-0 f6 color-fg-muted">
                                                      <span class="d-inline-block mr-3">
-                                                        <span class="repo-language-color" v-bind:style="{ backgroundColor: this.color_data[0] }"></span>
+                                                        <span class="repo-language-color" v-bind:style="{ backgroundColor: '#f1e05a' }"></span>
                                                         <span>ㅤ{{ this.repo_data[0].language }}</span>
                                                     </span>
                                                  </p>
@@ -40,7 +40,7 @@
                                             <div class="col">
                                                  <p class="mb-0 f6 color-fg-muted">
                                                      <span class="d-inline-block mr-3">
-                                                        <span class="repo-language-color" v-bind:style="{ backgroundColor: this.color_data[1] }"></span>
+                                                        <span class="repo-language-color" v-bind:style="{ backgroundColor: '#f1e05a' }"></span>
                                                         <span>ㅤ{{ this.repo_data[1].language }}</span>
                                                     </span>
                                                  </p>
@@ -63,7 +63,7 @@
                                             <div class="col">
                                                  <p class="mb-0 f6 color-fg-muted">
                                                      <span class="d-inline-block mr-3">
-                                                        <span class="repo-language-color" v-bind:style="{ backgroundColor: this.color_data[2] }"></span>
+                                                        <span class="repo-language-color" v-bind:style="{ backgroundColor: '#41b883' }"></span>
                                                         <span>ㅤ{{ this.repo_data[2].language }}</span>
                                                     </span>
                                                  </p>
@@ -84,7 +84,7 @@
                                             <div class="col">
                                                  <p class="mb-0 f6 color-fg-muted">
                                                      <span class="d-inline-block mr-3">
-                                                        <span class="repo-language-color" v-bind:style="{ backgroundColor: this.color_data[3] }"></span>
+                                                        <span class="repo-language-color" v-bind:style="{ backgroundColor: '#555555' }"></span>
                                                         <span>ㅤ{{ this.repo_data[3].language }}</span>
                                                     </span>
                                                  </p>
@@ -121,28 +121,17 @@ import axios from "axios";
 export default {
     data() {
         return {
-            repo_data : [{"owner":"NULL","repo":"NULL","link":"NULL","description":"NULL","language":"NULL","stars":0,"forks":0},
-                         {"owner":"NULL","repo":"NULL","link":"NULL","description":"NULL","language":"NULL","stars":0,"forks":0},
-                         {"owner":"NULL","repo":"NULL","link":"NULL","description":"NULL","language":"NULL","stars":0,"forks":0},
-                         {"owner":"NULL","repo":"NULL","link":"NULL","description":"NULL","language":"NULL","stars":0,"forks":0}],
+            repo_data : [{"owner":"INMD1","repo":"iptime-port-setting","link":"https://github.com/INMD1/iptime-port-setting","description":"api하는 포트포워딩을 쉽게 하기위해서 만든 cli","language":" study-file","stars":0,"forks":0},
+                         {"owner":"INMD1","repo":"server-dashboard","link":"https://github.com/INMD1/server-dashboard","description":"서버를 관리하는 툴입니다.","language":"Vue","stars":0,"forks":2},
+                         {"owner":"INMD1","repo":"computerapi","link":"https://github.com/INMD1/computerapi","description":"api하는 포트포워딩을 쉽게 하기위해서 만든 cli","language":" study-file","stars":0,"forks":0},
+                         {"owner":"INMD1","repo":"study-file","link":"https://github.com/INMD1/computerapi","description":"이때까지 공부하거나 코딩 테스트한 파일을 모아두는 곳입니다.","language":"C","stars":0,"forks":0}],
             color_data: [],
             all_data: [],
-            all_color_data: []
         }
     },
     async mounted() {
-
-        const pinned_repo = await axios.get("https://gh-pinned-repos.egoist.sh/?username=INMD1");
-        const lang_color = await axios.get("https://raw.githubusercontent.com/ozh/github-colors/master/colors.json");
         const all_repo = await axios.get("https://api.github.com/users/INMD1/repos");
-        this.repo_data = pinned_repo.data;
-        this.all_data = all_repo.data;
-        
-        for (let data = 0; data < Object.keys(pinned_repo.data).length; data++) {
-             this.color_data[data] = lang_color.data[`${pinned_repo.data[data].language }`].color
-        }
-
-        console.log(this.color_data);
+        this.all_data = all_repo.data; 
     }
 }
 </script>
