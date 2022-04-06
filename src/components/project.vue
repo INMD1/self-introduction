@@ -19,7 +19,7 @@
                                             <div class="col">
                                                  <p class="mb-0 f6 color-fg-muted">
                                                      <span class="d-inline-block mr-3">
-                                                        <span class="repo-language-color" v-bind:style="{ backgroundColor: '#f1e05a' }"></span>
+                                                        <span>언어:</span>
                                                         <span>ㅤ{{ this.repo_data[0].language }}</span>
                                                     </span>
                                                  </p>
@@ -40,7 +40,7 @@
                                             <div class="col">
                                                  <p class="mb-0 f6 color-fg-muted">
                                                      <span class="d-inline-block mr-3">
-                                                        <span class="repo-language-color" v-bind:style="{ backgroundColor: '#f1e05a' }"></span>
+                                                        <span>언어:</span>
                                                         <span>ㅤ{{ this.repo_data[1].language }}</span>
                                                     </span>
                                                  </p>
@@ -63,7 +63,7 @@
                                             <div class="col">
                                                  <p class="mb-0 f6 color-fg-muted">
                                                      <span class="d-inline-block mr-3">
-                                                        <span class="repo-language-color" v-bind:style="{ backgroundColor: '#41b883' }"></span>
+                                                        <span>언어:</span>
                                                         <span>ㅤ{{ this.repo_data[2].language }}</span>
                                                     </span>
                                                  </p>
@@ -84,7 +84,7 @@
                                             <div class="col">
                                                  <p class="mb-0 f6 color-fg-muted">
                                                      <span class="d-inline-block mr-3">
-                                                        <span class="repo-language-color" v-bind:style="{ backgroundColor: '#555555' }"></span>
+                                                        <span>언어:</span>
                                                         <span>ㅤ{{ this.repo_data[3].language }}</span>
                                                     </span>
                                                  </p>
@@ -98,7 +98,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col">
                         <div class="card" style="height: 364px;">
                             <div class="card-header">
                                 <h5 class="mb-0">지금까지 만든 프로젝트</h5>
@@ -121,10 +121,10 @@ import axios from "axios";
 export default {
     data() {
         return {
-            repo_data : [{"owner":"INMD1","repo":"iptime-port-setting","link":"https://github.com/INMD1/iptime-port-setting","description":"api하는 포트포워딩을 쉽게 하기위해서 만든 cli","language":" study-file","stars":0,"forks":0},
-                         {"owner":"INMD1","repo":"server-dashboard","link":"https://github.com/INMD1/server-dashboard","description":"서버를 관리하는 툴입니다.","language":"Vue","stars":0,"forks":2},
-                         {"owner":"INMD1","repo":"computerapi","link":"https://github.com/INMD1/computerapi","description":"api하는 포트포워딩을 쉽게 하기위해서 만든 cli","language":" study-file","stars":0,"forks":0},
-                         {"owner":"INMD1","repo":"study-file","link":"https://github.com/INMD1/computerapi","description":"이때까지 공부하거나 코딩 테스트한 파일을 모아두는 곳입니다.","language":"C","stars":0,"forks":0}],
+            repo_data : [{"owner":"INMD1","repo":"DoD_app_vue_container","link":"https://github.com/asw-dod/dod_app_vue","description":"모바일 전용웹","language":"Vue","stars":2,"forks":0},
+                         {"owner":"INMD1","repo":"Deu_food_api","link":"https://github.com/asw-dod/Deu_food_api","description":"동의대 기숙사, 학식 정보를 가공해서 보여주는 APi 입니다.","language":"JavaScript","stars":0,"forks":0},
+                         {"owner":"INMD1","repo":"DoD_DashBoard ","link":"https://github.com/asw-dod/DoD_DashBoard","description":"학교 공지사항이나 기타 정보를 한번에 보여줌니다.","language":"Vue","stars":0,"forks":0},
+                         {"owner":"INMD1","repo":"deu_food_gui","link":"https://github.com/INMD1/deu_food_gui","description":"학교앱의 불편한 부분을 직접 만들어서 씀","language":"Kotlin","stars":0,"forks":0}],
             color_data: [],
             all_data: [],
         }
