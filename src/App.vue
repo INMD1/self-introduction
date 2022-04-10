@@ -10,6 +10,7 @@
         <a class="nav-item nav-link menu" href="#home">Home</a>
         <a class="nav-item nav-link menu" href="#about">About</a>
         <a class="nav-item nav-link menu" href="#skill">Skill</a>
+        <a class="nav-item nav-link menu" href="#Repository">Repository</a>
         <a class="nav-item nav-link menu" href="#project">project</a>
       </div>
       </div>
@@ -31,8 +32,8 @@
   </article>
   <article id="about"><about /></article>
   <article id="skill" style="background: #87A7B3"><skill /></article>
-  <article id="project" style="background: #435560"><project /></article>
-  
+  <article id="Repository" style="background: #435560"><Repository/></article>
+  <article></article>
   <footer padless>
     <div class="col-12 py-2">
        <p class="menu" style="text-align: center;">이 사이트는 포트폴리오 용도로 제작 되었습니다.</p>
@@ -44,14 +45,14 @@
 <script>
 import about from "./components/about.vue";
 import skill from "./components/skill.vue";
-import project from "./components/project.vue";
+import Repository from "./components/Repository.vue";
 
 export default {
   name: "App",
   components: {
     about,
     skill,
-    project,
+    Repository,
   },
   data() {
     return {
