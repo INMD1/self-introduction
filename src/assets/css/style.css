@@ -13,6 +13,24 @@
     src: url("../font/BMHANNAAir_ttf.ttf");
 }
 
+.img1 {
+    height:auto;
+    width: 60vw;
+}
+
+.Repo_title{
+    color: var(--bs-gray-100);
+    font-weight: bold; 
+    font-size: 70px;
+}
+
+.Tab_img {
+    padding-top: 1rem !important;
+    padding-left: 3rem !important;
+    padding-right: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
 html,
 body {
     margin: 0;
@@ -20,7 +38,7 @@ body {
     width: 100%;
 }
 
-article {
+.c_article {
     width: 100%;
     padding: 0 7%;
     display: table;
@@ -28,6 +46,15 @@ article {
     max-width: none;
     height: 100vh;
     background-color: #072635;
+}
+
+.d_article {
+    width: 100%;
+    padding: 1% 4%;
+    display: table;
+    margin: 0;
+    max-width: none;
+    height: 100vh;
 }
 
 a {
@@ -196,4 +223,45 @@ a {
 .cardd {
     width: 90%;
     height: 18vh;
+}
+
+.img-card {
+    width: auto;
+    height: 50vh;
+}
+
+.py-deit {
+    padding-top: 6rem !important;
+    padding-bottom: 1rem !important;
+}
+
+.Tab_card {
+    padding-top: 1rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+
+@media (max-width: 768px) {
+    .img1 {
+        height:auto;
+        width: 90vw;
+    }
+
+    .Tab_img {
+        padding-top: 1rem !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+
+    .py-deit {
+        padding-top: 3rem !important;
+        padding-bottom: 1rem !important;
+    }
+
+    .Repo_title{
+        color: var(--bs-gray-100);font-weight: bold; font-size: 40px;
+    }
 }

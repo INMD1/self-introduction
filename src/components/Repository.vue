@@ -1,9 +1,9 @@
 <template>
-            <div class="h-100 r d-flex align-items-center">
+        <div class="h-100 r d-flex align-items-center">
             <div class="container">
                 <div class="row text-center">
                     <div class="col py-5">
-                        <h1 style="color: var(--bs-gray-100);font-weight: bold;font-size: 81px;">Repository </h1>
+                        <h1 class="Repo_title">Repository </h1>
                         <p style="color: rgb(255,255,255);font-size: 23px;">제가 만들 레포들입니다. 한번 보고가는건 어때요?</p>
                     </div>
                 </div>
@@ -12,88 +12,34 @@
                         <h2 style="color: var(--bs-gray-100);">💻활발하게 개발하고 있는거</h2>
                         <div class="row row-cols-2">
                             <div class="col">
-                                <div class="card cardd">
+                                <div class="card">
                                     <div class="card-body">
                                         <a v-bind:href="this.repo_data[0].link" style="color: black;"><h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[0].repo }} </h4></a>
                                         <p>{{ this.repo_data[0].description }}</p>
-                                        <div class="row">
-                                            <div class="col">
-                                                 <p class="mb-0 f6 color-fg-muted">
-                                                     <span class="d-inline-block mr-3">
-                                                        <span class="repo-language-color" v-bind:style="{ backgroundColor: this.color_data[0] }"></span>
-                                                        <span>ㅤ{{ this.repo_data[0].language }}</span>
-                                                    </span>
-                                                 </p>
-                                            </div>
-                                            <div class="col">
-                                                <p><i class="bi bi-star-fill"></i> stars: {{this.repo_data[0].stars}}</p>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="card cardd">
+                                <div class="card ">
                                     <div class="card-body">
                                         <a v-bind:href="this.repo_data[1].link" style="color: black;"><h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[1].repo }} </h4></a>
                                         <p>{{ this.repo_data[1].description }}</p>
-                                        <div class="row">
-                                            <div class="col">
-                                                 <p class="mb-0 f6 color-fg-muted">
-                                                     <span class="d-inline-block mr-3">
-                                                        <span class="repo-language-color" v-bind:style="{ backgroundColor: this.color_data[1] }"></span>
-                                                        <span>ㅤ{{ this.repo_data[1].language }}</span>
-                                                    </span>
-                                                 </p>
-                                            </div>
-                                            <div class="col">
-                                                <p><i class="bi bi-star-fill"></i> stars: {{this.repo_data[1].stars}}</p>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row py-3">
                             <div class="col">
-                                <div class="card cardd">
+                                <div class="card ">
                                     <div class="card-body">
                                         <a v-bind:href="this.repo_data[2].link" style="color: black;"><h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[2].repo }} </h4></a>
                                         <p>{{ this.repo_data[2].description }}</p>
-                                        <div class="row">
-                                            <div class="col">
-                                                 <p class="mb-0 f6 color-fg-muted">
-                                                     <span class="d-inline-block mr-3">
-                                                        <span class="repo-language-color" v-bind:style="{ backgroundColor: this.color_data[2] }"></span>
-                                                        <span>ㅤ{{ this.repo_data[2].language }}</span>
-                                                    </span>
-                                                 </p>
-                                            </div>
-                                            <div class="col">
-                                                <p><i class="bi bi-star-fill"></i> stars: {{this.repo_data[2].stars}}</p>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="card cardd">
+                                <div class="card ">
                                     <div class="card-body">
                                         <a v-bind:href="this.repo_data[3].link" style="color: black;"><h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[3].repo }} </h4></a>
                                         <p>{{ this.repo_data[3].description }}</p>
-                                        <div class="row">
-                                            <div class="col">
-                                                 <p class="mb-0 f6 color-fg-muted">
-                                                     <span class="d-inline-block mr-3">
-                                                        <span class="repo-language-color" v-bind:style="{ backgroundColor: this.color_data[3] }"></span>
-                                                        <span>ㅤ{{ this.repo_data[3].language }}</span>
-                                                    </span>
-                                                 </p>
-                                            </div>
-                                            <div class="col">
-                                                <p><i class="bi bi-star-fill"></i> stars: {{this.repo_data[3].stars}}</p>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

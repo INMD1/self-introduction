@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg fixed-top navbar-light" v-bind:style="{background: topcolor, transition: 'all ease 0.3s 0s' }">
+  <nav class=" navbar navbar-expand-lg fixed-top navbar-light" v-bind:style="{background: topcolor, transition: 'all ease 0.3s 0s' }">
     <div class="container">
       <a class="navbar-brand title" href="#">INMD1</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,13 +10,13 @@
         <a class="nav-item nav-link menu" href="#home">Home</a>
         <a class="nav-item nav-link menu" href="#about">About</a>
         <a class="nav-item nav-link menu" href="#skill">Skill</a>
-        <a class="nav-item nav-link menu" href="#Repository">Repository</a>
         <a class="nav-item nav-link menu" href="#project">project</a>
+        <a class="nav-item nav-link menu" href="#Repository">Repository</a>
       </div>
       </div>
     </div>
   </nav>
-  <article id="home" style="background-color: #C4D4F2;">
+  <article class="c_article" id="home" style="background-color: #C4D4F2;">
     <div class="py-5 h-100 align-items-center text-center d-flex img-fluid">
       <div class="container">
           <div class="row">
@@ -30,10 +30,10 @@
       </div>
     </div>
   </article>
-  <article id="about"><about /></article>
-  <article id="skill" style="background: #87A7B3"><skill /></article>
-  <article id="Repository" style="background: #435560"><Repository/></article>
-  <article></article>
+  <article class="c_article" id="about"><about /></article>
+  <article class="c_article" id="skill" style="background: #87A7B3"><skill /></article>
+  <article id="project"><project/></article>
+  <article class="c_article" id="Repository" style="background: #435560"><Repository/></article>
   <footer padless>
     <div class="col-12 py-2">
        <p class="menu" style="text-align: center;">이 사이트는 포트폴리오 용도로 제작 되었습니다.</p>
@@ -46,6 +46,7 @@
 import about from "./components/about.vue";
 import skill from "./components/skill.vue";
 import Repository from "./components/Repository.vue";
+import project from "./components/project.vue";
 
 export default {
   name: "App",
@@ -53,6 +54,7 @@ export default {
     about,
     skill,
     Repository,
+    project
   },
   data() {
     return {
