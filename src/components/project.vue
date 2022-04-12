@@ -3,34 +3,85 @@
     <div class="d_article" style="background: #D9D7F1">
             <div class="row py-deit">
                 <h1 style="font-weight: bold; font-size: 70px;">Projects</h1>
-                <p>여기 있는 프로젝트들은 제가 기억에 남는 프로젝트들을 한번 적어보았습니다</p>
+                <h5 style="font-weight: bold;">여기 있는 프로젝트들은 제가 기억에 남는 프로젝트들을 한번 적어보았습니다</h5>
             </div>
             <!-- Tabs를 넣어서 선택시 색이 바뀌게 이벤트 발생시키기 -->
             <div class="row">
-                <div class="col-md-6 col-xl-8">
-                     <img src="../assets/img/DoD_데시보드.png" class="img1 Tab_img">
+                <div class="col-md-8 col-xl-8">
+                    <div class="animate__animated animate__fadeIn" v-if="image == 0"><img src="../assets/img/DoD_데시보드.png" class="project-img1 Tab_img"></div>
+                    <div class="animate__animated animate__fadeIn" v-else-if="image == 1"><img src="../assets/img/Server-DashBoard.png" class="project-img2 Tab_img"></div>
+                    <div class="animate__animated animate__fadeIn" v-else> <img src="../assets/img/Deu_Food_gui.png" class="project-img2 Tab_img"></div>
                 </div>
-                 <div class="col-md-6 col-xl-4">
+                 <div class="col-md-6 col-xl-4 py-4">
                     <nav>
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">DoD_DashBoard</button>
-                            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
-                            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
+                            <button v-on:click="this.image = 0"
+                            class="nav-link active" id="tab1" data-bs-toggle="tab" 
+                            data-bs-target="#main" type="button" role="tab" 
+                            aria-controls="main" aria-selected="true">DoD_DashBoard</button>
+
+                            <button  v-on:click="this.image = 1"
+                            class="nav-link" id="tab2" data-bs-toggle="tab"
+                            data-bs-target="#serBoard" type="button" role="tab"
+                            aria-controls="serBoard" aria-selected="false">Server-DashBoard</button>
+
+                            <button v-on:click="this.image = 2"
+                            class="nav-link" id="tab3" data-bs-toggle="tab"
+                            data-bs-target="#widget" type="button" role="tab"
+                            aria-controls="widget" aria-selected="false">school-Food-Widget</button>
+
                         </div>
                     </nav>
                     <div class="tab-content" id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                            <div class="card">
+                        <div class="tab-pane fade show active" id="main" role="tabpanel" aria-labelledby="tab1">
+                            <div class="card card_t" >
                                 <div class="card_body Tab_card">
-                                    <h2 class="card-title py-1" style="font-weight: Bold;">DoD_DashBoard</h2>
-                                    <p class="card-text">이 프로젝트는 휴학생때 학교 동아리방에 동아리원들이 학교 소식을 한꺼번에 볼수 있게 하기위해 만든 프로젝트입니다.</p>
-
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <h2 class="card-title py-1" style="font-weight: Bold;">🤔What is  DoD_DashBoard?</h2>
+                                    <p class="card-text">
+                                        이 프로젝트는 휴학생때 학교 동아리방에 동아리원들이 학교 소식을 한꺼번에 볼수 있게 하기위해 만든 프로젝트입니다.
+                                    </p>
+                                    <h3 style="font-weight: Bold;">⚙️기능</h3>
+                                    <p>학교에서 나오는 공지, 식단공지 제공<br>
+                                    닐씨 제공<br>
+                                    주기적으로 정보업데이트<br>
+                                    유튜브 라이브를 이용해서 음악제공</p>
+                                    <a href="https://github.com/asw-dod/DoD_DashBoard" class="btn btn-secondary"><i class="bi bi-github"></i> 레포 방문</a>
                                 </div>
                             </div>                
                         </div>
-                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
-                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+                        <div class="tab-pane fade" id="serBoard" role="tabpanel" aria-labelledby="tab2">
+                            <div class="card card_t" >
+                                <div class="card_body Tab_card">
+                                    <h2 class="card-title py-1" style="font-weight: Bold;">🤔What is  Server-DashBoard</h2>
+                                    <p class="card-text">
+                                        이 프로젝트는 서버를 관리할때 서버의 자원 활용률을 보기위해서 만든 프로젝트입니다.
+                                    </p>
+                                    <h3 style="font-weight: Bold;">⚙️기능</h3>
+                                    <p>CPU,Ram,Network 모니터링 제공</p>
+                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                        <a href="https://github.com/INMD1/server-dashboard" class="btn btn-secondary"><i class="bi bi-github"></i> 레포 방문</a>
+                                        <a href="https://github.com/INMD1/server-dashboard/releases" class="btn" style="background-color: #79dfc1;">사용해보기</a>                                   
+                                    </div>                                
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="tab-pane fade" id="widget" role="tabpanel" aria-labelledby="tab3">
+                            <div class="card card_t" >
+                                <div class="card_body Tab_card">
+                                    <h2 class="card-title py-1" style="font-weight: Bold;">🤔What is school-Food-Widget</h2>
+                                    <p class="card-text">
+                                        이 프로젝트는 학교에서 학식을 볼때 앱을 들어가서 봐야한다는 불편함 때문에 만든 프로젝트입니다.
+                                    </p>
+                                    <h3 style="font-weight: Bold;">⚙️기능</h3>
+                                    <p>위젯들 통해 앱 바로가기 학식식단 정보 제공<br>
+                                    앱 메인 페이지는 웹뷰로 DoD-dashboard 모바일 버전으로 제공</p>
+                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                        <a href="https://github.com/INMD1/deu_food_gui" class="btn btn-secondary"><i class="bi bi-github"></i> 레포 방문</a>
+                                        <a href="https://github.com/INMD1/deu_food_gui/releases" class="btn" style="background-color: #79dfc1;">사용해보기</a>                                   
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
                     </div>
                 </div>               
             </div>
@@ -38,6 +89,12 @@
 </template>
 <script>
 export default {
-    
+    data(){
+        return {
+            image : 0
+        }
+    },
+    method: {
+    }
 }
 </script>

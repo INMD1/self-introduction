@@ -30,8 +30,8 @@
       </div>
     </div>
   </article>
-  <article class="c_article" id="about"><about /></article>
-  <article class="c_article" id="skill" style="background: #87A7B3"><skill /></article>
+  <article id="about" style="background: #072635"><about /></article>
+  <article id="skill" style="background: #87A7B3"><skill /></article>
   <article id="project"><project/></article>
   <article class="c_article" id="Repository" style="background: #435560"><Repository/></article>
   <footer padless>

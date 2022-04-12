@@ -1,9 +1,7 @@
 <template>
   <div class="h-100 align-items-center d-flex">
-    <div class="container-fluid">
-      <div class="row py-5">
-        <div class="col mx-auto">
-          <div class="row">
+    <div class="container">
+          <div class="row py-5">
             <div class="col-md-6 col-lg-5">
               <img class="img_p" :src="require('../assets/img/bg.webp')" />
             </div>
@@ -11,11 +9,10 @@
               <h1 class="skill_top">나는 어떤언어를 쓸까?</h1>
               <p class="skill_low">
                 저는 이때까지 관심이 생긴걸 하거나 아니면 지인,선생님의 부탁으로
-                만든 프로그램이 있서요. <br />
-                그래서 주로 웹이나 프로그램을 만들때 필요한 언어로 개발이
+                만든 프로그램이 있서요.그래서 주로 웹이나 프로그램을 만들때 필요한 언어로 개발이
                 되었습니다.
               </p>
-              <div class="card card_S">
+              <div class="card card_Size">
                 <div class="card-body">
                   <h3 class="text-start">C</h3>
                   <div class="progress border rounded-pill shadow-none">
@@ -35,6 +32,16 @@
                       aria-valuemin="0"
                       aria-valuemax="100"
                       style="width: 30%; background: #b07219"
+                    ></div>
+                  </div>
+                  <h3 class="text-start py-2">Kotlin</h3>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      aria-valuenow="50"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 40%; background: #9C38F3"
                     ></div>
                   </div>
                   <h3 class="text-start py-2">vue</h3>
@@ -82,8 +89,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
   </div>
 </template>
 <script>
