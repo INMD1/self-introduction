@@ -1,94 +1,52 @@
 <template>
   <div class="h-100 align-items-center d-flex">
     <div class="container">
-          <div class="row py-5">
-            <div class="col-md-6 col-lg-5">
-              <img class="img_p" :src="require('../assets/img/bg.webp')" />
+      <div class="row py-5">
+        <div class="col-md-2 col-lg-3">
+          <img class="img_p" :src="require('../assets/img/code.jpg')" />
+        </div>
+        <div class="col-md-7 py-3">
+          <h1 class="skill_top">난 어떤걸 써보았을까?</h1>
+          <p class="skill_low">
+            아래에 있는 것들은 제가 프로젝트를 할때 써본 기술들입니다.<br />
+            그래서 다른 프로젝트에 가도 코드를 이애할수 있습니다.
+          </p>
+          <div class="row">
+            <div class="col-md-3">
+              <h5 class="card-title" style="font-weight: bold">
+                <img src="../assets/img/lang/Vue.png" class="icon" /> Vue
+              </h5>
+              <h6 class="text-muted card-subtitle mb-2">Router 사용</h6>
             </div>
-            <div class="col-md-6 py-3">
-              <h1 class="skill_top">나는 어떤언어를 쓸까?</h1>
-              <p class="skill_low">
-                저는 이때까지 관심이 생긴걸 하거나 아니면 지인,선생님의 부탁으로
-                만든 프로그램이 있서요.그래서 주로 웹이나 프로그램을 만들때 필요한 언어로 개발이
-                되었습니다.
-              </p>
-              <div class="card card_Size">
-                <div class="card-body">
-                  <h3 class="text-start">C</h3>
-                  <div class="progress border rounded-pill shadow-none">
-                    <div
-                      class="progress-bar"
-                      aria-valuenow="50"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      style="width: 40%; background: #555555"
-                    ></div>
-                  </div>
-                  <h3 class="text-start py-2">Java</h3>
-                  <div class="progress">
-                    <div
-                      class="progress-bar"
-                      aria-valuenow="50"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      style="width: 30%; background: #b07219"
-                    ></div>
-                  </div>
-                  <h3 class="text-start py-2">Kotlin</h3>
-                  <div class="progress">
-                    <div
-                      class="progress-bar"
-                      aria-valuenow="50"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      style="width: 40%; background: #9C38F3"
-                    ></div>
-                  </div>
-                  <h3 class="text-start py-2">vue</h3>
-                  <div class="progress">
-                    <div
-                      class="progress-bar"
-                      aria-valuenow="50"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      style="width: 60%; background: #41b883"
-                    ></div>
-                  </div>
-                  <h3 class="text-start py-2">javascript</h3>
-                  <div class="progress">
-                    <div
-                      class="progress-bar"
-                      aria-valuenow="50"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      style="width: 70%; background: #f1e05a"
-                    ></div>
-                  </div>
-                  <h3 class="text-start py-2">html</h3>
-                  <div class="progress">
-                    <div
-                      class="progress-bar"
-                      aria-valuenow="50"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      style="width: 90%; background: #e34c26"
-                    ></div>
-                  </div>
-                  <h3 class="text-start py-2">CSS</h3>
-                  <div class="progress">
-                    <div
-                      class="progress-bar"
-                      aria-valuenow="50"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      style="width: 40%; background: #563d7c"
-                    ></div>
-                  </div>
-                </div>
-              </div>
+            <div class="col-md-3">
+              <h5 class="card-title" style="font-weight: bold">
+                <img src="../assets/img/lang/javascript.png" class="icon" />
+                javascript
+              </h5>
+              <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
+            </div>
+            <div class="col-md-3">
+              <h5 class="card-title" style="font-weight: bold">
+                <img src="../assets/img/lang/node.png" class="icon" />
+                Node.js
+              </h5>
+              <h6 class="text-muted card-subtitle mb-2">
+                Express Api/사이트 개발
+              </h6>
+            </div>
+            <div class="col-md-3">
+              <h5 class="card-title" style="font-weight: bold">
+                <img src="../assets/img/lang/node.png" class="icon" />
+                Node.js
+              </h5>
+              <h6 class="text-muted card-subtitle mb-2">
+                Express Api/사이트 개발
+              </h6>
             </div>
           </div>
         </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>

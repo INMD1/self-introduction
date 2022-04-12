@@ -2,15 +2,15 @@
     <!-- 기본색상 -->
     <div class="d_article" style="background: #D9D7F1">
             <div class="row py-deit">
-                <h1 style="font-weight: bold; font-size: 70px;">Projects</h1>
+                <h1 style="font-weight: bold; font-size: 64px;">Projects</h1>
                 <h5 style="font-weight: bold;">여기 있는 프로젝트들은 제가 기억에 남는 프로젝트들을 한번 적어보았습니다</h5>
             </div>
             <!-- Tabs를 넣어서 선택시 색이 바뀌게 이벤트 발생시키기 -->
             <div class="row">
                 <div class="col-md-8 col-xl-8">
-                    <div class="animate__animated animate__fadeIn" v-if="image == 0"><img src="../assets/img/DoD_데시보드.png" class="project-img1 Tab_img"></div>
-                    <div class="animate__animated animate__fadeIn" v-else-if="image == 1"><img src="../assets/img/Server-DashBoard.png" class="project-img2 Tab_img"></div>
-                    <div class="animate__animated animate__fadeIn" v-else> <img src="../assets/img/Deu_Food_gui.png" class="project-img2 Tab_img"></div>
+                    <div class="animate__animated animate__fadeIn " v-if="image == 0"><img src="../assets/img/DoD_데시보드.png" class="center"></div>
+                    <div class="animate__animated animate__fadeIn" v-else-if="image == 1"><img src="../assets/img/Server-DashBoard.png" class="center"></div>
+                    <div class="animate__animated animate__fadeIn" v-else> <img src="../assets/img/Deu_Food_gui.png" class="center-2"></div>
                 </div>
                  <div class="col-md-6 col-xl-4 py-4">
                     <nav>
@@ -29,7 +29,6 @@
                             class="nav-link" id="tab3" data-bs-toggle="tab"
                             data-bs-target="#widget" type="button" role="tab"
                             aria-controls="widget" aria-selected="false">school-Food-Widget</button>
-
                         </div>
                     </nav>
                     <div class="tab-content" id="nav-tabContent">

@@ -11,7 +11,6 @@
         <a class="nav-item nav-link menu" href="#about">About</a>
         <a class="nav-item nav-link menu" href="#skill">Skill</a>
         <a class="nav-item nav-link menu" href="#project">project</a>
-        <a class="nav-item nav-link menu" href="#Repository">Repository</a>
       </div>
       </div>
     </div>
@@ -30,10 +29,9 @@
       </div>
     </div>
   </article>
-  <article id="about" style="background: #072635"><about /></article>
-  <article id="skill" style="background: #87A7B3"><skill /></article>
+  <article class="c_article" id="about" style="background: #072635"><about /></article>
+  <article class="c_article" id="skill" style="background: #87A7B3"><skill /></article>
   <article id="project"><project/></article>
-  <article class="c_article" id="Repository" style="background: #435560"><Repository/></article>
   <footer padless>
     <div class="col-12 py-2">
        <p class="menu" style="text-align: center;">이 사이트는 포트폴리오 용도로 제작 되었습니다.</p>
@@ -45,7 +43,6 @@
 <script>
 import about from "./components/about.vue";
 import skill from "./components/skill.vue";
-import Repository from "./components/Repository.vue";
 import project from "./components/project.vue";
 
 export default {
@@ -53,7 +50,6 @@ export default {
   components: {
     about,
     skill,
-    Repository,
     project
   },
   data() {
