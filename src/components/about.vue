@@ -2,6 +2,12 @@
   <div class="h-100 py-5 align-items-center d-flex">
     <div class="container text-center">
       <div class="row">
+        <div class="col-md-2 mx-auto p-3 open">
+          <img
+            class="myicon d-block about-icon"
+            src="https://avatars.githubusercontent.com/u/87979171?v=4"
+          />
+        </div>
         <div class="col-md-8 p-5">
           <h2
             class="text-start"
@@ -19,8 +25,8 @@
           >
             안녕하세요! 중학교때부터 앱인벤터라는 블록 코딩이라는 것을 시작해서
             고등학교때는 웹 사이트를 제작을 하고 점점 성장해 대학교에 와서는
-            간단한 서버 운용, 프로그램, 제작 등등 할수 있고 더 많은 걸 하기 위해 조금더
-            성장하고 있는 INMD입니다!
+            간단한 서버 운용, 프로그램, 제작 등등 할수 있고 더 많은 걸 하기 위해
+            조금더 성장하고 있는 INMD입니다!
           </p>
           <div class="row">
             <div class="col">
@@ -35,14 +41,13 @@
                 연락처
               </h1>
               <div class="row d-flex">
-                <div class="col-6">
+                <div class="col-md-6">
                   <p
                     style="
                       font-size: 20px;
                       font-weight: bold;
                       color: rgb(255, 255, 255);
-                    "
-                  >
+                    ">
                     📧 이메일
                   </p>
                   <p
@@ -55,7 +60,7 @@
                     lyw541594@(Gmail)<br />
                   </p>
                 </div>
-                <div class="col">
+                <div class="col-md-6">
                   <p
                     style="
                       font-size: 20px;
@@ -85,9 +90,9 @@
             </div>
           </div>
         </div>
-        <div class="col-md-2 mx-auto p-3">
+        <div class="col-md-2 mx-auto p-3 hide">
           <img
-            class="myicon d-block rounded-circle img-fluid"
+            class="myicon d-block about-icon"
             src="https://avatars.githubusercontent.com/u/87979171?v=4"
           />
         </div>

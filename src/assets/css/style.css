@@ -87,12 +87,11 @@ body {
         padding-bottom: 1rem !important;
     }
 
-    .Repo_title{
-        color: var(--bs-gray-100);font-weight: bold; font-size: 40px;
+    .hide{
+        display: none;
     }
 
-    .card_t {
-        width: 90vw;
-        height: auto;
+    .open{
+        display: inline;
     }
 }

@@ -9,5 +9,6 @@ import "./assets/css/Card.css";
 import "./assets/css/image_text.css";
 import 'animate.css';
 
+
 createApp(App)
   .mount('#app')

@@ -8,7 +8,7 @@
             <!-- Tabs를 넣어서 선택시 색이 바뀌게 이벤트 발생시키기 -->
             <div class="row">
                 <div class="col-md-8 col-xl-8">
-                    <div class="animate__animated animate__fadeIn " v-if="image == 0"><img src="../assets/img/DoD_데시보드.png" class="center"></div>
+                    <div class="animate__animated animate__fadeIn " v-if="image == 0"><img src="../assets/img/DoD_데시보드.svg" class="center"></div>
                     <div class="animate__animated animate__fadeIn" v-else-if="image == 1"><img src="../assets/img/Server-DashBoard.png" class="center"></div>
                     <div class="animate__animated animate__fadeIn" v-else> <img src="../assets/img/Deu_Food_gui.png" class="center-2"></div>
                 </div>
