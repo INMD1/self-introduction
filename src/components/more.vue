@@ -11,7 +11,7 @@
           style="margin-left: auto; margin-left: auto"
         >
           <div class="row">
-            <div class="col-md-4 col-lg-5">
+            <div class="col-md-4 col-lg-5 botton">
               <div class="card more_card">
                 <div class="card-body card_center" >
                   <p class="card-title" style="font-size: 50px ; font-weight: Bold;"><i class="bi bi-github"></i> Github</p>
@@ -31,7 +31,7 @@
               </div>
             </div>
             <div class="col-md-3 col-lg-2 col-xl-1"></div>
-            <div class="col-md-4 col-lg-5">
+            <div class="col-md-4 col-lg-5 botton">
               <div class="card more_card">
                 <div class="card-body card_center">
                   <p class="card-title" style="font-size: 50px ; font-weight: Bold;"><i class="bi bi-archive"></i> Amview</p>
