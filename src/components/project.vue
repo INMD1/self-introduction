@@ -1,137 +1,98 @@
-<template>
-            <div class="h-100 r d-flex align-items-center">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col py-5">
-                        <h1 style="color: var(--bs-gray-100);font-weight: bold;font-size: 81px;">Project</h1>
-                        <p style="color: rgb(255,255,255);font-size: 23px;">제가 만들 프로젝트 들이에요. 한번 보고가는건 어때요?</p>
-                    </div>
+<template >
+    <!-- 기본색상 -->
+    <div class="d_article" style="background: #557B83">
+            <div class="row py-deit">
+                <h1 class="ME">My Projects</h1>
+                <h5 style="text-align: center; font-weight: Bold;">많은 프로젝트를 해보았지만 대표적인 프로젝트를 보여드리겠습니다</h5>
+            </div>
+            <div class="row ">
+                <div class="col-md-8 col-xl-8">
+                    <div class="animate__animated animate__fadeIn " v-if="image == 0"><img src="../assets/img/DoD_데시보드.svg" class="center"></div>
+                    <div class="animate__animated animate__fadeIn" v-else-if="image == 1"><img src="../assets/img/Server-DashBoard.svg" class="center"></div>
+                    <div class="animate__animated animate__fadeIn" v-else> <img src="../assets/img/Deu_Food_gui.svg" class="center-2"></div>
                 </div>
-                <div class="row py-5">
-                    <div class="col-md-8">
-                        <div class="row row-cols-2">
-                            <div class="col">
-                                <div class="card cardd">
-                                    <div class="card-body">
-                                        <a v-bind:href="this.repo_data[0].link" style="color: black;"><h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[0].repo }} </h4></a>
-                                        <p>{{ this.repo_data[0].description }}</p>
-                                        <div class="row">
-                                            <div class="col">
-                                                 <p class="mb-0 f6 color-fg-muted">
-                                                     <span class="d-inline-block mr-3">
-                                                        <span>언어:</span>
-                                                        <span>ㅤ{{ this.repo_data[0].language }}</span>
-                                                    </span>
-                                                 </p>
-                                            </div>
-                                            <div class="col">
-                                                <p><i class="bi bi-star-fill"></i> stars: {{this.repo_data[0].stars}}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="card cardd">
-                                    <div class="card-body">
-                                        <a v-bind:href="this.repo_data[1].link" style="color: black;"><h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[1].repo }} </h4></a>
-                                        <p>{{ this.repo_data[1].description }}</p>
-                                        <div class="row">
-                                            <div class="col">
-                                                 <p class="mb-0 f6 color-fg-muted">
-                                                     <span class="d-inline-block mr-3">
-                                                        <span>언어:</span>
-                                                        <span>ㅤ{{ this.repo_data[1].language }}</span>
-                                                    </span>
-                                                 </p>
-                                            </div>
-                                            <div class="col">
-                                                <p><i class="bi bi-star-fill"></i> stars: {{this.repo_data[1].stars}}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                 <div class="col-md-6 col-xl-4 py-4">
+                    <nav class="">
+                        <div class="project_nav nav nav-tabs" id="nav-tab" role="tablist">
+                            <button v-on:click="this.image = 0"
+                            class="nav-link active" id="tab1" data-bs-toggle="tab" 
+                            data-bs-target="#main" type="button" role="tab" 
+                            aria-controls="main" aria-selected="true">DoD_DashBoard</button>
+
+                            <button  v-on:click="this.image = 1"
+                            class="nav-link" id="tab2" data-bs-toggle="tab"
+                            data-bs-target="#serBoard" type="button" role="tab"
+                            aria-controls="serBoard" aria-selected="false">Server-DashBoard</button>
+
+                            <button v-on:click="this.image = 2"
+                            class="nav-link" id="tab3" data-bs-toggle="tab"
+                            data-bs-target="#widget" type="button" role="tab"
+                            aria-controls="widget" aria-selected="false">school-Food-Widget</button>
                         </div>
-                        <div class="row py-3">
-                            <div class="col py-2">
-                                <div class="card cardd">
-                                    <div class="card-body">
-                                        <a v-bind:href="this.repo_data[2].link" style="color: black;"><h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[2].repo }} </h4></a>
-                                        <p>{{ this.repo_data[2].description }}</p>
-                                        <div class="row">
-                                            <div class="col">
-                                                 <p class="mb-0 f6 color-fg-muted">
-                                                     <span class="d-inline-block mr-3">
-                                                        <span>언어:</span>
-                                                        <span>ㅤ{{ this.repo_data[2].language }}</span>
-                                                    </span>
-                                                 </p>
-                                            </div>
-                                            <div class="col">
-                                                <p><i class="bi bi-star-fill"></i> stars: {{this.repo_data[2].stars}}</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="main" role="tabpanel" aria-labelledby="tab1">
+                            <div class="card card_t" >
+                                <div class="card_body Tab_card">
+                                    <h2 class="card-title py-1" style="font-weight: Bold;">🤔What is  DoD_DashBoard?</h2>
+                                    <p class="card-text">
+                                        이 프로젝트는 휴학생때 학교 동아리방에 동아리원들이 학교 소식을 한꺼번에 볼수 있게 하기위해 만든 프로젝트입니다.
+                                    </p>
+                                    <h3 style="font-weight: Bold;">⚙️기능</h3>
+                                    <p>학교에서 나오는 공지, 식단공지 제공<br>
+                                    닐씨 제공<br>
+                                    주기적으로 정보업데이트<br>
+                                    유튜브 라이브를 이용해서 음악제공</p>
+                                    <a href="https://github.com/asw-dod/DoD_DashBoard" class="btn btn-secondary"><i class="bi bi-github"></i> 레포 방문</a>
                                 </div>
-                            </div>
-                            <div class="col">
-                                <div class="card cardd">
-                                    <div class="card-body">
-                                        <a v-bind:href="this.repo_data[3].link" style="color: black;"><h4><i class="bi bi-journal-bookmark"></i>  {{ this.repo_data[3].repo }} </h4></a>
-                                        <p>{{ this.repo_data[3].description }}</p>
-                                        <div class="row">
-                                            <div class="col">
-                                                 <p class="mb-0 f6 color-fg-muted">
-                                                     <span class="d-inline-block mr-3">
-                                                        <span>언어:</span>
-                                                        <span>ㅤ{{ this.repo_data[3].language }}</span>
-                                                    </span>
-                                                 </p>
-                                            </div>
-                                            <div class="col">
-                                                <p><i class="bi bi-star-fill"></i> stars: {{this.repo_data[3].stars}}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            </div>                
                         </div>
+                        <div class="tab-pane fade" id="serBoard" role="tabpanel" aria-labelledby="tab2">
+                            <div class="card card_t" >
+                                <div class="card_body Tab_card">
+                                    <h2 class="card-title py-1" style="font-weight: Bold;">🤔What is  Server-DashBoard</h2>
+                                    <p class="card-text">
+                                        이 프로젝트는 서버를 관리할때 서버의 자원 활용률을 보기위해서 만든 프로젝트입니다.
+                                    </p>
+                                    <h3 style="font-weight: Bold;">⚙️기능</h3>
+                                    <p>CPU,Ram,Network 모니터링 제공</p>
+                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                        <a href="https://github.com/INMD1/server-dashboard" class="btn btn-secondary"><i class="bi bi-github"></i> 레포 방문</a>
+                                        <a href="https://github.com/INMD1/server-dashboard/releases" class="btn" style="background-color: #79dfc1;">사용해보기</a>                                   
+                                    </div>                                
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="tab-pane fade" id="widget" role="tabpanel" aria-labelledby="tab3">
+                            <div class="card card_t" >
+                                <div class="card_body Tab_card">
+                                    <h2 class="card-title py-1" style="font-weight: Bold;">🤔What is school-Food-Widget</h2>
+                                    <p class="card-text">
+                                        이 프로젝트는 학교에서 학식을 볼때 앱을 들어가서 봐야한다는 불편함 때문에 만든 프로젝트입니다.
+                                    </p>
+                                    <h3 style="font-weight: Bold;">⚙️기능</h3>
+                                    <p>위젯들 통해 앱 바로가기 학식식단 정보 제공<br>
+                                    앱 메인 페이지는 웹뷰로 DoD-dashboard 모바일 버전으로 제공</p>
+                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                        <a href="https://github.com/INMD1/deu_food_gui" class="btn btn-secondary"><i class="bi bi-github"></i> 레포 방문</a>
+                                        <a href="https://github.com/INMD1/deu_food_gui/releases" class="btn" style="background-color: #79dfc1;">사용해보기</a>                                   
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>                       
                     </div>
-                    <div class="col">
-                        <div class="card" style="height: 364px;">
-                            <div class="card-header">
-                                <h5 class="mb-0">지금까지 만든 프로젝트</h5>
-                            </div>
-                            <div class="card-body" style="overflow:scroll;">
-                                <div class="col py-2 " v-for="item in all_data" :key="item"> 
-                                        <a v-bind:href="item.svn_url" style="color: black;"><h4><i class="bi bi-journal-bookmark"> </i>  {{ item.name }} </h4></a>
-                                        <p>{{ item.description }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div>               
             </div>
         </div>
 </template>
 <script>
-import axios from "axios";
-
 export default {
-    data() {
+    data(){
         return {
-            repo_data : [{"owner":"INMD1","repo":"DoD_app_vue_container","link":"https://github.com/asw-dod/dod_app_vue","description":"모바일 전용웹","language":"Vue","stars":2,"forks":0},
-                         {"owner":"INMD1","repo":"Deu_food_api","link":"https://github.com/asw-dod/Deu_food_api","description":"동의대 기숙사, 학식 정보를 가공해서 보여주는 APi 입니다.","language":"JavaScript","stars":0,"forks":0},
-                         {"owner":"INMD1","repo":"DoD_DashBoard ","link":"https://github.com/asw-dod/DoD_DashBoard","description":"학교 공지사항이나 기타 정보를 한번에 보여줌니다.","language":"Vue","stars":0,"forks":0},
-                         {"owner":"INMD1","repo":"deu_food_gui","link":"https://github.com/INMD1/deu_food_gui","description":"학교앱의 불편한 부분을 직접 만들어서 씀","language":"Kotlin","stars":0,"forks":0}],
-            color_data: [],
-            all_data: [],
+            image : 0
         }
     },
-    async mounted() {
-        const all_repo = await axios.get("https://api.github.com/users/INMD1/repos");
-        this.all_data = all_repo.data; 
+    method: {
     }
 }
 </script>
