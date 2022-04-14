@@ -1,20 +1,19 @@
 <template >
     <!-- 기본색상 -->
-    <div class="d_article" style="background: #D9D7F1">
+    <div class="d_article" style="background: #557B83">
             <div class="row py-deit">
-                <h1 style="font-weight: bold; font-size: 64px;">Projects</h1>
-                <h5 style="font-weight: bold;">여기 있는 프로젝트들은 제가 기억에 남는 프로젝트들을 한번 적어보았습니다</h5>
+                <h1 class="ME">My Projects</h1>
+                <h5 style="text-align: center; font-weight: Bold;">많은 프로젝트를 해보았지만 대표적인 프로젝트를 보여드리겠습니다</h5>
             </div>
-            <!-- Tabs를 넣어서 선택시 색이 바뀌게 이벤트 발생시키기 -->
-            <div class="row">
+            <div class="row ">
                 <div class="col-md-8 col-xl-8">
                     <div class="animate__animated animate__fadeIn " v-if="image == 0"><img src="../assets/img/DoD_데시보드.svg" class="center"></div>
-                    <div class="animate__animated animate__fadeIn" v-else-if="image == 1"><img src="../assets/img/Server-DashBoard.png" class="center"></div>
-                    <div class="animate__animated animate__fadeIn" v-else> <img src="../assets/img/Deu_Food_gui.png" class="center-2"></div>
+                    <div class="animate__animated animate__fadeIn" v-else-if="image == 1"><img src="../assets/img/Server-DashBoard.svg" class="center"></div>
+                    <div class="animate__animated animate__fadeIn" v-else> <img src="../assets/img/Deu_Food_gui.svg" class="center-2"></div>
                 </div>
                  <div class="col-md-6 col-xl-4 py-4">
-                    <nav>
-                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <nav class="">
+                        <div class="project_nav nav nav-tabs" id="nav-tab" role="tablist">
                             <button v-on:click="this.image = 0"
                             class="nav-link active" id="tab1" data-bs-toggle="tab" 
                             data-bs-target="#main" type="button" role="tab" 
@@ -80,7 +79,7 @@
                                     </div>
                                 </div>
                             </div> 
-                        </div>
+                        </div>                       
                     </div>
                 </div>               
             </div>

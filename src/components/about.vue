@@ -23,7 +23,7 @@
               color: rgb(255, 255, 255);
             "
           >
-            안녕하세요! 중학교때부터 앱인벤터라는 블록 코딩이라는 것을 시작해서
+            중학교때부터 앱인벤터라는 블록 코딩이라는 것을 시작해서
             고등학교때는 웹 사이트를 제작을 하고 점점 성장해 대학교에 와서는
             간단한 서버 운용, 프로그램, 제작 등등 할수 있고 더 많은 걸 하기 위해
             조금더 성장하고 있는 INMD입니다!
@@ -98,74 +98,6 @@
         </div>
       </div>
       <br />
-      <h1 style="color: rgb(255, 255, 255)">사이트</h1>
-      <p style="color: rgb(255, 255, 255)">
-        저와 관련된 사이트 들이에요. 한번 들어가보세요!
-      </p>
-      <div class="row align-items-center">
-        <div class="col-sm mb-4">
-          <div class="card_1">
-            <div class="face face1">
-              <div class="content">
-                <div class="icon" style="background: #171515">
-                  <i class="bi bi-github" aria-hidden="true"></i>
-                  <h3 class="about_title">Github</h3>
-                </div>
-              </div>
-            </div>
-            <div class="face face2">
-              <div class="content">
-                <h3>
-                  <a href="https://github.com/INMD1" target="_blank">Github</a>
-                </h3>
-                <p>제가 만든 프로젝트를 저장하는 곳이에요.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm mb-4">
-          <div class="card_1">
-            <div class="face face1">
-              <div class="content">
-                <div class="icon" style="background: #2eb086">
-                  <i class="bi bi-chat-left-fill" aria-hidden="true"></i>
-                  <h3 class="about_title">Blog</h3>
-                </div>
-              </div>
-            </div>
-            <div class="face face2">
-              <div class="content">
-                <h3>
-                  <a href="https://blog.powerinmd.com" target="_blank">Blog</a>
-                </h3>
-                <p>블로그는 일상, 정보, 프로젝트 개발일지를 적어놓아요</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm mb-4">
-          <div class="card_1">
-            <div class="face face1">
-              <div class="content">
-                <div class="icon" style="background: #6eadd4">
-                  <i class="bi bi-motherboard" aria-hidden="true"></i>
-                  <h3 class="about_title">Amview</h3>
-                </div>
-              </div>
-            </div>
-            <div class="face face2">
-              <div class="content">
-                <h3>
-                  <a href="https://amview.powerinmd.com/" target="_blank"
-                    >Amview</a
-                  >
-                </h3>
-                <p>백준 라비다 등 푼 문제들을 여기에서 올려요</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>

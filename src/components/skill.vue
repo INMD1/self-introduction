@@ -3,12 +3,12 @@
     <div class="container">
       <div class="row">
         <div class="py-5">
-          <h1 class="skill_top">난 어떤걸 써보았을까?</h1>
+          <h1 class="skill_top">DEVELOPMENT SKILLS</h1>
           <p class="skill_low">
             아래에 있는 것들은 제가 프로젝트를 할때 써본 기술들입니다.<br />
             그래서 다른 프로젝트에 가도 코드를 이해할수 있습니다.
           </p>
-          <h3 style="font-weight: bold">언어/프레임워크</h3>
+          <h3 style="font-weight: bold">lang / FrameWork</h3>
           <hr />
           <div class="row">
             <div class="col-md-3">
@@ -32,7 +32,7 @@
                 Node.js
               </h5>
               <h6 class="text-muted card-subtitle mb-2">
-                CI, Express Api/사이트 개발
+                CLI, Express Api/사이트 개발
               </h6>
             </div>
             <div class="col-md-3">
@@ -81,9 +81,15 @@
           <div class="row">
             <div class="col-md-3">
               <h5 class="card-title" style="font-weight: bold">
-                <img src="../assets/img/lang/Python.png" />Python
+                <img src="../assets/img/lang/css.png" class="icon" /> CSS
               </h5>
-              <h6 class="text-muted card-subtitle mb-2"></h6>
+              <h6 class="text-muted card-subtitle mb-2">웹 디자인 활용</h6>
+            </div>
+            <div class="col-md-3">
+              <h5 class="card-title" style="font-weight: bold">
+                <img src="../assets/img/lang/ionic.png" class="icon" /> Ionic
+              </h5>
+              <h6 class="text-muted card-subtitle mb-2">하이브리앱 개발 활용</h6>
             </div>
           </div>
           <h3 style="padding-top: 3rem; font-weight: bold">IDE</h3>
@@ -91,14 +97,14 @@
           <div class="row">
             <div class="col-md-3">
               <h5 class="card-title" style="font-weight: bold">
-                <img src="../assets/img/program/vs.png" class="icon" />Visual
+                <img src="../assets/img/program/vs.png" class="icon" /> Visual
                 Studio
               </h5>
               <h6 class="text-muted card-subtitle mb-2">C언어 개발 활용</h6>
             </div>
             <div class="col-md-3">
               <h5 class="card-title" style="font-weight: bold">
-                <img src="../assets/img/program/vs.png" class="icon" />Visual
+                <img src="../assets/img/program/vs.png" class="icon" /> Visual
                 Studio code
               </h5>
               <h6 class="text-muted card-subtitle mb-2">
@@ -107,10 +113,8 @@
             </div>
             <div class="col-md-3">
               <h5 class="card-title" style="font-weight: bold">
-                <img
-                  src="../assets/img/program/android.png"
-                  class="icon"
-                />android studio
+                <img src="../assets/img/program/android.png" class="icon" />
+                android studio
               </h5>
               <h6 class="text-muted card-subtitle mb-2">
                 안드로이드앱 개발 활용
@@ -118,10 +122,8 @@
             </div>
             <div class="col-md-3">
               <h5 class="card-title" style="font-weight: bold">
-                <img
-                  src="../assets/img/program/intellij.png"
-                  class="icon"
-                />intellij
+                <img src="../assets/img/program/intellij.png" class="icon" />
+                intellij
               </h5>
               <h6 class="text-muted card-subtitle mb-2">
                 코틀린/자바 개발 활용
@@ -129,7 +131,7 @@
             </div>
           </div>
 
-          <h3 style="padding-top: 3rem; font-weight: bold">그외</h3>
+          <h3 style="padding-top: 3rem; font-weight: bold">Other</h3>
           <hr />
           <div class="row">
             <div class="col-md-3">
@@ -148,7 +150,9 @@
               <h5 class="card-title" style="font-weight: bold">
                 <img src="../assets/img/program/git.png" class="icon" />Git
               </h5>
-              <h6 class="text-muted card-subtitle mb-2">기본내용 숙지/깃허브 활용</h6>
+              <h6 class="text-muted card-subtitle mb-2">
+                기본내용 숙지/깃허브 활용
+              </h6>
             </div>
           </div>
         </div>
