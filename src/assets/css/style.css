@@ -36,20 +36,11 @@ body {
 
 .l_article {
     width: 100%;
-    padding: 0 7%;
+    padding: 0 6%;
     display: table;
     margin: 0;
     max-width: none;
-    height: 50vh;
-}
-
-.d_article {
-    width: 100%;
-    padding: 1% 4%;
-    display: table;
-    margin: 0;
-    max-width: none;
-    height: 100vh;
+    height:
 }
 
 
