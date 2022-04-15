@@ -13,14 +13,11 @@
     src: url("../font/BMHANNAAir_ttf.ttf");
 }
 
-html
-{
+html,
+body {
     margin: 0;
     height: 100%;
     width: 100%;
-}
-body {
- overflow-x: hidden;
 }
 
 /* 페이지관리 차원 디자인 클래스 */
@@ -36,11 +33,20 @@ body {
 
 .l_article {
     width: 100%;
-    padding: 0 6%;
+    padding: 0 7%;
     display: table;
     margin: 0;
     max-width: none;
-    height:
+    height: 50vh;
+}
+
+.d_article {
+    width: 100%;
+    padding: 1% 4%;
+    display: table;
+    margin: 0;
+    max-width: none;
+    height: 100vh;
 }
 
 
