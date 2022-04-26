@@ -77,6 +77,12 @@ body {
     background-color: white;
     border-radius: 5px;
 }
+
+.ul-col-center {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
 /* 모바일일떄 디자인이 수정되는 곳 */
 @media (max-width: 980px) {
     .img1 {
