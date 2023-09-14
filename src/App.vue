@@ -2,7 +2,7 @@
   <nav class=" navbar navbar-expand-lg fixed-top navbar-light" v-bind:style="{background: topcolor, transition: 'all ease 0.3s 0s' }">
     <div class="container">
       <a class="navbar-brand title" href="#">INMD1</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" @click="clicks = !clicks, whitechange()" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -57,13 +57,19 @@ export default {
   data() {
     return {
       topcolor: "#00ff0000",
-      scrollPostion: 0
+      scrollPostion: 0,
+      clicks : false,
     }
   },
   created () {
     window.addEventListener('scroll', this.handleScroll);
   },
   methods: {
+    whitechange() {
+      if(this.clicks == true){
+        this.topcolor = "white"
+      }
+    },
     handleScroll () {
       if(window.pageYOffset < 5){
         this.topcolor = "#00ff0000"
