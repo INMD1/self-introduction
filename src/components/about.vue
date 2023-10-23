@@ -2,13 +2,13 @@
   <div class="h-100 py-5 align-items-center d-flex">
     <div class="container text-center">
       <div class="row">
-        <div class="col-md-2 mx-auto p-3 open">
+        <div class="col-lg-2 mx-auto p-3 open">
           <img
             class="myicon d-block about-icon"
             src="https://avatars.githubusercontent.com/u/87979171?v=4"
           />
         </div>
-        <div class="col-md-8 p-5">
+        <div class="col-lg-8 p-5">
           <h2
             class="text-start"
             style="color: rgb(255, 255, 255); font-weight: bold"
@@ -90,7 +90,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-2 mx-auto p-3 hide">
+        <div class="col-lg-2 mx-auto p-3 hide">
           <img
             class="myicon d-block about-icon"
             src="https://avatars.githubusercontent.com/u/87979171?v=4"

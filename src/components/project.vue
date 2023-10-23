@@ -6,12 +6,12 @@
                 <h5 style="text-align: center; font-weight: Bold;">많은 프로젝트를 해보았지만 대표적인 프로젝트를 보여드리겠습니다</h5>
             </div>
             <div class="row ">
-                <div class="col-md-8 col-xl-8">
+                <div class="col-lg-8 col-xl-8">
                     <div class="animate__animated animate__fadeIn " v-if="image == 0"><img src="../assets/img/DoD_데시보드.svg" class="center"></div>
                     <div class="animate__animated animate__fadeIn" v-else-if="image == 1"><img src="../assets/img/Server-DashBoard.svg" class="center"></div>
                     <div class="animate__animated animate__fadeIn" v-else> <img src="../assets/img/Deu_Food_gui.svg" class="center-2"></div>
                 </div>
-                 <div class="col-md-6 col-xl-4 py-4">
+                 <div class="col-lg-6 col-xl-4 py-4">
                     <nav class="">
                         <div class="project_nav nav nav-tabs" id="nav-tab" role="tablist">
                             <button v-on:click="this.image = 0"
@@ -56,9 +56,9 @@
                                     </p>
                                     <h3 style="font-weight: Bold;">⚙️기능</h3>
                                     <p>CPU,Ram,Network 모니터링 제공</p>
-                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                        <a href="https://github.com/INMD1/server-dashboard" class="btn btn-secondary"><i class="bi bi-github"></i> 레포 방문</a>
-                                        <a href="https://github.com/INMD1/server-dashboard/releases" class="btn" style="background-color: #79dfc1;">사용해보기</a>                                   
+                                    <div class="d-grid gap-2 d-lg-flex justify-content-lg-end">
+                                        <a href="https://github.com/INlg1/server-dashboard" class="btn btn-secondary"><i class="bi bi-github"></i> 레포 방문</a>
+                                        <a href="https://github.com/INlg1/server-dashboard/releases" class="btn" style="background-color: #79dfc1;">사용해보기</a>                                   
                                     </div>                                
                                 </div>
                             </div> 
@@ -73,9 +73,9 @@
                                     <h3 style="font-weight: Bold;">⚙️기능</h3>
                                     <p>위젯들 통해 앱 바로가기 학식식단 정보 제공<br>
                                     앱 메인 페이지는 웹뷰로 DoD-dashboard 모바일 버전으로 제공</p>
-                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                        <a href="https://github.com/INMD1/deu_food_gui" class="btn btn-secondary"><i class="bi bi-github"></i> 레포 방문</a>
-                                        <a href="https://github.com/INMD1/deu_food_gui/releases" class="btn" style="background-color: #79dfc1;">사용해보기</a>                                   
+                                    <div class="d-grid gap-2 d-lg-flex justify-content-lg-end">
+                                        <a href="https://github.com/INlg1/deu_food_gui" class="btn btn-secondary"><i class="bi bi-github"></i> 레포 방문</a>
+                                        <a href="https://github.com/INlg1/deu_food_gui/releases" class="btn" style="background-color: #79dfc1;">사용해보기</a>                                   
                                     </div>
                                 </div>
                             </div> 
