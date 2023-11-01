@@ -33,7 +33,7 @@
   <article class="c_article" id="about" style="background: #06113C"><about /></article>
   <article id="project"><project/></article>
   <article class="c_article" id="skill" style="background: #7CD1B8"><skill /></article>
-  <article class="l_article" style="background: #9FE6A0"><more/></article>
+  <article class="l_article" style="background: #9FE6A0;"><more/></article>
   <footer style="box-shadow: 6px -4px 5px #368f69; background: #729c72"> 
        <p class="menu py-1" style="text-align: center;">이 사이트는 포트폴리오 용도로 제작 되었습니다.<br>
        Web Made with <span style="color: #e25555">❤</span> by INMD1</p>

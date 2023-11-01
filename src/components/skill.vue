@@ -8,7 +8,7 @@
             아래에 있는 것들은 제가 프로젝트를 할때 써본 기술들입니다.<br />
             그래서 다른 프로젝트에 가도 코드를 이해할수 있습니다.
           </p>
-          <h3 style="font-weight: bold">lang / FrameWork</h3>
+          <h3 style="font-weight: bold">lang / FrameWork / CMS</h3>
           <hr />
           <div class="row">
             <div class="col-md-3">
@@ -90,6 +90,12 @@
                 <img src="../assets/img/lang/ionic.png" class="icon" /> Ionic
               </h5>
               <h6 class="text-muted card-subtitle mb-2">하이브리앱 개발 활용</h6>
+            </div>
+            <div class="col-md-3">
+              <h5 class="card-title" style="font-weight: bold">
+                <img src="../assets/img/lang/strapi.png" class="icon" /> Strapi
+              </h5>
+              <h6 class="text-muted card-subtitle mb-2">백엔드 API서버 활용</h6>
             </div>
           </div>
           <h3 style="padding-top: 3rem; font-weight: bold">IDE</h3>

@@ -6,17 +6,16 @@
 }
 
 .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 55vw;
+  display: flex;
+  justify-content: center;
+  width:60vw;
 }
 
 .center-2 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 40vw;
+  width: 50vw;
 }
 
 .about-icon {

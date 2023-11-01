@@ -11,9 +11,9 @@
                     <div class="animate__animated animate__fadeIn" v-else-if="image == 1"><img src="../assets/img/Server-DashBoard.svg" class="center"></div>
                     <div class="animate__animated animate__fadeIn" v-else> <img src="../assets/img/Deu_Food_gui.svg" class="center-2"></div>
                 </div>
-                 <div class="col-lg-6 col-xl-4 py-4">
-                    <nav class="">
-                        <div class="project_nav nav nav-tabs" id="nav-tab" role="tablist">
+                 <div class="col-lg-6 col-xl-4 py-4 card">
+                    <div class="card-header">
+                        <div class="card-header-tabs nav nav-tabs" id="nav-tab" role="tablist">
                             <button v-on:click="this.image = 0"
                             class="nav-link active" id="tab1" data-bs-toggle="tab" 
                             data-bs-target="#main" type="button" role="tab" 
@@ -29,7 +29,7 @@
                             data-bs-target="#widget" type="button" role="tab"
                             aria-controls="widget" aria-selected="false">school-Food-Widget</button>
                         </div>
-                    </nav>
+                    </div>
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="main" role="tabpanel" aria-labelledby="tab1">
                             <div class="card card_t" >
