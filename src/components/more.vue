@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" style="margin-bottom: 4vh;">
     <div class="row py-3">
       <h1 class="ME">Some More?</h1>
       <p class="ME_sub">좀 더 저에 대해서 알고 싶나요? 밑에 사이트를 방문해주세요!</p>
