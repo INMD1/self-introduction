@@ -13,7 +13,7 @@
 
 ### 깃허브 액션 수정
 레포 `self-introduction/.github/workflows/deploy.yml`가시면 CNAME있는데 그걸 지우면<br>
-깃허브 레포 URL로 자동 호스팅이 되고 따로 수정하면 그 ULR대로 호스팅이 됨니다.
+깃허브 레포 URL로 자동 호스팅이 되고 따로 수정하면 그 ULR대로 호스팅이 됨니다..
   
 # License
 MIT License입니다.
