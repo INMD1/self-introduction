@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Container, position } from "@chakra-ui/react";
+import NavBar from "./componets/Header";
+import Firstpage from "./componets/mainpage";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header style={{position:'fixed', width: '100vw'}}>
+        <NavBar />
       </header>
+      <Container maxW='8xl'>
+        <Firstpage />
+      </Container>
     </div>
   );
 }

@@ -2,15 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+
 import reportWebVitals from './reportWebVitals';
-import { NextUIProvider } from "@nextui-org/react";
+import { ChakraProvider } from '@chakra-ui/react'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <NextUIProvider>
+    <ChakraProvider>
       <App />
-    </NextUIProvider>
+    </ChakraProvider>
   </React.StrictMode>
 );
 
