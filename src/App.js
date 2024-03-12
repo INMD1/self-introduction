@@ -7,9 +7,7 @@ function App() {
       <header style={{position:'fixed', width: '100vw'}}>
         <NavBar />
       </header>
-      <Container maxW='8xl'>
         <Firstpage />
-      </Container>
     </div>
   );
 }
