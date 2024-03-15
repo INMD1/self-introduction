@@ -10,7 +10,7 @@ const NavBar = () => {
         >
             <Flex>
                 <Center>
-                    <Avatar p='2' src='https://bit.ly/dan-abramov'></Avatar>
+                    <Avatar p='2' src='https://avatars.githubusercontent.com/u/87979171?v=4'></Avatar>
                     <Heading size='lg'>INMD1</Heading>
                 </Center>
             </Flex>
