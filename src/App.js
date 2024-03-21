@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header style={{position:'fixed', width: '100vw'}}>
         <NavBar />
-      </header>
+          </header>
         <Firstpage />
     </div>
   );
