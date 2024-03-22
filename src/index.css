@@ -2,16 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@media (pointer: coarse) { 
+  /* 포인팅 장치가 있음(터치스크린, 모션 감지 센서) -> 휴대폰*/
+  onegrild {
+    order: 1;
+  }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  twogrild {
+    order: 2;
+  }
+
+  threegrild {
+    order: 3;
+  }
 }

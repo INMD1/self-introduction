@@ -1,20 +1,37 @@
-import { Center, Heading, Image } from '@chakra-ui/react'
+import { Center, Heading, Image, Card, Grid, GridItem } from "@chakra-ui/react";
 
 function mainpage() {
-    return (
-        //반응형 적용
-        <div class="grid lg:grid-rows-3 md:grid-flow-col gap-4" style={{ padding: "10%", backgroundColor: "#F8F1F1" }}>
-            <div class="lg:row-span-3 col-span-3 p-10" style={{borderRadius: "5%", backgroundColor: "#9BB8CD"}}>
-                <Heading size='2xl' >Hello World!</Heading>
-            </div>
-            <div class="lg:row-span-2 col-span-2" >
-                <Center>
-                    <Image style={{borderRadius: "50%", height: "40vh"}} src='https://avatars.githubusercontent.com/u/87979171?v=4'/>
-                </Center>
-            </div>
-            <div class="col-span-2 border-2" >3번째 레이어</div>
-        </div>
-    )
+  return (
+    //반응형 적용
+    <div
+      class="h-full flex grid justify-items-stretch  md:grid-flow-col lg:grid-rows-3 gap-8 pt-10"
+      style={{ padding: "10%", backgroundColor: "#F8F1F1" }}
+    >
+       <div className="col-span-3 lg:col-span-4 lg:row-span-3 order-3 sm:order-none">
+        <Card>
+          <div className="p-10">
+            <Heading size="2xl">Hello World!</Heading>
+            <Heading size="lg">여러분들 반가워요!_</Heading>
+          </div>
+        </Card>
+      </div>
+      <div class="lg:row-span-2 col-span-3 order-1 sm:order-none">
+        <Center>
+          <Image
+            className=" rounded-full w-auto h-40  md:h-80"
+            src="./logo.png"
+          />
+        </Center>
+      </div>
+      <div className="col-span-3 order-2 sm:order-none">
+        <Grid templateColumns="repeat(3, 1fr)" gap={1}>
+          <GridItem className="w-full sm:h-20 md:h-40" bg="blue.500" />
+          <GridItem className="w-full sm:h-20 md:h-40" bg="blue.500" />
+          <GridItem className="w-full sm:h-20 md:h-40" bg="blue.500" />
+        </Grid>
+      </div>
+    </div>
+  );
 }
 
 export default mainpage;
