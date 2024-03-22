@@ -8,7 +8,7 @@ const NavBar = () => {
                 <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
 
-                        <span class="self-center text-2xl font-semibold whitespace-nowrap">INMD1의 나른한곳</span>
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap" style={{fontWeight: "bold"}}>INMD1의 나른한곳</span>
                     </a>
                     <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                         <Button size='lg' variant='link' leftIcon={<FaGithub style={{ height: '3.5vh', width: 'auto' }} color='black' />} />
