@@ -3,7 +3,7 @@ import { Center, Heading, Image, Card, Grid, GridItem } from "@chakra-ui/react";
 function mainpage() {
   return (
     <div
-      className="h-full flex grid justify-items-stretch lg:grid-flow-col grid-rows-6 sm:grid-rows-4 gap-8 pt-10"
+      className="h-full flex grid justify-items-stretch lg:grid-flow-col grid-rows-9 sm:grid-rows-4 gap-8 pt-10"
       style={{ padding: "10%", backgroundColor: "#F8F1F1" }}
     >
       <div className="col-span-3 lg:col-span-4 row-span-3 order-3 sm:order-none">
@@ -14,10 +14,10 @@ function mainpage() {
           </div>
         </Card>
       </div>
-      <div className="row-span-2 col-span-3 order-1 sm:order-none">
+      <div className="row-span-2 col-span-3 order-1 pt-10 sm:order-none sm:pt-0">
         <Center>
           <Image
-            className="rounded-full w-auto h-56 pt-5 md:h-80"
+            className="rounded-full w-auto h-56  md:h-80"
             src="./logo.png"
           />
         </Center>
