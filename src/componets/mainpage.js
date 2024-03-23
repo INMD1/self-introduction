@@ -1,20 +1,43 @@
-import { Center, Heading, Image, Card, Grid, GridItem } from "@chakra-ui/react";
-
+import {
+  Center,
+  Heading,
+  Image,
+  Text,
+  Grid,
+  GridItem,
+  Button,
+  HStack
+} from "@chakra-ui/react";
 function mainpage() {
+  //mobile -> middle -> PC
   return (
     <div
-      className="h-full flex grid justify-items-stretch lg:grid-flow-col grid-rows-9 sm:grid-rows-4 gap-8 pt-10"
+      className="h-full flex grid justify-items-stretch lg:grid-cols-6 grid-rows-9 sm:grid-rows-5 gap-8 pt-10"
       style={{ padding: "10%", backgroundColor: "#F8F1F1" }}
     >
-      <div className="col-span-3 lg:col-span-4 row-span-3 order-3 sm:order-none">
-        <Card>
-          <div className="p-10">
-            <Heading size="2xl">Hello World!</Heading>
-            <Heading size="lg">여러분들 반가워요!_</Heading>
-          </div>
-        </Card>
+      <div className="col-span-3  lg:row-span-6 order-3 sm:order-none self-center">
+        <div className="p-10">
+          <Heading size="2xl">Hello World!</Heading>
+          <Heading size="lg">여러분들 반가워요!_👋</Heading>
+          <br />
+          <Heading size="lg">저는 INMD1 이고</Heading>
+          <br />
+          <Text fontSize="xl">
+            현재 대학교에서 응용소프트웨어를 전공하고 있는
+          </Text>
+          <Text fontSize="xl">
+            백엔드 지식을 가지고 있는 프론트 개발자 입니다.
+          </Text>
+        </div>
+        <div className="p-5">
+          <HStack>
+            <Button>>></Button>
+            <Text>다음 단계로 가볼까요?</Text>
+          </HStack>
+        </div>
       </div>
-      <div className="row-span-2 col-span-3 order-1 pt-10 sm:order-none sm:pt-0">
+      {/* 이미지 들어가는 곳 */}
+      <div className="row-span-3 col-span-3 order-1 pt-10 sm:order-none sm:pt-5">
         <Center>
           <Image
             className="rounded-full w-auto h-56  md:h-80"
@@ -22,14 +45,13 @@ function mainpage() {
           />
         </Center>
       </div>
-
-      <div className="hidden sm:block">test</div>
-
-      <div className="col-span-3 order-2 sm:order-none">
+      {/* 연락처 들어가는 곳 */}
+      <div className="p-5 row-span-2 order-2 sm:order-none sm:row-span-3 col-span-3 ">
+        <Heading size="lg">Contact</Heading>
         <Grid templateColumns="repeat(3, 1fr)" gap={1}>
-          <GridItem className="w-full md:h-40 sm:h-20 " bg="blue.500" />
-          <GridItem className="w-full md:h-40 sm:h-20" bg="blue.500" />
-          <GridItem className="w-full md:h-40 sm:h-20" bg="blue.500" />
+          <GridItem className="w-full h-28 sm:h-20 " bg="blue.500" />
+          <GridItem className="w-full h-28 sm:h-20" bg="blue.500" />
+          <GridItem className="w-full h-28 sm:h-20" bg="blue.500" />
         </Grid>
       </div>
     </div>
