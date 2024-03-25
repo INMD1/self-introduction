@@ -17,7 +17,7 @@ import { MdOutlineEmail } from "react-icons/md";
 
 function mainpage() {
   return (
-    <div className="h-full flex grid justify-items-stretch lg:grid-cols-4 grid-rows-9 sm:grid-rows-5 gap-8 pt-10" style={{ padding: "10%", backgroundColor: "#F5F5F5" }}>
+    <div className="w-full h-full flex grid justify-items-stretch lg:grid-cols-4 grid-rows-9 sm:grid-rows-5 gap-8 pt-10" style={{ padding: "10%", backgroundColor: "#F5F5F5" }}>
       {/* Introduction Section */}
       <div className="col-span-3 row-span-6 order-3 md:max-lg:col-span-2 sm:order-none sm:col-span-2 justify-self-end self-center">
         <Heading size="2xl">Hello World!</Heading>
@@ -43,13 +43,13 @@ function mainpage() {
       </div>
 
       {/* Contact Section */}
-      <div className="row-span-1 col-span-3 order-2 pt-16 sm:order-none sm:row-span-3 sm:pt-0 sm:col-span-2 wrap">
+      <div className="row-span-2 col-span-3 order-2 pt-16 sm:order-none sm:row-span-3 sm:pt-0 sm:col-span-2 wrap">
         <Heading size="lg">Contact</Heading>
         <HStack spacing='5vh' className="pt-5 sm:m-5">
           <Center>
-            <Box className="w-full h-20 sm:h-42">
+            <Box className="h-20 sm:h-42">
               <VStack>
-                <BsDiscord style={{ height: "2rem", width: 'auto' }} />
+                <BsDiscord style={{ height: "1rem", width: 'auto' }} />
                 <Text>Discord</Text>
                 <Text>ubuntu22.04.1lts</Text>
               </VStack>
@@ -58,20 +58,11 @@ function mainpage() {
           <Center>
             <Box className="w-full h-20 sm:h-42">
               <VStack>
-                <MdOutlineEmail style={{ height: "2rem", width: 'auto' }} />
+                <MdOutlineEmail style={{ height: "1rem", width: 'auto' }} />
                 <Text>Email</Text>
                 <Link href="mailto:lyw514549@gmail.com">lyw514549@gmail.com</Link>
               </VStack>
             </Box>
-          </Center>
-          <Center>
-              <Box className="w-full h-20 sm:h-42" >
-                <VStack>
-                  <FaLinkedin style={{ height: "2rem", width: 'auto' }} />
-                  <Text>Linkedin</Text>
-                  <Link href="https://www.linkedin.com/in/inmd1/">inmd1</Link>
-                </VStack>
-              </Box>
           </Center>
         </HStack>
       </div>
