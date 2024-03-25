@@ -9,14 +9,13 @@ import {
   HStack
 } from "@chakra-ui/react";
 function mainpage() {
-  //mobile -> middle -> PC
+  //mobile none -> middle md:max -> PC sm
   return (
     <div
       className="h-full flex grid justify-items-stretch lg:grid-cols-6 grid-rows-9 sm:grid-rows-5 gap-8 pt-10"
       style={{ padding: "10%", backgroundColor: "#F8F1F1" }}
     >
-      <div className="col-span-3  lg:row-span-6 order-3 sm:order-none self-center">
-        <div className="p-10">
+      <div className="col-span-3 lg:row-span-6 order-3 md:max-lg:col-span-2 sm:order-none self-center">
           <Heading size="2xl">Hello World!</Heading>
           <Heading size="lg">여러분들 반가워요!_👋</Heading>
           <br />
@@ -28,7 +27,6 @@ function mainpage() {
           <Text fontSize="xl">
             백엔드 지식을 가지고 있는 프론트 개발자 입니다.
           </Text>
-        </div>
         <div className="p-5">
           <HStack>
             <Button>>></Button>
@@ -37,7 +35,7 @@ function mainpage() {
         </div>
       </div>
       {/* 이미지 들어가는 곳 */}
-      <div className="row-span-3 col-span-3 order-1 pt-10 sm:order-none sm:pt-5">
+      <div className="row-span-3 col-span-3 order-1 md:max-lg:col-span-1 pt-10 sm:col-span-3 sm:order-none sm:pt-5">
         <Center>
           <Image
             className="rounded-full w-auto h-56  md:h-80"
