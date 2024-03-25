@@ -1,5 +1,6 @@
 import NavBar from "./componets/Header";
 import Firstpage from "./componets/mainpage";
+import Skill from "./componets/skill";
 function App() {
   return (
     <div className="App">
@@ -8,6 +9,9 @@ function App() {
       </header>
       <div style={{ height: "100vh" }}>
         <Firstpage />
+      </div>
+      <div style={{ height: "100vh" }}>
+        <Skill/>
       </div>
     </div>
   );

@@ -1,68 +1,79 @@
+import React from "react";
 import {
   Center,
   Heading,
   Image,
   Text,
-  Grid,
-  GridItem,
   Button,
-  HStack
+  HStack,
+  VStack,
+  Box,
+  Link
 } from "@chakra-ui/react";
+import { BiArrowToRight } from "react-icons/bi";
+import { BsDiscord } from "react-icons/bs";
+import { FaLinkedin } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
+
 function mainpage() {
-  //mobile none -> middle md:max -> PC sm
   return (
-    <div
-      className="h-full flex grid justify-items-stretch lg:grid-cols-6 grid-rows-9 sm:grid-rows-5 gap-8 pt-10"
-      style={{ padding: "10%", backgroundColor: "#F8F1F1" }}
-    >
-      <div className="col-span-3 row-span-6 order-3 md:max-lg:col-span-2 sm:order-none self-center">
+    <div className="h-full flex grid justify-items-stretch lg:grid-cols-4 grid-rows-9 sm:grid-rows-5 gap-8 pt-10" style={{ padding: "10%", backgroundColor: "#F5F5F5" }}>
+      {/* Introduction Section */}
+      <div className="col-span-3 row-span-6 order-3 md:max-lg:col-span-2 sm:order-none sm:col-span-2 justify-self-end self-center">
         <Heading size="2xl">Hello World!</Heading>
         <Heading size="lg">여러분들 반가워요!_👋</Heading>
         <br />
         <Heading size="lg">저는 INMD1 이고</Heading>
         <br />
-        <Text fontSize="xl">
-          현재 대학교에서 응용소프트웨어를 전공하고 있는
-        </Text>
-        <Text fontSize="xl">
-          백엔드 지식을 가지고 있는 프론트 개발자 입니다.
-        </Text>
-        <div className="p-5">
+        <Text fontSize="xl">현재 대학교에서 응용소프트웨어를 전공하고 있는</Text>
+        <Text fontSize="xl">백엔드 지식을 가지고 있는 프론트 개발자 입니다.</Text>
+        <div className="pt-5">
           <HStack>
-            <Button>>></Button>
+            <Button colorScheme='green'><BiArrowToRight /></Button>
             <Text>다음 단계로 가볼까요?</Text>
           </HStack>
         </div>
       </div>
-      {/* 이미지 들어가는 곳 */}
-      <div className="row-span-3 col-span-3 order-1 md:max-lg:col-span-1 pt-10 sm:col-span-3 sm:order-none sm:pt-5">
+
+      {/* Image Section */}
+      <div className="row-span-3 col-span-3 order-1 md:max-lg:col-span-1 pt-10 sm:col-span-2 sm:order-none sm:pt-5 ">
         <Center>
-          <Image
-            className="rounded-full w-auto h-56  md:h-80"
-            src="./logo.png"
-          />
+          <Image className="rounded-full w-auto h-56 md:h-80" src="./logo.png" />
         </Center>
       </div>
-      {/* 연락처 들어가는 곳 */}
-      <div className="p-5 row-span-1 order-2 sm:order-none sm:row-span-3 col-span-3 ">
+
+      {/* Contact Section */}
+      <div className="row-span-1 col-span-3 order-2 pt-16 sm:order-none sm:row-span-3 sm:pt-0 sm:col-span-2 wrap">
         <Heading size="lg">Contact</Heading>
-        <Grid templateColumns="repeat(3, 1fr)" gap={1}>
-          <GridItem className="w-full h-full" bg="blue.500">
-            <Center>
-              디스코드
-            </Center>
-          </GridItem>
-          <GridItem className="w-full h-full " bg="blue.500">
-            <Center>
-              이메일
-            </Center>
-          </GridItem>
-          <GridItem className="w-full h-full " bg="blue.500">
-            <Center>
-              Linkdin
-            </Center>
-          </GridItem>
-        </Grid>
+        <HStack spacing='5vh' className="pt-5 sm:m-5">
+          <Center>
+            <Box className="w-full h-20 sm:h-42">
+              <VStack>
+                <BsDiscord style={{ height: "2rem", width: 'auto' }} />
+                <Text>Discord</Text>
+                <Text>ubuntu22.04.1lts</Text>
+              </VStack>
+            </Box>
+          </Center>
+          <Center>
+            <Box className="w-full h-20 sm:h-42">
+              <VStack>
+                <MdOutlineEmail style={{ height: "2rem", width: 'auto' }} />
+                <Text>Email</Text>
+                <Link href="mailto:lyw514549@gmail.com">lyw514549@gmail.com</Link>
+              </VStack>
+            </Box>
+          </Center>
+          <Center>
+              <Box className="w-full h-20 sm:h-42" >
+                <VStack>
+                  <FaLinkedin style={{ height: "2rem", width: 'auto' }} />
+                  <Text>Linkedin</Text>
+                  <Link href="https://www.linkedin.com/in/inmd1/">inmd1</Link>
+                </VStack>
+              </Box>
+          </Center>
+        </HStack>
       </div>
     </div>
   );
