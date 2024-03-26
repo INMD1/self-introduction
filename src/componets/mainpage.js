@@ -17,7 +17,7 @@ import { MdOutlineEmail } from "react-icons/md";
 
 function mainpage() {
   return (
-    <div className="w-full h-full flex grid justify-items-stretch lg:grid-cols-4 grid-rows-9 sm:grid-rows-5 gap-8 pt-10" style={{ padding: "10%", backgroundColor: "#F5F5F5" }}>
+    <div className="w-full h-full flex grid justify-items-stretch lg:grid-cols-4 grid-rows-9 sm:grid-rows-5 gap-8 pt-10" style={{ padding: "10%", backgroundColor: "#FEFDED" }}>
       {/* Introduction Section */}
       <div className="col-span-3 row-span-6 order-3 md:max-lg:col-span-2 sm:order-none sm:col-span-2 justify-self-end self-center">
         <Heading size="2xl">Hello World!</Heading>
