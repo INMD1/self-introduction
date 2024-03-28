@@ -10,7 +10,7 @@ import { MdCss } from "react-icons/md";
 import { IoLogoIonic } from "react-icons/io";
 const Skill = () => {
     return (
-        <div  id='skill' className="h-full" style={{ padding: "10%", backgroundColor: "#78A083" }}>
+        <div  id='skill' className="h-full" style={{ padding: "10%", backgroundColor: "#DCE2F0" }}>
             <Heading size='3xl'>DEVELOPMENT SKILLS</Heading>
             <br />
             <Text fontSize='xl'>아래에 있는 것들은 제가 프로젝트를 할때 써본 기술들입니다.</Text>
@@ -67,7 +67,7 @@ const Skill = () => {
                 <div>
                     <VStack>
                         <HStack>
-                            <TbBrandKotlin style={{ height: "2.5rem", width: 'auto' }} />
+                            <TbBrandKotlin style={{ height: "2.5=rem", width: 'auto' }} />
                             <Heading fontSize='xl'>Kotlin</Heading>
                         </HStack>
                         <Text fontSize='xl'>안드로이드 개발 활용</Text>
@@ -109,7 +109,7 @@ const Skill = () => {
                 <div>
                     <VStack>
                         <HStack>
-                            <SiVisualstudio style={{ height: "2.5rem", width: 'auto' }} />
+                            <SiVisualstudio style={{ height: "2rem", width: 'auto' }} />
                             <Heading fontSize='xl'>Visual studio</Heading>
                         </HStack>
                         <Text fontSize='xl'>C/C++ 개발 활용</Text>
@@ -118,7 +118,7 @@ const Skill = () => {
                 <div>
                     <VStack>
                         <HStack>
-                            <SiVisualstudiocode style={{ height: "2.5rem", width: 'auto' }} />
+                            <SiVisualstudiocode style={{ height: "2rem", width: 'auto' }} />
                             <Heading fontSize='xl'>Visual studio Code</Heading>
                         </HStack>
                         <Text fontSize='xl'>웹 개발 활용</Text>
@@ -127,7 +127,7 @@ const Skill = () => {
                 <div>
                     <VStack>
                         <HStack>
-                            <SiIntellijidea style={{ height: "2.5rem", width: 'auto' }} />
+                            <SiIntellijidea style={{ height: "2rem", width: 'auto' }} />
                             <Heading fontSize='xl'>intellij</Heading>
                         </HStack>
                         <Text fontSize='xl'>코틀린/자바 단일 개발 활용</Text>
@@ -136,7 +136,7 @@ const Skill = () => {
                 <div>
                     <VStack>
                         <HStack>
-                            <SiAndroidstudio style={{ height: "2.5rem", width: 'auto' }} />
+                            <SiAndroidstudio style={{ height: "2rem", width: 'auto' }} />
                             <Heading fontSize='xl'>Android studio</Heading>
                         </HStack>
                         <Text fontSize='xl'>안드로이드 앱 개발 활용</Text>

@@ -12,9 +12,7 @@ function App() {
         <Firstpage />
       </div>
       <Skill />
-      <div style={{ height: "100vh" }}>
-        <Project />
-      </div>
+      <Project />
     </div>
   );
 }
