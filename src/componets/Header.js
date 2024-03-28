@@ -1,7 +1,8 @@
-import { Button, MenuButton, Menu, MenuList, MenuItem } from '@chakra-ui/react'
+import { Button, MenuButton, Menu, MenuList, MenuItem,  Link} from '@chakra-ui/react'
 import { FaGithub } from "react-icons/fa6";
 import { GoCodeReview } from "react-icons/go";
 const NavBar = () => {
+    
     return (
         <>
             <nav class="fixed w-full z-20 top-0 start-0" style={{ backgroundColor: "rgb(254, 253, 237, 0.8)" }}>
@@ -11,8 +12,8 @@ const NavBar = () => {
                         <span class="self-center text-xl font-semibold whitespace-nowrap" style={{ fontWeight: "bold" }}>INMD1의 나른한곳</span>
                     </a>
                     <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                        <Button size='lg' variant='link' leftIcon={<FaGithub style={{ height: '3.5vh', width: 'auto' }} color='black' />} />
-                        <Button size='lg' variant='link' leftIcon={<GoCodeReview style={{ height: '3.5vh', width: 'auto' }} color='black' />} />
+                       <Link href='https://github.com/INMD1' > <Button size='lg' variant='link' leftIcon={<FaGithub style={{ height: '3.5vh', width: 'auto' }} color='black' />} /></Link>
+                        <Link href='https://blog.powerinmd.com'><Button size='lg' variant='link'  leftIcon={<GoCodeReview style={{ height: '3.5vh', width: 'auto' }} color='black' />} /></Link>
                         <div className='pt-1 none sm:hidden'>
                             <Menu>
                                 <MenuButton>

@@ -16,6 +16,8 @@ import { FaLinkedin } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 
 function mainpage() {
+
+
   return (
     <div className="w-full h-full flex grid justify-items-stretch lg:grid-cols-4 grid-rows-9 sm:grid-rows-5 gap-8 pt-10" style={{ padding: "10%", backgroundColor: "#FEFDED" }}>
       {/* Introduction Section */}
@@ -29,8 +31,8 @@ function mainpage() {
         <Text fontSize="xl">백엔드 지식을 가지고 있는 프론트 개발자 입니다.</Text>
         <div className="pt-5">
           <HStack>
-            <Button colorScheme='green'><BiArrowToRight /></Button>
-            <Text>다음 단계로 가볼까요?</Text>
+           <Link href="#skill"> <Button colorScheme='green'><BiArrowToRight /></Button></Link>
+            <Text>저가 무엇을 할수 있는지 가볼까요?</Text>
           </HStack>
         </div>
       </div>
