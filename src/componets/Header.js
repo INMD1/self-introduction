@@ -1,6 +1,7 @@
 import { Button, MenuButton, Menu, MenuList, MenuItem,  Link} from '@chakra-ui/react'
 import { FaGithub } from "react-icons/fa6";
 import { GoCodeReview } from "react-icons/go";
+import { TbBrandVscode } from "react-icons/tb";
 const NavBar = () => {
     
     return (
@@ -14,6 +15,8 @@ const NavBar = () => {
                     <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                        <Link href='https://github.com/INMD1' > <Button size='lg' variant='link' leftIcon={<FaGithub style={{ height: '3.5vh', width: 'auto' }} color='black' />} /></Link>
                         <Link href='https://blog.powerinmd.com'><Button size='lg' variant='link'  leftIcon={<GoCodeReview style={{ height: '3.5vh', width: 'auto' }} color='black' />} /></Link>
+                        <Link href='https://blog.powerinmd.com'><Button size='lg' variant='link'  leftIcon={<TbBrandVscode style={{ height: '3.5vh', width: 'auto' }} color='black' />} /></Link>
+
                         <div className='pt-1 none sm:hidden'>
                             <Menu>
                                 <MenuButton>

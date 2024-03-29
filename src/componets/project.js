@@ -1,9 +1,9 @@
-import { Text, Image, Stack, Divider, Heading, Center } from '@chakra-ui/react'
+import { Text, Image, Stack, VStack, Heading, Center, Button } from '@chakra-ui/react'
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 const Project = () => {
     return (
         <div className='h-full p-10 sm:p-72' style={{ backgroundColor: "#EEF5FF" }}>
-            <div className='flex grid auto-row-max gap-0 grid-rows-3 sm:grid-cols-3 sm:grid-rows-2 sm:gap-16'>
+            <div className='flex grid gap-0 grid-rows-2 sm:grid-cols-3 sm:grid-rows-2 sm:gap-16'>
                 <div className='row-span-2 col-span-3 pt-5 content-center sm:col-span-2 sm:pt-0' style={{ backgroundColor: "#B4D4FF", borderRadius: "5%" }}>
                     <Image height="32%" src='/image/1p.webp' style={{ margin: "auto" }} ></Image>
                     <br />
@@ -18,26 +18,38 @@ const Project = () => {
                         </div>
                     </Stack>
                 </div>
-                <div className='col-span-3 pt-9 sm:col-span-1  sm:pt-0' >
-                    <Heading size='xl'>Projects</Heading>
+                <div className='row-span-1 col-span-3 pt-9 sm:col-span-1 sm:row-span-2  sm:pt-0' >
+                    <Heading size='2xl' className='pb-2'>Projects</Heading>
                     <Text fontSize="lg">제가 만든 프로젝트로 볼래요?</Text>
                     <br />
                     <Tabs isLazy>
                         <TabList>
-                            <Tab>Web</Tab>
+                            <Tab>Web&*Webapp</Tab>
                             <Tab>Android</Tab>
                             <Tab>Api</Tab>
                         </TabList>
 
                         <TabPanels>
                             <TabPanel>
-                                <p>one!</p>
+                                <VStack align='stretch'>
+                                    <Button>self-introduction</Button>
+                                    <Button>APSU</Button>
+                                    <Button>Algorithm-web-view</Button>
+                                    <Button>server-dashboard</Button>
+                                    <Button>DoD_DashBoard</Button>
+                                </VStack>
                             </TabPanel>
                             <TabPanel>
-                                <p>two!</p>
+                                <VStack align='stretch'>
+                                    <Button>deu_food_gui-widget-only </Button>
+                                </VStack>
                             </TabPanel>
                             <TabPanel>
-                                <p>three!</p>
+                                <VStack align='stretch'>
+                                    <Button>Computer-API</Button>
+                                    <Button>deu-Dorm-meal</Button>
+                                    <Button>Deu_food_api</Button>
+                                </VStack>
                             </TabPanel>
                         </TabPanels>
                     </Tabs>
