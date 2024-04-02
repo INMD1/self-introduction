@@ -1,7 +1,8 @@
-import { Text, Image, Stack, VStack, Heading, Center, Button } from '@chakra-ui/react'
+import { Text, Image, Stack, VStack, Heading, UnorderedList, Button } from '@chakra-ui/react'
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import { useState } from 'react';
 import jsondata from './data/index.json'
+import { FaGithub } from "react-icons/fa6";
 
 const Project = () => {
     const [data, setData] = useState({
@@ -9,14 +10,14 @@ const Project = () => {
         "body": "프로젝트를 선택해주세요.",
         "imageurl": "/image/403.webp",
         "size": "45%"
-    }); 
+    });
 
     function changedata(number) {
         setData(jsondata[number])
     }
 
     return (
-        <div className='h-full p-10 sm:p-72' style={{ backgroundColor: "#EEF5FF" }}>
+        <div id='project' className='h-full p-10 sm:p-72' style={{ backgroundColor: "#EEF5FF" }}>
             <div className='flex grid gap-0 pt-24 grid-rows-2 sm:grid-cols-3 sm:grid-rows-2 sm:gap-16 sm:pt-0'>
                 <div className='row-span-2 col-span-3 pt-10 content-center sm:col-span-2 sm:pt-0' style={{ backgroundColor: "#B4D4FF", borderRadius: "5%" }}>
                     <Image height={data.size} src={data.imageurl} style={{ margin: "auto" }} ></Image>
@@ -27,6 +28,8 @@ const Project = () => {
                             <br />
                             <Text className='' fontSize="md">
                                 {data.body}
+                                <br/><br/>
+                                <Button color="black" leftIcon={<FaGithub/>}>Github View</Button>
                             </Text>
                         </div>
                     </Stack>
@@ -45,23 +48,23 @@ const Project = () => {
                         <TabPanels>
                             <TabPanel>
                                 <VStack align='stretch'>
-                                    <Button onClick={() => {changedata(0)}}>self-introduction</Button>
-                                    <Button onClick={() => {changedata(1)}}>APSU</Button>
-                                    <Button onClick={() => {changedata(0)}}>Algorithm-web-view</Button>
-                                    <Button onClick={() => {changedata(0)}}>server-dashboard</Button>
-                                    <Button onClick={() => {changedata(0)}}>DoD_DashBoard</Button>
+                                    <Button onClick={() => { changedata(0) }}>self-introduction</Button>
+                                    <Button onClick={() => { changedata(1) }}>APSU</Button>
+                                    <Button onClick={() => { changedata(2) }}>Algorithm-web-view</Button>
+                                    <Button onClick={() => { changedata(3) }}>server-dashboard</Button>
+                                    <Button onClick={() => { changedata(4) }}>DoD_DashBoard</Button>
                                 </VStack>
                             </TabPanel>
                             <TabPanel>
                                 <VStack align='stretch'>
-                                    <Button onClick={() => {changedata(0)}}>deu_food_gui-widget-only </Button>
+                                    <Button onClick={() => { changedata(5) }}>deu_food_gui-widget-only </Button>
                                 </VStack>
                             </TabPanel>
                             <TabPanel>
                                 <VStack align='stretch'>
-                                    <Button onClick={() => {changedata(0)}}>Computer-API</Button>
-                                    <Button onClick={() => {changedata(0)}}>deu-Dorm-meal</Button>
-                                    <Button onClick={() => {changedata(0)}}>Deu_food_api</Button>
+                                    <Button onClick={() => { changedata(6) }}>Computer-API</Button>
+                                    <Button onClick={() => { changedata(7) }}>deu-Dorm-meal</Button>
+                                    <Button onClick={() => { changedata(8) }}>Deu_food_api</Button>
                                 </VStack>
                             </TabPanel>
                         </TabPanels>

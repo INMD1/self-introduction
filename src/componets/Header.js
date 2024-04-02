@@ -8,7 +8,7 @@ const NavBar = () => {
         <>
             <nav class="fixed w-full z-20 top-0 start-0" style={{ backgroundColor: "rgb(254, 253, 237, 0.8)" }}>
                 <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4" >
-                    <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
 
                         <span class="self-center text-xl font-semibold whitespace-nowrap" style={{ fontWeight: "bold" }}>INMD1의 나른한곳</span>
                     </a>
@@ -45,7 +45,7 @@ const NavBar = () => {
                                 <a href="#skill" class="block py-2 px-3 rounded  md:hover:bg-transparent  md:p-0 md:dark:hover:bg-transparent ">Skill</a>
                             </li>
                             <li>
-                                <a href="projct" class="block py-2 px-3 rounded  md:hover:bg-transparent  md:p-0 md:dark:hover:bg-transparent ">Project</a>
+                                <a href="#project" class="block py-2 px-3 rounded  md:hover:bg-transparent  md:p-0 md:dark:hover:bg-transparent ">Project</a>
                             </li>
                             <li>
                                 <a href="#" class="block py-2 px-3  md:hover:bg-transparent md:p-0  md:dark:hover:bg-transparent ">More?</a>
