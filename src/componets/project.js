@@ -1,4 +1,4 @@
-import { Text, Image, Stack, VStack, Heading, UnorderedList, Button } from '@chakra-ui/react'
+import { Text, Image, Stack, VStack, Heading, Link, Button } from '@chakra-ui/react'
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import { useState } from 'react';
 import jsondata from './data/index.json'
@@ -28,8 +28,11 @@ const Project = () => {
                             <br />
                             <Text className='' fontSize="md">
                                 {data.body}
-                                <br/><br/>
-                                <Button color="black" leftIcon={<FaGithub/>}>Github View</Button>
+                                <br /><br />
+                                <Link href={data} >
+                                    <Button color="black" leftIcon={<FaGithub />}>Github View</Button>
+
+                                </Link>
                             </Text>
                         </div>
                     </Stack>
