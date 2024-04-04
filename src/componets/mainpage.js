@@ -12,7 +12,6 @@ import {
 } from "@chakra-ui/react";
 import { BiArrowToRight } from "react-icons/bi";
 import { BsDiscord } from "react-icons/bs";
-import { FaLinkedin } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 
 function mainpage() {
