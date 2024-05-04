@@ -18,7 +18,7 @@ const NavBar = () => {
                         <Link href='https://amview.powerinmd.com'><Button size='lg' variant='link'  leftIcon={<TbBrandVscode style={{ height: '3.5vh', width: 'auto' }} color='black' />} /></Link>
 
                         <div className='pt-1 none sm:hidden'>
-                            <Menu>
+                            {/* <Menu>
                                 <MenuButton>
                                     <span class="sr-only">Open main menu</span>
                                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -32,7 +32,7 @@ const NavBar = () => {
                                     <MenuItem>Delete</MenuItem>
                                     <MenuItem>Attend a Workshop</MenuItem>
                                 </MenuList>
-                            </Menu>
+                            </Menu> */}
                         </div>
 
                     </div>
