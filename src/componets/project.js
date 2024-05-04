@@ -7,7 +7,6 @@ import {
   Link,
   Button,
   Center,
-  Divider,
 } from "@chakra-ui/react";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import { useState } from "react";
