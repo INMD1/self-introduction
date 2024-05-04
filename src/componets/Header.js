@@ -48,7 +48,7 @@ const NavBar = () => {
                                 <a href="#project" class="block py-2 px-3 rounded  md:hover:bg-transparent  md:p-0 md:dark:hover:bg-transparent ">Project</a>
                             </li>
                             <li>
-                                <a href="#" class="block py-2 px-3  md:hover:bg-transparent md:p-0  md:dark:hover:bg-transparent ">More?</a>
+                                <a href="#!" class="block py-2 px-3  md:hover:bg-transparent md:p-0  md:dark:hover:bg-transparent ">More?</a>
                             </li>
                         </ul>
                     </div>
