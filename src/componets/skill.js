@@ -79,7 +79,7 @@ const Skill = () => {
                             <FaNode style={{ height: "2.5rem", width: 'auto' }} />
                             <Heading fontSize='xl'>Node.js</Heading>
                         </HStack>
-                        <Text fontSize='xl'>CLI/Express Api/사이트 개발</Text>
+                        <Text fontSize='lg'>CLI/Express Api/사이트 개발</Text>
                     </VStack>
                 </div>
                 <div>
@@ -130,7 +130,7 @@ const Skill = () => {
                             <SiIntellijidea style={{ height: "2rem", width: 'auto' }} />
                             <Heading fontSize='xl'>intellij</Heading>
                         </HStack>
-                        <Text fontSize='xl'>코틀린/자바 단일 개발 활용</Text>
+                        <Text fontSize='lg'>코틀린/자바 단일 개발 활용</Text>
                     </VStack>
                 </div>
                 <div>

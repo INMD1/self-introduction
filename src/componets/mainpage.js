@@ -17,10 +17,10 @@ import { MdOutlineEmail } from "react-icons/md";
 function mainpage() {
   return (
     <div
-      className="w-full h-full *: grid justify-items-stretch lg:grid-cols-4 grid-rows-9 sm:grid-rows-3 gap-8 pt-10"
+      className="w-full h-full grid  sm:grid-rows-2 sm:grid-flow-col sm:gap-4 items-stretch  place-content-center "
       style={{ padding: "10%", backgroundColor: "#FEFDED" }}
     >
-      <div className="col-span-3 row-span-6 order-3 md:max-lg:col-span-2 sm:order-none sm:col-span-2 justify-self-end self-center">
+      <div className=" order-2 col-span-2  self-center sm:row-span-3 sm:order-none sm:pb-28">
         <Heading size="2xl">Hello World!</Heading>
         <Heading size="lg">여러분들 반가워요!_👋</Heading>
         <br />
@@ -45,7 +45,7 @@ function mainpage() {
         </div>
       </div>
 
-      <div className="row-span-3 col-span-3 order-1 md:max-lg:col-span-1 pt-10 sm:col-span-2 sm:order-none sm:pt-5 ">
+      <div className="order-1 col-span-2 self-end mb-5 sm:order-none ">
         <Center>
           <Image
             className="rounded-full w-auto h-56 md:h-80"
@@ -54,8 +54,10 @@ function mainpage() {
         </Center>
       </div>
 
-      <div className="row-span-2 col-span-3 order-2 pt-16 sm:order-none sm:row-span-2 sm:pt-0 sm:col-span-2 wrap">
-        <Heading size="lg">Contact(연락처)</Heading>
+      <div className="order-3 col-span-2 sm:order-none">
+        <Center>
+          <Heading size="lg">Contact(연락처)</Heading>
+        </Center>
         <HStack spacing="5vh" className="pt-5 sm:m-5">
           <Center>
             <Box className="h-20 sm:h-42">
