@@ -143,12 +143,12 @@ const Project = () => {
                                 <LinkBox as='article' maxW='sm' p='5' borderWidth='1px' rounded='md' onClick={() => { changedata(6); }}>
                                     <Heading size='md' my='2'>
                                         <LinkOverlay>
-                                            Computer-API
-
+                                        Computer-API
+                                           
                                         </LinkOverlay>
                                     </Heading>
                                     <Text>
-                                        server-dashboard에 필요한 API입니다.
+                                         server-dashboard에 필요한 API입니다.
                                     </Text>
                                 </LinkBox>
                                 <br />
