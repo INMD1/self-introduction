@@ -1,4 +1,4 @@
-import { Text, Image, Stack, Divider, Heading, Link, Button, Card, CardBody, CardFooter, ButtonGroup, CardHeader, Center } from '@chakra-ui/react'
+import { Text, Image, Stack, Divider, Heading, Link, Button, Card, CardBody, CardFooter, ButtonGroup, CardHeader } from '@chakra-ui/react'
 import { useState } from 'react';
 import jsondata from './data/index.json'
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, } from '@chakra-ui/react'
