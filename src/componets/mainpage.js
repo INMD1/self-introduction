@@ -56,6 +56,8 @@ function mainpage() {
 
       <div className="order-3 col-span-2 sm:order-none">
         <Center>
+        <br/>
+        <br/>
           <Heading size="lg">Contact(연락처)</Heading>
         </Center>
         <HStack spacing="5vh" className="pt-5 sm:m-5">

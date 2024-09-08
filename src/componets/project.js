@@ -19,162 +19,149 @@ const Project = () => {
     }
 
     return (
-        <div id='project' className='h-full p-10 sm:pl-52 sm:pr-52' style={{ backgroundColor: "#EEF5FF" }}>
-            <div className='grid grid-rows-3 grid-cols-1 md:grid-cols-2 gap-4'>
-                <div className='row-span-1 col-span-1 md:col-span-2'>
-                    <Heading size="3xl">Project</Heading>
+      <div
+        id="project"
+        className="h-full p-10 sm:p-44"
+        style={{ backgroundColor: "#EEF5FF" }}
+      >
+        <div className="flex grid gap-0 pt-24 grid-rows-2  grid-cols-4 sm:grid-cols-2 sm:grid-rows-2 sm:gap-10 sm:pt-0">
+          <div
+            className="row-span-2 col-span-4 pt-8 sm:col-span-1 sm:pt-0"
+            style={{
+              backgroundColor: "#B4D4FF",
+              borderRadius: "3%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <Image className="sm:w-7/12"
+              src={data.imageurl}
+              style={{
+                height: "auto",
+                objectFit: "contain",
+                padding: "8%",
+              }}
+            />
+            <br />
+  
+            <Stack direction="row" spacing={4} justify="center">
+              <div className="mx-0 p-5 sm:mx-20">
+                <Heading size="lg">{data.title}</Heading>
+                <br />
+                <Text className="" fontSize="md">
+                  {data.body}
+                  <br />
+                  <br />
+                  <Link href={data}>
+                    <Button color="black" leftIcon={<FaGithub />}>
+                      Github View
+                    </Button>
                     <br />
-                    <Text fontSize='xl' >이번 구역은 제가 이때까지 해왔던 프로젝트를 소개하는 곳입니다.</Text>
-                </div>
-                <div className='row-span-2'>
-                    <Card maxW='sm'>
-                        <CardBody>
-                            <Image
-                                src={data.imageurl}
-                                borderRadius='lg'
-                            />
-                            <Stack mt='6' spacing='3'>
-                                <Heading size='md'>{data.title}</Heading>
-                                <Text>
-                                    {data.body}
-                                </Text>
-                            </Stack>
-                        </CardBody>
-                        <Divider />
-                        <CardFooter>
-                            <ButtonGroup spacing='2'>
-                                <Link href={data.url}>
-                                    <Button variant='solid' colorScheme='blue' >
-                                        <FaGithub /> 레포 페이지 방문
-                                    </Button>
-                                </Link>
-                            </ButtonGroup>
-                        </CardFooter>
-                    </Card>
-                </div>
-                <div className='row-span-2 col-span-1'>
-                    <Card style={{ height: "50vh", overflowY: "auto" }}>
-                        <CardHeader>
-                            <Text fontSize='sm'>만든 분야를 크게 분류하면..</Text>
-                            <Breadcrumb>
-                                <BreadcrumbItem>
-                                    <BreadcrumbLink fontSize="xl">Web</BreadcrumbLink>
-                                </BreadcrumbItem>
-
-                                <BreadcrumbItem>
-                                    <BreadcrumbLink fontSize="xl">Android</BreadcrumbLink>
-                                </BreadcrumbItem>
-
-                                <BreadcrumbItem isCurrentPage>
-                                    <BreadcrumbLink fontSize="xl">Api</BreadcrumbLink>
-                                </BreadcrumbItem>
-                            </Breadcrumb>
-                        </CardHeader>
-                        <Divider />
-                        <CardBody >
-                            {/* 여기서 부터는 리스트로 불려옴 */}
-                            <div>
-                                <LinkBox as='article' maxW='sm' p='5' borderWidth='1px' rounded='md' onClick={() => { changedata(0); }}>
-                                    <Heading size='md' my='2'>
-                                        <LinkOverlay >
-                                            self-introduction
-                                        </LinkOverlay>
-                                    </Heading>
-                                    <Text>
-                                        영원히 완성이 되지 않는 레포
-                                    </Text>
-                                </LinkBox>
-                                <br />
-                                <LinkBox as='article' maxW='sm' p='5' borderWidth='1px' rounded='md' onClick={() => { changedata(1); }}>
-                                    <Heading size='md'>
-                                        <LinkOverlay>
-                                            APSU
-                                        </LinkOverlay>
-                                    </Heading>
-                                    <Text>
-                                        군 내 병영관리 시스템
-                                    </Text>
-                                </LinkBox>
-                                <br />
-                                <LinkBox as='article' maxW='sm' p='5' borderWidth='1px' rounded='md' onClick={() => { changedata(2); }}>
-                                    <Heading size='md' my='2'>
-                                        <LinkOverlay>
-                                            Algorithm-web-view
-                                        </LinkOverlay>
-                                    </Heading>
-                                    <Text>
-                                        문제의 답을 보여주는 곳
-                                    </Text>
-                                </LinkBox>
-                                <br />
-                                <LinkBox as='article' maxW='sm' p='5' borderWidth='1px' rounded='md' onClick={() => { changedata(3); }}>
-                                    <Heading size='md' my='2'>
-                                        <LinkOverlay>
-                                            server-dashboard
-                                        </LinkOverlay>
-                                    </Heading>
-                                    <Text>
-                                        서버 관리툴
-                                    </Text>
-                                </LinkBox>
-                                <br />
-                                <LinkBox as='article' maxW='sm' p='5' borderWidth='1px' rounded='md' onClick={() => { changedata(4); }}>
-                                    <Heading size='md' my='2'>
-                                        <LinkOverlay>
-                                            DoD_DashBoard
-                                        </LinkOverlay>
-                                    </Heading>
-                                    <Text>
-                                        동아리 학교 정보 확인 사이트
-                                    </Text>
-                                </LinkBox>
-                                <br />
-                                <LinkBox as='article' maxW='sm' p='5' borderWidth='1px' rounded='md' onClick={() => { changedata(5); }}>
-                                    <Heading size='md' my='2'>
-                                        <LinkOverlay>
-                                            deu_food_gui-widget-only
-                                        </LinkOverlay>
-                                    </Heading>
-                                    <Text>
-                                        메인화면에서 바로 볼수 있는 위젓
-                                    </Text>
-                                </LinkBox>
-                                <br />
-                                <LinkBox as='article' maxW='sm' p='5' borderWidth='1px' rounded='md' onClick={() => { changedata(6); }}>
-                                    <Heading size='md' my='2'>
-                                        <LinkOverlay>
-                                        Computer-API
-                                           
-                                        </LinkOverlay>
-                                    </Heading>
-                                    <Text>
-                                         server-dashboard에 필요한 API입니다.
-                                    </Text>
-                                </LinkBox>
-                                <br />
-                                <LinkBox as='article' maxW='sm' p='5' borderWidth='1px' rounded='md' onClick={() => { changedata(8); }}>
-                                    <Heading size='md' my='2'>
-                                        <LinkOverlay>
-                                            Deu_food_api
-                                        </LinkOverlay>
-                                    </Heading>
-                                    <Text>
-                                        동의대 학식 또는 기숙사 식단을 가져옴니다.
-
-                                    </Text>
-                                </LinkBox>
-                            </div>
-
-                        </CardBody>
-                        <CardFooter>
-
-                        </CardFooter>
-                    </Card>
-                </div>
-            </div>
-
+                    <br />
+                    <br />
+                  </Link>
+                </Text>
+              </div>
+            </Stack>
+          </div>
+          <div className="row-span-1 col-span-4 pt-9 sm:col-span-1 sm:row-span-2  sm:pt-0">
+            <Heading size="2xl" className="pb-2">
+              Projects
+            </Heading>
+            <Text fontSize="lg">이때까지 제가 만든 프로젝트들을 소개합니다.</Text>
+            <br />
+            <Tabs isLazy>
+              <TabList>
+                <Tab>Web/Webapp</Tab>
+                <Tab>Android</Tab>
+                <Tab>Api</Tab>
+              </TabList>
+  
+              <TabPanels>
+                <TabPanel>
+                  <VStack align="stretch">
+                    <Button
+                      onClick={() => {
+                        changedata(0);
+                      }}
+                    >
+                      self-introduction
+                    </Button>
+                    <Button
+                      onClick={() => {
+                        changedata(1);
+                      }}
+                    >
+                      APSU
+                    </Button>
+                    <Button
+                      onClick={() => {
+                        changedata(2);
+                      }}
+                    >
+                      Algorithm-web-view
+                    </Button>
+                    <Button
+                      onClick={() => {
+                        changedata(3);
+                      }}
+                    >
+                      server-dashboard
+                    </Button>
+                    <Button
+                      onClick={() => {
+                        changedata(4);
+                      }}
+                    >
+                      DoD_DashBoard
+                    </Button>
+                  </VStack>
+                </TabPanel>
+                <TabPanel>
+                  <VStack align="stretch">
+                    <Button
+                      onClick={() => {
+                        changedata(5);
+                      }}
+                    >
+                      deu_food_gui-widget-only{" "}
+                    </Button>
+                  </VStack>
+                </TabPanel>
+                <TabPanel>
+                  <VStack align="stretch">
+                    <Button
+                      onClick={() => {
+                        changedata(6);
+                      }}
+                    >
+                      Computer-API
+                    </Button>
+                    <Button
+                      onClick={() => {
+                        changedata(7);
+                      }}
+                    >
+                      deu-Dorm-meal
+                    </Button>
+                    <Button
+                      onClick={() => {
+                        changedata(8);
+                      }}
+                    >
+                      Deu_food_api
+                    </Button>
+                  </VStack>
+                </TabPanel>
+              </TabPanels>
+            </Tabs>
+          </div>
         </div>
-    )
-}
-
-export default Project;
+      </div>
+    );
+  };
+  
+  export default Project;
+  
