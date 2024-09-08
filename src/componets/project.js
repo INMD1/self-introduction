@@ -28,29 +28,32 @@ const Project = () => {
   return (
     <div
       id="project"
-      className="h-full p-10 sm:p-72"
+      className="h-full p-10 sm:p-44"
       style={{ backgroundColor: "#EEF5FF" }}
     >
-      <div className="flex grid gap-0 pt-24 grid-rows-2 sm:grid-cols-3 sm:grid-rows-2 sm:gap-16 sm:pt-0">
+      <div className="flex grid gap-0 pt-24 grid-rows-2  grid-cols-4 sm:grid-cols-2 sm:grid-rows-2 sm:gap-10 sm:pt-0">
         <div
-          className="row-span-2 col-span-3 pt-10 content-center sm:col-span-2 sm:pt-0  justify-center items-center"
-          style={{ backgroundColor: "#B4D4FF", borderRadius: "5%" }}
+          className="row-span-2 col-span-4 pt-8 sm:col-span-1 sm:pt-0"
+          style={{
+            backgroundColor: "#B4D4FF",
+            borderRadius: "3%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
         >
-          <Center>
-            <Image
-              src={data.imageurl}
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-                objectFit: "contain",
-                padding: "8%",
-                width: "70%", // 초기값은 모바일에서 70%로 설정
-              }}
-            />
-          </Center>
+          <Image className="sm:w-7/12"
+            src={data.imageurl}
+            style={{
+              height: "auto",
+              objectFit: "contain",
+              padding: "8%",
+            }}
+          />
           <br />
 
-          <Stack direction="row">
+          <Stack direction="row" spacing={4} justify="center">
             <div className="mx-0 p-5 sm:mx-20">
               <Heading size="lg">{data.title}</Heading>
               <br />
@@ -70,7 +73,7 @@ const Project = () => {
             </div>
           </Stack>
         </div>
-        <div className="row-span-1 col-span-3 pt-9 sm:col-span-1 sm:row-span-2  sm:pt-0">
+        <div className="row-span-1 col-span-4 pt-9 sm:col-span-1 sm:row-span-2  sm:pt-0">
           <Heading size="2xl" className="pb-2">
             Projects
           </Heading>

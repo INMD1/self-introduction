@@ -18,7 +18,7 @@ const Skill = () => {
             <div className="jb-division-line" />
             <Heading size='lg'>lang / FrameWork / CMS</Heading>
             <br />
-            <div class="flex grid justify-items-stretch lg:grid-cols-4 grid-rows-9 sm:grid-rows-3 gap-7">
+            <div class="flex grid justify-items-stretch lg:grid-cols-4 grid-rows-9 sm:grid-rows-2 gap-7">
                 <div>
                     <VStack>
                         <HStack>
@@ -91,7 +91,7 @@ const Skill = () => {
                         <Text fontSize='xl'>웹디자인 활용</Text>
                     </VStack>
                 </div>
-                <div>
+                {/* <div>
                     <VStack>
                         <HStack>
                             <IoLogoIonic style={{ height: "2.5rem", width: 'auto' }} />
@@ -99,7 +99,7 @@ const Skill = () => {
                         </HStack>
                         <Text fontSize='xl'>웹앱 개발 활용</Text>
                     </VStack>
-                </div>
+                </div> */}
             </div>
             <br />
             <div className="jb-division-line" />
