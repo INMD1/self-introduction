@@ -1,10 +1,8 @@
-import { Text, Image, Stack, Divider, Heading, Link, Button, Card, CardBody, CardFooter, ButtonGroup, CardHeader } from '@chakra-ui/react'
+import { Text, Image, Stack, Heading, Link, Button } from '@chakra-ui/react'
 import { useState } from 'react';
 import jsondata from './data/index.json'
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, } from '@chakra-ui/react'
-import { LinkBox, LinkOverlay } from '@chakra-ui/react'
 import { FaGithub } from "react-icons/fa6";
-
+import { Tabs, TabList, Tab,TabPanels,TabPanel, VStack} from '@chakra-ui/react'
 const Project = () => {
     const [data, setData] = useState({
         "title": "None",
