@@ -7,7 +7,7 @@ import { TbBrandKotlin } from "react-icons/tb";
 import { TiHtml5 } from "react-icons/ti";
 import { FaNode } from "react-icons/fa6";
 import { MdCss } from "react-icons/md";
-import { IoLogoIonic } from "react-icons/io";
+
 const Skill = () => {
     return (
         <div  id='skill' className="h-full" style={{ padding: "10%", backgroundColor: "#DCE2F0" }}>
