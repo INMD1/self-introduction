@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, Image, Stack, Heading, Link, Button } from "@chakra-ui/react";
 import { useState } from "react";
-// import jsondata from "./data/index.json";
+import jsondata from "./data/index.json";
 import { FaGithub } from "react-icons/fa6";
 import { Tabs } from "@chakra-ui/react";
 const Project = () => {
@@ -19,7 +19,7 @@ const Project = () => {
       className="h-full p-10 sm:p-44"
       style={{ backgroundColor: "#EEF5FF" }}
     >
-      <div className="flex grid gap-0 pt-24 grid-rows-2  grid-cols-4 sm:grid-cols-2 sm:grid-rows-2 sm:gap-10 sm:pt-0">
+      <div className=" grid gap-0 pt-24 grid-rows-2 lg:flex grid-cols-4 sm:grid-cols-2 sm:grid-rows-2 sm:gap-10 sm:pt-0">
         <div
           className="row-span-2 col-span-4 pt-8 sm:col-span-1 sm:pt-0"
           style={{
@@ -41,40 +41,14 @@ const Project = () => {
             }}
           />
           <br />
-
-          <Stack direction="row" justify="center">
-            <div className="mx-0 p-5 sm:mx-20">
-              <Heading size="lg">{data.title}</Heading>
-              <br />
-              <Text className="" fontSize="md">
-                {data.body}
-                <br />
-                <br />
-                <Link>
-                  <Button color="black">
-                    <FaGithub /> Github View
-                  </Button>
-                  <br />
-                  <br />
-                  <br />
-                </Link>
-              </Text>
-            </div>
-          </Stack>
+          {/* //본문 내용 삽입할 공간 */}
+          <Stack direction="row" justify="center"></Stack>
         </div>
         <div className="row-span-1 col-span-4 pt-9 sm:col-span-1 sm:row-span-2  sm:pt-0">
           <Heading size="2xl" className="pb-2">
             Projects
           </Heading>
           <Text fontSize="lg">이때까지 제가 만든 프로젝트들을 소개합니다.</Text>
-          <br />
-          <Tabs.Root isLazy>
-            <Tabs.List>
-              <Tabs.Indicator>Web/Webapp</Tabs.Indicator>
-              <Tabs.Indicator>Android</Tabs.Indicator>
-              <Tabs.Indicator>Api</Tabs.Indicator>
-            </Tabs.List>
-          </Tabs.Root>
         </div>
       </div>
     </div>

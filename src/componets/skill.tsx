@@ -17,9 +17,9 @@ const Skill = () => {
             <Text fontSize='xl'>아래에 있는 것들은 제가 프로젝트를 할때 써본 기술들입니다.</Text>
             <Text fontSize='xl'>그래서 다른 프로젝트에 빠르게 적용이 가능합니다.</Text>
             <div className="jb-division-line" />
-            <Heading size='lg'>lang / FrameWork / CMS</Heading>
+            <Heading size='lg'>lang / FrameWork</Heading>
             <br />
-            <div className="flex grid justify-items-stretch lg:grid-cols-4 grid-rows-9 sm:grid-rows-2 gap-7">
+            <div className="grid justify-items-stretch lg:flex lg:grid-cols-4 grid-rows-9 sm:grid-rows-2 gap-7">
                 <div>
                     <VStack>
                         <HStack>
@@ -106,7 +106,7 @@ const Skill = () => {
             <div className="jb-division-line" />
             <Heading size='lg'>IDE</Heading>
             <br />
-            <div className="flex grid justify-items-stretch lg:grid-cols-4 grid-rows-4 sm:grid-rows-1 gap-7">
+            <div className="grid justify-items-stretch  lg:flex lg:grid-cols-4 grid-rows-4 sm:grid-rows-1 gap-7">
                 <div>
                     <VStack>
                         <HStack>
@@ -147,7 +147,7 @@ const Skill = () => {
             <div className="jb-division-line" />
             <Heading size='lg'>other(Linux)</Heading>
             <br />
-            <div className="flex grid justify-items-stretch lg:grid-cols-4 grid-rows-4 sm:grid-rows-1 gap-7">
+            <div className=" grid justify-items-stretch lg:flex   lg:grid-cols-4 grid-rows-4 sm:grid-rows-1 gap-7">
                 <div>
                     <VStack>
                         <HStack>

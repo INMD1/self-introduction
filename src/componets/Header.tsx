@@ -1,8 +1,8 @@
 import React from "react";
-import { Button, Link } from "@chakra-ui/react";
-import { FaGithub } from "react-icons/fa6";
-import { GoCodeReview } from "react-icons/go";
-import { TbBrandVscode } from "react-icons/tb";
+// import { Button, Link } from "@chakra-ui/react";
+// import { FaGithub } from "react-icons/fa6";
+// import { GoCodeReview } from "react-icons/go";
+// import { TbBrandVscode } from "react-icons/tb";
 const NavBar = () => {
   return (
     <>
@@ -23,7 +23,7 @@ const NavBar = () => {
             </span>
           </a>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <Link href="https://github.com/INMD1">
+            {/* <Link href="https://github.com/INMD1">
               {" "}
               <Button size="lg" />
               <FaGithub
@@ -44,7 +44,7 @@ const NavBar = () => {
                 style={{ height: "3.5vh", width: "auto" }}
                 color="black"
               />
-            </Link>
+            </Link> */}
 
             <div className="pt-1 none sm:hidden">
               {/* <Menu>
