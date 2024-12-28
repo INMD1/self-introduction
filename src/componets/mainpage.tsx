@@ -60,7 +60,7 @@ function mainpage() {
         <br/>
           <Heading size="lg">Contact(연락처)</Heading>
         </Center>
-        <HStack spacing="5vh" className="pt-5 sm:m-5">
+        <HStack  className="pt-5 sm:m-5">
           <Center>
             <Box className="h-20 sm:h-42">
               <VStack>
