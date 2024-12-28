@@ -145,7 +145,7 @@ const Skill = () => {
                 </div>
             </div>
             <div className="jb-division-line" />
-            <Heading size='lg'>other(Linux)</Heading>
+            <Heading size='lg'>other</Heading>
             <br />
             <div className=" grid justify-items-stretch lg:flex   lg:grid-cols-4 grid-rows-4 sm:grid-rows-1 gap-7">
                 <div>
