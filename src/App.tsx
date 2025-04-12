@@ -1,6 +1,5 @@
 import NavBar from "./componets/Header";
 import Firstpage from "./componets/mainpage";
-import Project from "./componets/project";
 import Skill from "./componets/skill";
 import More from "./componets/more";
 
@@ -14,7 +13,6 @@ function App() {
         <Firstpage />
       </div>
       <Skill />
-      <Project />
       <More/>
     </div>
   );
