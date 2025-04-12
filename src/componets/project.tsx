@@ -3,7 +3,6 @@ import { Text, Image, Stack, Heading, Link, Button } from "@chakra-ui/react";
 import { useState } from "react";
 import jsondata from "./data/index.json";
 import { FaGithub } from "react-icons/fa6";
-import { Tabs } from "@chakra-ui/react";
 const Project = () => {
   const [data] = useState({
     title: "None",
