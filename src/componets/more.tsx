@@ -1,4 +1,5 @@
-import { HStack, Card, VStack, ListItem, UnorderedList, CardBody, Text, Heading, Center, Link } from '@chakra-ui/react'
+import React from 'react';
+import { HStack, Card, VStack, List, Text, Heading, Center, Link } from '@chakra-ui/react'
 import { FaBoxArchive } from "react-icons/fa6";
 import { FaGithubSquare } from "react-icons/fa";
 
@@ -13,8 +14,8 @@ const More = () => {
             </div>
             <div className='flex grid gap-10 sm:grid-cols-2'>
                 <div className='grid-cols-1'>
-                    <Card>
-                        <CardBody>
+                    <Card.Root>
+                        <Card.Body>
                             <Center>
                                 <VStack>
                                     <HStack>
@@ -23,19 +24,19 @@ const More = () => {
                                     </HStack>
                                     <Link href='https://github.com/INMD1'><Text>https://github.com/INMD1</Text></Link>
                                     <Text>코딩 문제를 풀고 소스코드를 공개하는 사이트</Text>
-                                    <UnorderedList>
-                                        <ListItem>백준 문제 소스코드</ListItem>
-                                        <ListItem>라비다 문제 소스코드</ListItem>
-                                        <ListItem>Ascode 문제 소스코드</ListItem>
-                                    </UnorderedList>
+                                    <List.Root>
+                                        <List.Item>백준 문제 소스코드</List.Item>
+                                        <List.Item>라비다 문제 소스코드</List.Item>
+                                        <List.Item>Ascode 문제 소스코드</List.Item>
+                                    </List.Root>
                                 </VStack>
                             </Center>
-                        </CardBody>
-                    </Card>
+                        </Card.Body>
+                    </Card.Root>
                 </div>
                 <div className='grid-cols-1'>
-                    <Card>
-                        <CardBody>
+                    <Card.Root>
+                        <Card.Body>
                             <Center>
                                 <VStack>
                                     <HStack>
@@ -45,15 +46,15 @@ const More = () => {
                                     <Link href='https://amview.powerinmd.com'><Text>https://amview.powerinmd.com</Text></Link>
                                     <Text>코딩 문제를 풀고 소스코드를 공개하는 사이트</Text>
 
-                                    <UnorderedList>
-                                        <ListItem>백준 문제 소스코드</ListItem>
-                                        <ListItem>라비다 문제 소스코드</ListItem>
-                                        <ListItem>Ascode 문제 소스코드</ListItem>
-                                    </UnorderedList>
+                                    <List.Root>
+                                        <List.Item>백준 문제 소스코드</List.Item>
+                                        <List.Item>라비다 문제 소스코드</List.Item>
+                                        <List.Item>Ascode 문제 소스코드</List.Item>
+                                    </List.Root>
                                 </VStack>
                             </Center>
-                        </CardBody>
-                    </Card>
+                        </Card.Body>
+                    </Card.Root>
                 </div>
             </div>
         </div>

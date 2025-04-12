@@ -1,13 +1,14 @@
 import React from "react";
 import { VStack, Heading, Text, HStack } from "@chakra-ui/react";
 import { FaVuejs, FaReact,FaUbuntu,FaGithub  } from "react-icons/fa";
-import { SiRockylinux, SiJavascript, SiVisualstudio, SiVisualstudiocode, SiAndroidstudio, SiIntellijidea } from "react-icons/si";
+import { SiRockylinux, SiJavascript, SiAndroidstudio, SiIntellijidea } from "react-icons/si";
+import { DiVisualstudio } from "react-icons/di";
+import { VscVscode } from "react-icons/vsc";
 import { BsBootstrapFill } from "react-icons/bs";
 import { TbBrandKotlin } from "react-icons/tb";
 import { TiHtml5 } from "react-icons/ti";
 import { FaNode } from "react-icons/fa6";
 import { MdCss } from "react-icons/md";
-
 const Skill = () => {
     return (
         <div  id='skill' className="h-full" style={{ padding: "10%", backgroundColor: "#DCE2F0" }}>
@@ -16,9 +17,9 @@ const Skill = () => {
             <Text fontSize='xl'>아래에 있는 것들은 제가 프로젝트를 할때 써본 기술들입니다.</Text>
             <Text fontSize='xl'>그래서 다른 프로젝트에 빠르게 적용이 가능합니다.</Text>
             <div className="jb-division-line" />
-            <Heading size='lg'>lang / FrameWork / CMS</Heading>
+            <Heading size='lg'>lang / FrameWork</Heading>
             <br />
-            <div class="flex grid justify-items-stretch lg:grid-cols-4 grid-rows-9 sm:grid-rows-2 gap-7">
+            <div className="grid justify-items-stretch lg:flex lg:grid-cols-4 grid-rows-9 sm:grid-rows-2 gap-7">
                 <div>
                     <VStack>
                         <HStack>
@@ -105,11 +106,11 @@ const Skill = () => {
             <div className="jb-division-line" />
             <Heading size='lg'>IDE</Heading>
             <br />
-            <div class="flex grid justify-items-stretch lg:grid-cols-4 grid-rows-4 sm:grid-rows-1 gap-7">
+            <div className="grid justify-items-stretch  lg:flex lg:grid-cols-4 grid-rows-4 sm:grid-rows-1 gap-7">
                 <div>
                     <VStack>
                         <HStack>
-                            <SiVisualstudio style={{ height: "2rem", width: 'auto' }} />
+                            <DiVisualstudio style={{ height: "2rem", width: 'auto' }} />
                             <Heading fontSize='xl'>Visual studio</Heading>
                         </HStack>
                         <Text fontSize='xl'>C/C++ 개발 활용</Text>
@@ -118,7 +119,7 @@ const Skill = () => {
                 <div>
                     <VStack>
                         <HStack>
-                            <SiVisualstudiocode style={{ height: "2rem", width: 'auto' }} />
+                            <VscVscode  style={{ height: "2rem", width: 'auto' }} />
                             <Heading fontSize='xl'>Visual studio Code</Heading>
                         </HStack>
                         <Text fontSize='xl'>웹 개발 활용</Text>
@@ -144,9 +145,9 @@ const Skill = () => {
                 </div>
             </div>
             <div className="jb-division-line" />
-            <Heading size='lg'>other(Linux)</Heading>
+            <Heading size='lg'>other</Heading>
             <br />
-            <div class="flex grid justify-items-stretch lg:grid-cols-4 grid-rows-4 sm:grid-rows-1 gap-7">
+            <div className=" grid justify-items-stretch lg:flex   lg:grid-cols-4 grid-rows-4 sm:grid-rows-1 gap-7">
                 <div>
                     <VStack>
                         <HStack>

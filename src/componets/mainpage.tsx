@@ -21,17 +21,18 @@ function mainpage() {
       style={{ padding: "10%", backgroundColor: "#FEFDED" }}
     >
       <div className=" order-2 col-span-2  self-center sm:row-span-3 sm:order-none sm:pb-28">
-        <Heading size="2xl">Hello World!</Heading>
-        <Heading size="lg">여러분들 반가워요!_👋</Heading>
+        <p className="mainpage_title">Hello World!</p>
+        <Heading className="ml-[-0.05vw]" size="lg">
+          여러분들 반가워요!_👋
+        </Heading>
         <br />
         <Heading size="lg">저는 INMD1 이고</Heading>
         <br />
         <Text fontSize="xl">
           현재 대학교에서 응용소프트웨어를 전공하고 있는
         </Text>
-        <Text fontSize="xl">
-          백엔드 지식을 가지고 있는 프론트 개발자 입니다.
-        </Text>
+        <Text fontSize="xl">백엔드,프론트 지식을 가지고 있는 원하는걸</Text>
+        <Text fontSize="xl">개발하는 개발자 입니다.</Text>
         <div className="pt-5">
           <HStack>
             <Link href="#skill">
@@ -56,17 +57,17 @@ function mainpage() {
 
       <div className="order-3 col-span-2 sm:order-none">
         <Center>
-        <br/>
-        <br/>
+          <br />
+          <br />
           <Heading size="lg">Contact(연락처)</Heading>
         </Center>
-        <HStack spacing="5vh" className="pt-5 sm:m-5">
+        <div className="flex justify-center gap-5 mt-5">
           <Center>
             <Box className="h-20 sm:h-42">
               <VStack>
                 <BsDiscord style={{ height: "1rem", width: "auto" }} />
                 <Text>Discord</Text>
-                <Text>ubuntu22.04.1lts</Text>
+                <Text>INMD</Text>
               </VStack>
             </Box>
           </Center>
@@ -76,12 +77,12 @@ function mainpage() {
                 <MdOutlineEmail style={{ height: "1rem", width: "auto" }} />
                 <Text>Email</Text>
                 <Link href="mailto:lyw514549@gmail.com">
-                  lyw514549@gmail.com
+                  lyw514549(gmail)
                 </Link>
               </VStack>
             </Box>
           </Center>
-        </HStack>
+        </div>
       </div>
     </div>
   );
