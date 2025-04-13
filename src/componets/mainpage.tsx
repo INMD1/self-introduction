@@ -17,36 +17,28 @@ import { MdOutlineEmail } from "react-icons/md";
 function mainpage() {
   return (
     <div
-      className="w-full h-full grid  sm:grid-rows-2 sm:grid-flow-col sm:gap-4 items-stretch  place-content-center "
-      style={{ padding: "10%", backgroundColor: "#FEFDED" }}
+      className="w-full h-full grid gap-x-16 md:grid-rows-2 md:grid-flow-col place-content-center "
+      style={{ padding: "6%", backgroundColor: "#FEFDED" }}
     >
-      <div className=" order-2 col-span-2  self-center sm:row-span-3 sm:order-none sm:pb-28">
+      <div className="order-2 col-span-2 self-center md:row-span-3 md:order-none md:pb-28">
         <p className="mainpage_title">Hello World!</p>
-        <Heading className="ml-[-0.05vw]" size="lg">
-          여러분들 반가워요!_👋
-        </Heading>
+        <Heading size="md">여러분들 반가워요!_👋</Heading>
         <br />
         <Heading size="lg">저는 INMD1 이고</Heading>
         <br />
-        <Text fontSize="xl">
-          현재 대학교에서 응용소프트웨어를 전공하고 있는
-        </Text>
-        <Text fontSize="xl">백엔드,프론트 지식을 가지고 있는 원하는걸</Text>
-        <Text fontSize="xl">개발하는 개발자 입니다.</Text>
-        <div className="pt-5">
-          <HStack>
-            <Link href="#skill">
-              {" "}
-              <Button colorScheme="green">
-                <BiArrowToRight />
-              </Button>
-            </Link>
-            <Text>저는 무엇을 할수 있는지 가볼까요?</Text>
-          </HStack>
+        <Text>현재 대학교에서 응용소프트웨어를 전공하고 있는</Text>
+        <Text>백엔드,프론트 지식을 가지고 있는 원하는걸</Text>
+        <Text>개발하는 개발자 입니다.</Text>
+        <div className="flex items-center pt-5">
+          <Link href="#skill" className="pr-10">
+            <Button colorScheme="green">
+              <BiArrowToRight />
+              GOTO!
+            </Button>
+          </Link>
         </div>
       </div>
-
-      <div className="order-1 col-span-2 self-end mb-5 sm:order-none ">
+      <div className="order-1 col-span-2 self-end mb-5 md:order-none ">
         <Center>
           <Image
             className="rounded-full w-auto h-56 md:h-80"
@@ -54,16 +46,13 @@ function mainpage() {
           />
         </Center>
       </div>
-
-      <div className="order-3 col-span-2 sm:order-none">
-        <Center>
-          <br />
-          <br />
+      <div className="order-3 col-span-2 md:order-none">
+        <Center className="pt-10">
           <Heading size="lg">Contact(연락처)</Heading>
         </Center>
         <div className="flex justify-center gap-5 mt-5">
           <Center>
-            <Box className="h-20 sm:h-42">
+            <Box className="h-20 md:h-42">
               <VStack>
                 <BsDiscord style={{ height: "1rem", width: "auto" }} />
                 <Text>Discord</Text>
@@ -72,13 +61,11 @@ function mainpage() {
             </Box>
           </Center>
           <Center>
-            <Box className="w-full h-20 sm:h-42">
+            <Box className="w-full h-20 md:h-42">
               <VStack>
                 <MdOutlineEmail style={{ height: "1rem", width: "auto" }} />
                 <Text>Email</Text>
-                <Link href="mailto:lyw514549@gmail.com">
-                  lyw514549(gmail)
-                </Link>
+                <Link href="mailto:lyw514549@gmail.com">lyw514549(gmail)</Link>
               </VStack>
             </Box>
           </Center>
