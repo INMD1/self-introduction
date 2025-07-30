@@ -33,7 +33,7 @@ function mainpage() {
           <Link href="#skill" className="pr-10">
             <Button colorScheme="green">
               <BiArrowToRight />
-              GOTO!
+              GOTO
             </Button>
           </Link>
         </div>

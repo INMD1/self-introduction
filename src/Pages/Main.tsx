@@ -1,7 +1,8 @@
-import NavBar from "./componets/Header";
-import Firstpage from "./componets/mainpage";
-import Skill from "./componets/skill";
-import More from "./componets/more";
+import NavBar from "../components/Header";
+import Firstpage from "../components/mainpage";
+import Skill from "../components/skill";
+import More from "../components/more";
+import Project from "../components/project";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
         <Firstpage />
       </div>
       <Skill />
-      <More/>
+      <Project />
+      <More />
     </div>
   );
 }
