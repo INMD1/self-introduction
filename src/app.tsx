@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
+import * as React from "react";
 import { Button } from './components/ui/button';
 import { Github, Linkedin, Mail, Menu, X } from 'lucide-react';
-import first from './components/App_session/first';
+import First from './components/App_session/Main_session';
+import About_me from './components/App_session/About_me';
 
 const navLinks = [
   { href: '#about', label: '소개' },
@@ -54,8 +56,12 @@ function App() {
           </div>
         )}
       </header>
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <first />
+      {/*메인 페이지*/}
+      <First />
+      <div className="container mx-auto px-4 sm:px-6">
+        <About_me />
+      </div>
+      <main className="">
       </main>
       <footer className="border-t border-gray-200 dark:border-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between text-sm text-gray-500 dark:text-gray-400">
