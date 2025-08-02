@@ -20,7 +20,7 @@ function First() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
                     {/* 왼쪽: 이미지 (글래스모피즘) */}
-                    <div className="relative p-4 w-60 sm:w-auto">
+                    <div className="relative p-4 w-60 lg:w-5- sm:w-auto">
                         <div className="absolute inset-0 bg-white/30 dark:bg-black/20 rounded-3xl backdrop-blur-lg shadow-2xl transform -rotate-6 transition-transform duration-500 hover:rotate-0"></div>
                         <img
                             src="https://avatars.githubusercontent.com/u/87979171?v=4"
@@ -31,7 +31,7 @@ function First() {
                     {/* 오른쪽: 텍스트 및 링크 */}
                     <div className="text-left m-10 sm:m-0">
                         <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-gray-800 dark:text-gray-100">
-                            풀스택 개발자 OOO입니다.
+                            풀스택 개발자 INMD입니다.
                         </h1>
                         <p className="max-w-xl text-lg text-gray-600 dark:text-gray-400 mb-8">
                             아이디어를 코드로 구현하고, 안정적인 인프라 위에서 사용자의 문제를 해결합니다.
