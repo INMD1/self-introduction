@@ -1,7 +1,7 @@
 //@ts-nocheck
 import { motion } from 'framer-motion'
 import * as React from "react";
-
+import about from "@/assets/image.png"
 const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -32,9 +32,9 @@ function About_me() {
                             </p>
                         </div>
                     </div>
-                    <div className="md:col-span-2">
+                    <div className="md:col-span-2 hidden sm:block">
                         <img
-                            src="https://placehold.co/600x700/e2e8f0/1e293b?text=Code"
+                            src={about}
                             alt="코딩하는 모습"
                             className="rounded-xl shadow-lg w-full h-auto object-cover"
                         />

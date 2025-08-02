@@ -4,7 +4,7 @@ import { Button } from './components/ui/button';
 import { Github, Linkedin, Mail, Menu, X } from 'lucide-react';
 import First from './components/App_session/Main_session';
 import About_me from './components/App_session/About_me';
-import { motion } from 'framer-motion';
+
 
 const navLinks = [
   { href: '#about', label: '소개' },
@@ -46,7 +46,7 @@ function App() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">
               <a href="#" className="flex items-center gap-2">
-                <span className="text-xl font-bold text-gray-900 dark:text-white">Your Name</span>
+                <span className="text-xl font-bold text-gray-900 dark:text-white">INMD1의 나른한곳</span>
               </a>
               <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
                 {navLinks.map(link => (
