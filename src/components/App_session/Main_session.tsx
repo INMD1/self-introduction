@@ -6,7 +6,7 @@ function First() {
     return (
         <>
             {/* --- 히어로 섹션 --- */}
-            <section className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden">
+            <section className="relative min-h-[calc(100vh)] flex items-center justify-center overflow-hidden ">
                 {/* 배경 그라데이션 */}
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-pink-100 via-purple-50 to-blue-100 dark:from-pink-900/30 dark:via-purple-900/20 dark:to-blue-900/30"></div>
                 <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob dark:opacity-20"></div>
@@ -14,7 +14,7 @@ function First() {
                 <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob animation-delay-4000 dark:opacity-20"></div>
 
                 <motion.div
-                    className="relative w-full max-w-5xl mx-auto grid md:grid-cols-2 gap-20 items-center"
+                    className="relative  w-full max-w-7xl mx-auto grid md:grid-cols-2 gap-20 sm:gap-x-42 items-center"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
@@ -29,7 +29,7 @@ function First() {
                         />
                     </div>
                     {/* 오른쪽: 텍스트 및 링크 */}
-                    <div className="text-left">
+                    <div className="text-left m-10 sm:m-0">
                         <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-gray-800 dark:text-gray-100">
                             풀스택 개발자 OOO입니다.
                         </h1>

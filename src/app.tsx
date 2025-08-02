@@ -4,6 +4,7 @@ import { Button } from './components/ui/button';
 import { Github, Linkedin, Mail, Menu, X } from 'lucide-react';
 import First from './components/App_session/Main_session';
 import About_me from './components/App_session/About_me';
+import { motion } from 'framer-motion';
 
 const navLinks = [
   { href: '#about', label: '소개' },
@@ -15,47 +16,67 @@ const navLinks = [
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      // 사용자가 100px 이상 스크롤하면 헤더를 표시
+      if (window.scrollY > 100) {
+        setIsHeaderVisible(true);
+      } else {
+        setIsHeaderVisible(false);
+      }
+    };
+
+    // 스크롤 이벤트 리스너 추가
+    window.addEventListener('scroll', handleScroll);
+
+    // 컴포넌트가 언마운트될 때 이벤트 리스너 제거
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); // 이 useEffect는 컴포넌트 마운트 시 한 번만 실행
 
   return (
     <div className="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen font-sans selection:bg-blue-500/20">
-      <header className="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
-            <a href="#" className="flex items-center gap-2">
-              <span className="text-xl font-bold text-gray-900 dark:text-white">나른한 INMD</span>
-            </a>
-            <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-              {navLinks.map(link => (
-                <a key={link.label} href={link.href} className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                  {link.label}
-                </a>
-              ))}
-            </nav>
-            <div className="flex items-center gap-2">
-              <Button onClick={() => window.location.href = '#contact'} className="hidden sm:inline-flex" variant="outline">
-                연락하기
-              </Button>
-              <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-              </button>
+      {/* --- 헤더 (수정됨) --- */}
+      {isHeaderVisible == false ? <></> : <>
+
+        <header className={`sticky top-0 z-50 w-full transition-opacity duration-300 ease-in-out ${isHeaderVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'} bg-white/80 dark:bg-gray-950/70 backdrop-blur-sm border-b border-gray-200/50 dark:border-gray-800/50`}>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex h-16 items-center justify-between">
+              <a href="#" className="flex items-center gap-2">
+                <span className="text-xl font-bold text-gray-900 dark:text-white">Your Name</span>
+              </a>
+              <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+                {navLinks.map(link => (
+                  <a key={link.label} href={link.href} className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">
+                    {link.label}
+                  </a>
+                ))}
+              </nav>
+              <div className="flex items-center gap-2">
+                <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                  {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        {isMenuOpen && (
-          <div className="md:hidden bg-white dark:bg-gray-900 border-t dark:border-gray-800">
-            <nav className="flex flex-col items-center gap-4 p-4">
-              {navLinks.map(link => (
-                <a key={link.label} href={link.href} onClick={() => setIsMenuOpen(false)} className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-2">
-                  {link.label}
-                </a>
-              ))}
-              <Button onClick={() => { window.location.href = '#contact'; setIsMenuOpen(false); }} className="w-full">
-                Contact Me
-              </Button>
-            </nav>
-          </div>
-        )}
-      </header>
+          {isMenuOpen && (
+            <div className="md:hidden bg-white/95 dark:bg-gray-950/95 border-t dark:border-gray-800">
+              <nav className="flex flex-col items-center gap-4 p-4">
+                {navLinks.map(link => (
+                  <a key={link.label} href={link.href} onClick={() => setIsMenuOpen(false)} className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors py-2">
+                    {link.label}
+                  </a>
+                ))}
+              </nav>
+            </div>
+          )}
+        </header>
+      </>}
+
+
       {/*메인 페이지*/}
       <First />
       <div className="container mx-auto px-4 sm:px-6">
