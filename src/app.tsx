@@ -59,10 +59,10 @@ function App() {
       </main>
       <footer className="border-t border-gray-200 dark:border-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between text-sm text-gray-500 dark:text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Your Name. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()}INMD(Lee hojun). All Rights Reserved.</p>
           <div className="flex gap-4 mt-4 sm:mt-0">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400"><Github size={20} /></a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400"><Linkedin size={20} /></a>
+            <a href="https://github.com/INMD1" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400"><Github size={20} /></a>
+            <a href="https://www.linkedin.com/in/inmd1/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400"><Linkedin size={20} /></a>
             <a href="mailto:your.email@example.com" className="hover:text-blue-600 dark:hover:text-blue-400"><Mail size={20} /></a>
           </div>
         </div>
