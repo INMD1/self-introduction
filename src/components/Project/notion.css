@@ -1,0 +1,129 @@
+/* global.css 또는 App.css 내에 추가 */
+
+.prose {
+  font-family: 'Noto Sans KR', sans-serif;
+
+  line-height: 1.75;
+  color: #333;
+}
+
+/* 제목 */
+.prose h1 {
+  font-size: 1.9em;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.prose h2 {
+  font-size: 1.5em; 
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.prose h3 {
+  font-size:1.17em; 
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.prose h4 {
+  font-size:1.0em; 
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+
+
+/* 블록 인용 */
+.prose blockquote {
+  border-left: 4px solid #d1d5db;
+  padding-left: 1rem;
+  color: #6b7280;
+  background-color: #f9fafb;
+  border-radius: 0.375rem;
+}
+
+/* 리스트 */
+.prose ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+.prose ul > li::marker {
+  color: #60a5fa; /* 파란색 마커 */
+}
+
+/* 코드 블럭 */
+.prose pre {
+  background-color: #1e293b; /* dark background */
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+}
+.prose code {
+  font-family: 'Fira Code', monospace;
+  color: white;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
+}
+
+/* 이미지 */
+.prose img {
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin: 1.5rem auto;
+  display: block;
+}
+
+/* 체크박스 리스트 */
+.prose input[type="checkbox"] {
+  accent-color: #3b82f6;
+  transform: scale(1.2);
+  margin-right: 0.5rem;
+}
+
+/* callout box 예시 */
+.callout {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: #fef3c7;
+  border-left: 4px solid #facc15;
+  margin: 1.5rem 0;
+}
+.callout-icon {
+  margin-right: 0.75rem;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  margin-top: 16px;
+  background-color: #f9f9f9;
+}
+
+th, td {
+  text-align: center;
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #333;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e6f7ff;
+}
