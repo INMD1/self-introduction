@@ -11,6 +11,8 @@ ReactDOM.createRoot(root).render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path='/projects/main' element={<Notion />} />
+      <Route path='/projects/aswdcp' element={<Notion />} />
+      <Route path='/projects/ASW-PSMT' element={<Notion />} />
     </Routes>
   </BrowserRouter>,
 );

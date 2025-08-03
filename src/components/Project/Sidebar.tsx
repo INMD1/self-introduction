@@ -1,7 +1,8 @@
 import * as React from "react";
 
 const navItems = [
-    { label: "ASW-DCP", href: "/projects/main" },
+    { label: "ASW-DCP", href: "/projects/aswdcp" },
+    { label: "ASW-PSMT", href: "/projects/ASW-PSMT" },
 ];
 
 export default function Sidebar() {
