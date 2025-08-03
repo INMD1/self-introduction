@@ -4,6 +4,7 @@ import { Button } from './components/ui/button';
 import { Github, Linkedin, Mail, Menu, X } from 'lucide-react';
 import First from './components/App_session/Main_session';
 import About_me from './components/App_session/About_me';
+import Sklls_ui from './components/App_session/Sklls_ui';
 
 
 const navLinks = [
@@ -81,6 +82,7 @@ function App() {
       <First />
       <div className="container mx-auto px-4 sm:px-6">
         <About_me />
+        <Sklls_ui />
       </div>
       <main className="">
       </main>
