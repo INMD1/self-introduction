@@ -35,8 +35,8 @@ export default function Sklls_ui() {
     return (
         <div>
             {/* --- 기술 스택 섹션 --- */}
-            <motion.section id="skills" className="p-10 min-h-[calc(100vh)] bg-[#E5E1DA] gird lg:flex items-center justify-center overflow-hidden " variants={sectionVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-                <div className="mt-52 sm:mt-0 text-center mb-12">
+            <motion.section id="skills" className="p-10 min-h-[calc(100vh)] bg-[#E5E1DA] gird xl:flex items-center justify-center overflow-hidden " variants={sectionVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+                <div className="mb-12 mt-52 lg:mt-52 xl:mb-52 text-center ">
                     <h2 className="text-3xl sm:text-5xl font-bold tracking-tight">Tech Stack</h2>
                     <p className="max-w-2xl mx-auto text-gray-600 sm:text-xl dark:text-gray-400 mt-2">
                         애플리케이션 개발과 배포를 위해 다음과 같은 기술들을 주로 사용합니다.
@@ -51,7 +51,7 @@ export default function Sklls_ui() {
                         </div>
                     ))}
                 </div>
-                <div className="flex ml-32 hidden lg:block ">
+                <div className="flex xl:ml-32 hidden lg:block ">
                     <div className="grid min-w-3xl gap-10 grid-cols-2 ">
                         <Card className="">
                             <CardHeader>

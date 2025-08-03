@@ -4,9 +4,9 @@
 ![image](https://github.com/user-attachments/assets/c40e1fcd-e1dd-4883-b4d0-42e75bf6933c)
 
 ## What is this Project?
-이프로젝트는 대학교에서  Proxmox라는 시스템일 이용해서 &nbsp;  
+이프로젝트는 대학교에서  Proxmox라는 시스템을 이용해서 &nbsp;  
 가상화를 관리하고 있는데 학생들 관리나 가상화(VM) 관리를 가능하기 위해 제작  &nbsp;  
-되었습니다.
+Proxmox API을 참고해서 개발 되었니다.
 
 ## Use Framwork/Language
 - JavaScript: 프론트 프레임워크를 돌리기 위해서 자바스크립트를 선택했습니다.
