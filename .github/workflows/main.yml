@@ -30,13 +30,13 @@ jobs:
         run: npm run build
 
       - name: Check build output
-        run: ls -la ./build
+        run: ls -la ./dist
         
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v4
         with:
           name: production-files
-          path: ./build # React의 기본 빌드 폴더 경로
+          path: ./dist # React의 기본 빌드 폴더 경로
 
   deploy:
     name: Deploy
@@ -49,10 +49,10 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: production-files
-          path: ./build
+          path: ./dist
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build # React의 기본 빌드 폴더 경로
+          publish_dir: ./dist # React의 기본 빌드 폴더 경로
