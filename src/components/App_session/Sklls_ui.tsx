@@ -7,10 +7,10 @@ const skills = [
     { name: 'Node.js', icon: <Server className="h-6 w-6 text-green-500" /> },
     { name: 'Python', icon: <Code className="h-6 w-6 text-yellow-500" /> },
     { name: 'Docker', icon: <Server className="h-6 w-6 text-blue-600" /> },
-    { name: 'AWS', icon: <Cloud className="h-6 w-6 text-orange-500" /> },
     { name: 'TypeScript', icon: <Code className="h-6 w-6 text-blue-400" /> },
     { name: 'PostgreSQL', icon: <Database className="h-6 w-6 text-indigo-500" /> },
     { name: 'Mysql', icon: <Database className="h-6 w-6 text-[#F29111]" /> },
+    { name: 'Openstack', icon: <Database className="h-6 w-6 text-[#ed1e48]" /> },
 
 ];
 
