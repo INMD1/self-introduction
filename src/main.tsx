@@ -10,9 +10,7 @@ ReactDOM.createRoot(root).render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path='/projects/test' element={<Notion />} />
-      <Route path='/projects/asw-dcp' element={<Notion />} />
-
+      <Route path='/projects/main' element={<Notion />} />
     </Routes>
   </BrowserRouter>,
 );
