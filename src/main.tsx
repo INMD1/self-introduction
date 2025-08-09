@@ -7,7 +7,7 @@ import Notion from "./components/Project/Notion";
 const root = document.getElementById("root");
 
 ReactDOM.createRoot(root).render(
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
+  <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
       <Route path='/projects/main' element={<Notion />} />
