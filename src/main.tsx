@@ -1,6 +1,6 @@
 import * as React from "react";
 import ReactDOM from "react-dom/client";
-import { HashRouter as BrowserRouter, Routes, Route } from "react-router";
+import {  BrowserRouter, Routes, Route } from "react-router";
 import App from "./app";
 import '@/index.css';
 import Notion from "./components/Project/Notion";
@@ -14,5 +14,5 @@ ReactDOM.createRoot(root).render(
       <Route path='/projects/aswdcp' element={<Notion />} />
       <Route path='/projects/ASW-PSMT' element={<Notion />} />
     </Routes>
-  </BrowserRouter>,
+  </BrowserRouter>
 );
