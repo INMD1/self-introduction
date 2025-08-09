@@ -18,7 +18,7 @@ const experiences = [
     {
         role: "한국콘텐츠학회장상",
         company: "K-해커톤 12",
-        creater: "과가기술정보통신부",
+        creater: "과학기술정보통신부",
         type: "festival",
         period: "2024",
     },
