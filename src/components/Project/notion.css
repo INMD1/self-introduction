@@ -62,7 +62,7 @@
 }
 .prose code {
   font-family: 'Fira Code', monospace;
-  color: white;
+  background-color: oklch(92.9% 0.013 255.508);
   padding: 0.2rem 0.4rem;
   border-radius: 0.3rem;
   font-size: 0.9rem;

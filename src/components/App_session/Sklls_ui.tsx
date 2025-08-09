@@ -1,13 +1,13 @@
 import * as React from "react";
 import { motion } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import { FaReact, FaNodeJs, FaPython, FaDocker, FaVuejs } from "react-icons/fa";
-import { SiOpenstack, SiProxmox, SiTypescript, SiMysql, SiPostgresql, SiVite } from "react-icons/si";
+import { FaReact, FaNodeJs, FaPython, FaDocker, FaVuejs, FaJava } from "react-icons/fa";
+import { SiOpenstack, SiProxmox, SiTypescript, SiMysql, SiPostgresql, SiVite, SiStrapi } from "react-icons/si";
 
 const skills = [
     { name: 'React', tag: "FrameWork", icon: <FaReact className="h-6 w-6 text-blue-500" /> },
     { name: 'Vue', tag: "FrameWork", icon: <FaVuejs className="h-6 w-6 text-[#41B883]" /> },
-    { name: 'Vite', tag: "FrameWork", icon: <SiVite className="h-6 w-6 text-[#40A798]" /> },
+    { name: 'Vite', tag: "FrameWork", icon: <SiVite className="h-6 w-6 text-[#646cff]" /> },
     { name: 'Node.js', tag: "Language", icon: <FaNodeJs className="h-6 w-6 text-green-500" /> },
     { name: 'Python', tag: "Language", icon: <FaPython className="h-6 w-6 text-[#306998]" /> },
     { name: 'Docker', tag: "Infra", icon: <FaDocker className="h-6 w-6 text-blue-600" /> },
@@ -16,6 +16,10 @@ const skills = [
     { name: 'Mysql', tag: "DB", icon: <SiMysql className="h-6 w-6 text-[#F29111]" /> },
     { name: 'Openstack', tag: "Infra", icon: <SiOpenstack className="h-6 w-6 text-[#ed1e48]" /> },
     { name: 'Proxmox', tag: "Infra", icon: <SiProxmox className="h-6 w-6 text-[#fb8c00]" /> },
+    { name: 'Strapi', tag: "FrameWork", icon: <SiStrapi className="h-6 w-6 text-[#4945FF]" /> },
+    { name: 'Java', tag: "Language", icon: <FaJava className="h-6 w-6 text-[#5382a1]" /> },
+
+
 ];
 
 // --- 애니메이션 설정 ---
@@ -68,7 +72,6 @@ export default function Sklls_ui() {
                                             : <></>
                                     ))}
                                 </div>
-
                             </CardContent>
                         </Card>
 
