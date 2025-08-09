@@ -1,10 +1,11 @@
 import * as React from "react";
+import { useEffect, useState } from 'react';
 import * as Icons from "lucide-react";
 import { motion } from 'framer-motion'
 import { Card, CardDescription, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import { Badge } from "@/components/ui/badge"
-
+import { isMobile } from 'react-device-detect';
 // --- 애니메이션 설정 ---
 const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -36,6 +37,7 @@ const projects = [
 
 ];
 
+
 export default function Project_session() {
     return (
         <div>
@@ -47,12 +49,15 @@ export default function Project_session() {
                     </p>
                 </div>
                 <div className={
-                    `grid  lg:pl-30 lg:pr-30 gap-6 ${projects.length === 1
+                    `lg:pl-30 lg:pr-30 gap-6 
+                   
+                        ${isMobile ? "grid " : `flex ${projects.length === 1
                         ? "grid-cols-1"
                         : projects.length === 2
                             ? "grid-cols-2"
                             : "grid-cols-3 md:grid-cols-4"
-                    }`
+                        } `}
+                    `
                 }>
                     {projects.map((project, index) => (
                         <motion.div
@@ -65,7 +70,7 @@ export default function Project_session() {
                             <Card className="max-w-[25em] overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                                 <div className="grid">
                                     <div className="p-6 flex flex-col">
-                                        <div className={projects.length < 3 ? "justify-items-center" : ""}>
+                                        <div >
                                             <CardTitle className="text-2xl mb-2">{project.title}</CardTitle>
                                             <CardDescription className="mb-4">{project.description}</CardDescription>
                                             <div className="flex flex-wrap gap-2 mb-4">
@@ -74,7 +79,7 @@ export default function Project_session() {
                                                 ))}
                                             </div>
                                         </div>
-                                        <div className="flex items-center gap-4 mt-4">
+                                        <div className={`flex  gap-4 mt-4`}>
                                             <Button onClick={() => window.open(project.liveUrl, "_blank")}>
                                                 <Icons.Book className="h-4 w-4" /> INotion
                                             </Button>
