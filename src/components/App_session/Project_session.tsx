@@ -34,7 +34,13 @@ const projects = [
         liveUrl: '/projects/ASW-PSMT',
         githubUrl: 'https://github.com/INMD1/ASW-PSMT',
     },
-
+    {
+        title: 'APSU',
+        description: '군대에서 자동적으로 유동병력을 식사 인원을 체크할수 있는 유틸리티 입니다.',
+        tags: ['Vue', 'Strapi', 'Mysql', "PWA"],
+        liveUrl: '/projects/APSU',
+        githubUrl: 'https://github.com/INMD1-Repo/APSU',
+    },
 ];
 
 
