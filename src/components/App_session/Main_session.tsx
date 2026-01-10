@@ -38,9 +38,8 @@ function First() {
                         </p>
                         <div className="flex flex-col items-start gap-3">
                             <a href="#projects" className="w-full sm:w-2/3 p-4 border border-gray-300 dark:border-gray-700 rounded-lg text-left hover:bg-white/50 dark:hover:bg-white/10 transition-colors">프로젝트 보기</a>
-                            <a href="#skills" className="w-full sm:w-2/3 p-4 border border-gray-300 dark:border-gray-700 rounded-lg text-left hover:bg-white/50 dark:hover:bg-white/10 transition-colors">기술 스택</a>
+                            <a href="#skills" className="w-full sm:w-2/3 p-4 border border-gray-300 dark:border-gray-700 rounded-lg text-left hover:bg-white/50 dark:hover:bg-white/10 transition-colors">소개 & 기술 스택</a>
                             <a href="#experience" className="w-full sm:w-2/3 p-4 border border-gray-300 dark:border-gray-700 rounded-lg text-left hover:bg-white/50 dark:hover:bg-white/10 transition-colors">경력 & 수상</a>
-                            <a href="#contact" className="w-full sm:w-2/3 p-4 border border-gray-300 dark:border-gray-700 rounded-lg text-left hover:bg-white/50 dark:hover:bg-white/10 transition-colors">연락하기</a>
                         </div>
                     </div>
                 </motion.div>

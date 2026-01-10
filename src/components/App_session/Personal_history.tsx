@@ -40,7 +40,7 @@ const sectionVariants = {
         y: 0,
         transition: {
             duration: 0.6,
-            ease: "easeOut"
+            ease: "easeOut" as const
         }
     }
 };
@@ -49,10 +49,10 @@ export default function Personal_history() {
     return (
         <div>
             <hr />
-            <motion.section id="experience" className="p-10 min-h-[calc(100vh)] y-24 scroll-mt-20" variants={sectionVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-                <div className="text-center mb-16 lg:mt-42">
-                    <h2 className="text-5xl font-bold tracking-tight">Experience</h2>
-                    <p className="max-w-xl text-2xl mx-auto text-gray-600 dark:text-gray-400 mt-2">
+            <motion.section id="experience" className="p-4 sm:p-6 md:p-10 min-h-screen py-16 sm:py-20 md:py-24 scroll-mt-20" variants={sectionVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+                <div className="text-center mb-12 sm:mb-16">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">Experience</h2>
+                    <p className="max-w-xl text-base sm:text-lg md:text-2xl mx-auto text-gray-600 dark:text-gray-400 mt-2 px-4">
                         제가 걸어온 길과 성장 과정입니다.
                     </p>
                 </div>
@@ -69,17 +69,17 @@ export default function Personal_history() {
                         >
                             {
                                 exp.type == "Inc" ? <div>
-                                    <div className="absolute left-3 sm:left-1/2 top-1 -translate-x-1/2 w-5 h-5 bg-blue-500 rounded-full border-4 border-white dark:border-gray-950"></div>
+                                    <div className="absolute left-3 sm:left-1/2 top-1 -translate-x-1/2 w-4 h-4 sm:w-5 sm:h-5 bg-blue-500 rounded-full border-2 sm:border-4 border-white dark:border-gray-950"></div>
                                     <div className={`sm:w-5/12 ${index % 2 === 0 ? 'sm:ml-auto sm:pl-8' : 'sm:mr-auto sm:pr-8 sm:text-right'}`}>
-                                        <div className="p-4 rounded-lg bg-gray-100 dark:bg-gray-800/50">
-                                            <p className="font-bold text-lg">{exp.role}</p>
+                                        <div className="p-3 sm:p-4 rounded-lg bg-gray-100 dark:bg-gray-800/50">
+                                            <p className="font-bold text-base sm:text-lg">{exp.role}</p>
                                             <p className="text-sm text-blue-600 dark:text-blue-400 mb-1">{exp.company}</p>
-                                            <p className="text-xs text-gray-500 dark:text-gray-400 ">{exp.period}</p>
+                                            <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 ">{exp.period}</p>
                                             <Accordion type="single" collapsible>
                                                 <AccordionItem value="item-1">
-                                                    <AccordionTrigger>더보기</AccordionTrigger>
+                                                    <AccordionTrigger className="text-sm sm:text-base">더보기</AccordionTrigger>
                                                     <AccordionContent>
-                                                        <p className="text-sm text-gray-700 dark:text-gray-300">{exp.description}</p>
+                                                        <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-300">{exp.description}</p>
                                                     </AccordionContent>
                                                 </AccordionItem>
                                             </Accordion>
@@ -88,23 +88,23 @@ export default function Personal_history() {
                                 </div>
                                     :
                                     <div>
-                                        <div className="absolute left-3 sm:left-1/2 top-1 -translate-x-1/2 w-5 h-5 bg-green-600 rounded-full border-4 border-white dark:border-gray-950"></div>
+                                        <div className="absolute left-3 sm:left-1/2 top-1 -translate-x-1/2 w-4 h-4 sm:w-5 sm:h-5 bg-green-600 rounded-full border-2 sm:border-4 border-white dark:border-gray-950"></div>
                                         <div className={`sm:w-5/12 ${index % 2 === 0 ? 'sm:ml-auto sm:pl-8' : 'sm:mr-auto sm:pr-8 sm:text-right'}`}>
-                                            <div className="p-4 rounded-lg bg-gray-100 dark:bg-gray-800/50">
-                                                <p className="font-bold text-lg">{exp.role}</p>
-                                                <p>주최자: {exp.creater}</p>
+                                            <div className="p-3 sm:p-4 rounded-lg bg-gray-100 dark:bg-gray-800/50">
+                                                <p className="font-bold text-base sm:text-lg">{exp.role}</p>
+                                                <p className="text-xs sm:text-sm">주최자: {exp.creater}</p>
                                                 <p className="text-sm text-green-600 dark:text-blue-400 mb-1">{exp.company}</p>
                                                 <p className="text-xs text-gray-500 dark:text-gray-400 ">{exp.period}</p>
                                             </div>
                                         </div>
                                     </div>
                             }
-                            
+
 
                         </motion.div>
-                        
+
                     ))}
-                    
+
                 </div>
             </motion.section>
         </div>

@@ -1,20 +1,16 @@
 import { useState } from 'react'
 import * as React from "react";
-import { Button } from './components/ui/button';
 import { Github, Linkedin, Mail, Menu, X } from 'lucide-react';
 import First from './components/App_session/Main_session';
-import About_me from './components/App_session/About_me';
 import Sklls_ui from './components/App_session/Sklls_ui';
 import Project_session from './components/App_session/Project_session';
 import Personal_history from './components/App_session/Personal_history';
 
 
 const navLinks = [
-  { href: '#about', label: '소개' },
-  { href: '#skills', label: '기술 스택' },
+  { href: '#skills', label: '소개&기술 스택' },
   { href: '#projects', label: '프로젝트' },
   { href: '#experience', label: '경력&수상' },
-  { href: '#contact', label: '연락처' },
 ];
 
 function App() {
@@ -22,7 +18,14 @@ function App() {
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
 
   React.useEffect(() => {
+    let lastScrollTime = 0;
+    const throttleDelay = 100; // 100ms throttle
+
     const handleScroll = () => {
+      const now = Date.now();
+      if (now - lastScrollTime < throttleDelay) return;
+      lastScrollTime = now;
+
       // 사용자가 100px 이상 스크롤하면 헤더를 표시
       if (window.scrollY > 100) {
         setIsHeaderVisible(true);
@@ -32,7 +35,7 @@ function App() {
     };
 
     // 스크롤 이벤트 리스너 추가
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     // 컴포넌트가 언마운트될 때 이벤트 리스너 제거
     return () => {
@@ -44,7 +47,7 @@ function App() {
     <div className="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen font-sans selection:bg-blue-500/20">
       {/* --- 헤더 (수정됨) --- */}
       {isHeaderVisible == false ? <></> : <>
-        <header className={`sticky top-0 z-50 w-full transition-opacity duration-300 ease-in-out ${isHeaderVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'} bg-white/80 dark:bg-gray-950/70 backdrop-blur-sm border-b border-gray-200/50 dark:border-gray-800/50`}>
+        <header className={`sticky top-0 z-50 w-full transition-opacity duration-300 ease-in-out ${isHeaderVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'} bg-white/80 dark:bg-gray-950/70 backdrop-blur-sm border-b border-gray-200/50 dark:border-gray-800/50`} style={{ willChange: isHeaderVisible ? 'opacity' : 'auto' }}>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">
               <a href="#" className="flex items-center gap-2">
@@ -58,7 +61,7 @@ function App() {
                 ))}
               </nav>
               <div className="flex items-center gap-2">
-                <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label={isMenuOpen ? "메뉴 닫기" : "메뉴 열기"} aria-expanded={isMenuOpen}>
                   {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
               </div>
@@ -82,7 +85,6 @@ function App() {
       {/*메인 페이지*/}
       <div className='w-full'>
         <First />
-        <About_me />
         <Sklls_ui />
         <Project_session />
         <Personal_history />
