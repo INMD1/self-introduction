@@ -11,7 +11,7 @@ export default function Notion() {
         <>
             <div className="min-h-screen flex flex-col md:flex-row bg-white text-gray-900">
                 {isMobile ? (<Mobile_Sidebar />) : (<PC_Sidebar />)}
-                <div className="flex-1 p-6 md:p-12">
+                <div className="flex-1">
                     <ProjectShowcase id={projectsid.pathname} />
                 </div>
             </div>
