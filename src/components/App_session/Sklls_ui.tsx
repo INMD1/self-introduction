@@ -27,7 +27,7 @@ const PORTFOLIO_DATA = {
     greeting: "안녕하세요, 저는",
     bio: "사용자 경험을 최우선으로 생각하며, 복잡한 문제를 직관적인 코드로 해결하는 것을 즐깁니다. 새로운 기술에 끊임없이 도전하며 더 나은 디지털 세상을 만들어가고 있습니다.",
     skills: [
-        "React", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Python", "Git"
+        "React", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Python", "Git", "OpenStack","LINUX","DOCKER","SQLite","PostgreSQL","MySQL","MongoDB"
     ],
     projects: [
         {
