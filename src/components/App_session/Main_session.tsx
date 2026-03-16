@@ -1,53 +1,106 @@
-
 import { motion } from 'framer-motion';
-import * as React from "react";
+import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
 
 function First() {
     return (
-        <>
-            {/* --- 히어로 섹션 --- */}
-            <section className="relative min-h-[calc(100vh)] flex items-center justify-center overflow-hidden p-0 lg:p-10">
-                {/* 배경 그라데이션 */}
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-pink-100 via-purple-50 to-blue-100 dark:from-pink-900/30 dark:via-purple-900/20 dark:to-blue-900/30"></div>
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob dark:opacity-20"></div>
-                <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob animation-delay-2000 dark:opacity-20"></div>
-                <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob animation-delay-4000 dark:opacity-20"></div>
+        <section className="relative min-h-screen flex items-center bg-white overflow-hidden">
+            {/* Dot grid background */}
+            <div className="dot-grid-bg absolute inset-0" />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white pointer-events-none" />
 
-                <motion.div
-                    className="relative w-full max-w-7xl mx-auto grid md:grid-cols-2 gap-20 pt-20 xl:pt-0 sm:gap-x-42 justify-items-center-safe sm:items-center "
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                >
-                    {/* 왼쪽: 이미지 (글래스모피즘) */}
-                    <div className="relative p-4 w-60 lg:w-5- sm:w-auto">
-                        <div className="absolute inset-0 bg-white/30 dark:bg-black/20 rounded-3xl backdrop-blur-lg shadow-2xl transform -rotate-6 transition-transform duration-500 hover:rotate-0"></div>
-                        <img
-                            src="https://avatars.githubusercontent.com/u/87979171?v=4"
-                            alt="프로필 사진"
-                            className="relative w-full h-auto rounded-2xl shadow-lg"
-                        />
-                    </div>
-                    {/* 오른쪽: 텍스트 및 링크 */}
-                    <div className="text-left m-10 sm:m-0">
-                        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-gray-800 dark:text-gray-100">
-                            풀스택 개발자 INMD입니다.
-                        </h1>
-                        <p className="max-w-xl text-lg text-gray-600 dark:text-gray-400 mb-8">
-                            아이디어를 코드로 구현하고, 안정적인 인프라 위에서 사용자의 문제를 해결합니다.
-                        </p>
-                        <div className="flex flex-col items-start gap-3">
-                            <a href="#projects" className="w-full sm:w-2/3 p-4 border border-gray-300 dark:border-gray-700 rounded-lg text-left hover:bg-white/50 dark:hover:bg-white/10 transition-colors">프로젝트 보기</a>
-                            <a href="#skills" className="w-full sm:w-2/3 p-4 border border-gray-300 dark:border-gray-700 rounded-lg text-left hover:bg-white/50 dark:hover:bg-white/10 transition-colors">소개 & 기술 스택</a>
-                            <a href="#experience" className="w-full sm:w-2/3 p-4 border border-gray-300 dark:border-gray-700 rounded-lg text-left hover:bg-white/50 dark:hover:bg-white/10 transition-colors">경력 & 수상</a>
+            <div className="relative z-10 w-full max-w-6xl mx-auto px-6 py-24 lg:py-32">
+                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    {/* Left: Text */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 24 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-blue-100 bg-blue-50 text-blue-700 text-xs font-semibold mb-8 tracking-wide">
+                            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse" />
+                            OPEN TO OPPORTUNITIES
                         </div>
+
+                        <h1 className="text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-6 leading-[1.1]">
+                            풀스택 개발자<br />
+                            <span className="text-blue-600">INMD</span>입니다.
+                        </h1>
+
+                        <p className="text-lg text-slate-500 mb-10 leading-relaxed">
+                            아이디어를 코드로 구현하고, 안정적인 인프라 위에서<br className="hidden sm:block" />
+                            사용자의 문제를 해결합니다.
+                        </p>
+
+                        <div className="flex flex-wrap gap-3 mb-12">
+                            <a href="#projects" className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white font-semibold rounded-xl hover:bg-slate-700 transition-all duration-200 text-sm">
+                                프로젝트 보기 <ArrowRight size={16} />
+                            </a>
+                            <a href="#experience" className="inline-flex items-center gap-2 px-6 py-3 border border-slate-200 text-slate-700 font-semibold rounded-xl hover:bg-slate-50 hover:border-slate-300 transition-all duration-200 text-sm">
+                                경력 & 수상
+                            </a>
+                        </div>
+
+                        <div className="flex items-center gap-1">
+                            <a href="https://github.com/INMD1" target="_blank" rel="noreferrer"
+                                className="p-2.5 text-slate-400 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-all">
+                                <Github size={20} />
+                            </a>
+                            <a href="https://www.linkedin.com/in/inmd1/" target="_blank" rel="noreferrer"
+                                className="p-2.5 text-slate-400 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-all">
+                                <Linkedin size={20} />
+                            </a>
+                            <a href="mailto:lyw514549@gmail.com"
+                                className="p-2.5 text-slate-400 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-all">
+                                <Mail size={20} />
+                            </a>
+                        </div>
+                    </motion.div>
+
+                    {/* Right: Profile image */}
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, delay: 0.15 }}
+                        className="flex justify-center lg:justify-end"
+                    >
+                        <div className="relative">
+                            <div className="absolute -inset-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl" />
+                            <img
+                                src="https://avatars.githubusercontent.com/u/87979171?v=4"
+                                alt="프로필"
+                                className="relative w-64 h-64 lg:w-80 lg:h-80 rounded-2xl object-cover shadow-2xl"
+                            />
+                            <div className="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-lg border border-slate-100 px-5 py-3">
+                                <p className="text-sm font-bold text-slate-900">Full Stack Dev</p>
+                                <p className="text-xs text-slate-400 mt-0.5">React · Node.js · TypeScript</p>
+                            </div>
+                        </div>
+                    </motion.div>
+                </div>
+
+                {/* Stats */}
+                <motion.div
+                    initial={{ opacity: 0, y: 16 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.35 }}
+                    className="mt-20 pt-8 border-t border-slate-100 grid grid-cols-3 gap-8 max-w-sm"
+                >
+                    <div>
+                        <p className="text-3xl font-extrabold text-slate-900">3+</p>
+                        <p className="text-xs text-slate-400 mt-1 font-medium uppercase tracking-wide">Years Coding</p>
+                    </div>
+                    <div>
+                        <p className="text-3xl font-extrabold text-slate-900">3</p>
+                        <p className="text-xs text-slate-400 mt-1 font-medium uppercase tracking-wide">Projects</p>
+                    </div>
+                    <div>
+                        <p className="text-3xl font-extrabold text-slate-900">1</p>
+                        <p className="text-xs text-slate-400 mt-1 font-medium uppercase tracking-wide">Award</p>
                     </div>
                 </motion.div>
-            </section>
-
-
-        </>
-    )
+            </div>
+        </section>
+    );
 }
 
 export default First;

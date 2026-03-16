@@ -1,6 +1,6 @@
 import * as React from "react";
-import { motion } from 'framer-motion'
-import { Briefcase, Trophy, Award, ChevronDown } from "lucide-react";
+import { motion } from 'framer-motion';
+import { Briefcase, Award, Trophy, ChevronDown } from 'lucide-react';
 
 const experiences = [
     {
