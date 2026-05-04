@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
+import * as React from "react";
 
 function First() {
     return (

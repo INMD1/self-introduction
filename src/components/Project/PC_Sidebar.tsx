@@ -1,44 +1,121 @@
 import * as React from "react";
+import { useState } from "react";
+import { useLocation } from "react-router";
 import { FaHome } from "react-icons/fa";
+import { ChevronDown, ChevronRight, Plus, Search, Settings, LogOut } from 'lucide-react';
 
-const navItems = [
-    { label: "ASW-DCP", href: "/projects/aswdcp" },
-    { label: "ASW-PSMT", href: "/projects/ASW-PSMT" },
-    { label: "APSU", href: "/projects/APSU" },
+interface NavItem {
+    label: string;
+    href: string;
+    icon?: string;
+}
+
+interface NavSection {
+    title: string;
+    items: NavItem[];
+}
+
+const navSections: NavSection[] = [
+    {
+        title: "Projects",
+        items: [
+            { label: "D Cloud Platform", href: "/projects/aswdcp", icon: "☁️" },
+            { label: "ASW-PSMT", href: "/projects/ASW-PSMT", icon: "🎓" },
+            { label: "APSU", href: "/projects/APSU", icon: "📱" },
+        ],
+    },
 ];
 
-export default function Sidebar() {
-    return (
-        <nav className="notion-sidebar md:w-64 w-full md:sticky md:top-0 h-screen overflow-hidden border-r border-[#e9e9e8]">
-            {/* User / Workspace Area */}
-            <div className="notion-sidebar-header h-12 flex items-center px-4 hover:bg-[#e9e9e8] cursor-pointer transition-colors m-1 rounded-sm">
-                <span className="mr-2 text-lg">🤠</span>
-                <span className="truncate font-medium text-[#37352f]">INMD1's Workspace</span>
-            </div>
+export default function PC_Sidebar() {
+    const location = useLocation();
+    const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({
+        Projects: true,
+    });
 
-            {/* Navigation Section */}
-            <div className="flex-1 overflow-y-auto py-2 px-1">
-                <div className="notion-sidebar-section-header px-3 text-xs font-semibold text-[#9b9a97] mb-1 mt-2">Projects</div>
-                <div className="flex flex-col space-y-0.5">
-                    {navItems.map((item) => (
-                        <a
-                            key={item.href}
-                            href={item.href}
-                            className="notion-sidebar-item flex items-center px-3 py-1 min-h-[28px] text-[#5f5e5b] hover:bg-[#e9e9e8] rounded-sm text-sm transition-colors decoration-0"
-                        >
-                            <span className="notion-sidebar-item-icon mr-2 text-lg">📄</span>
-                            <span className="truncate">{item.label}</span>
-                        </a>
-                    ))}
+    const toggleSection = (sectionTitle: string) => {
+        setExpandedSections(prev => ({
+            ...prev,
+            [sectionTitle]: !prev[sectionTitle],
+        }));
+    };
+
+    return (
+        <nav className="notion-sidebar">
+            {/* Workspace Header */}
+            <div className="notion-workspace-header">
+                <div className="notion-workspace-row">
+                    <span className="workspace-icon">🤠</span>
+                    <span className="workspace-name">INMD1's Workspace</span>
+                    <ChevronDown size={16} className="workspace-chevron" />
                 </div>
             </div>
 
+            {/* Search */}
+            <div className="notion-search">
+                <Search size={14} className="search-icon" />
+                <input
+                    type="text"
+                    placeholder="Search"
+                    className="notion-search-input"
+                />
+                <span className="search-shortcut">
+                    <span className="shortcut-key">⌘</span>
+                    <span className="shortcut-key">K</span>
+                </span>
+            </div>
+
+            {/* Navigation Sections */}
+            <div className="notion-nav-sections">
+                {navSections.map((section) => (
+                    <div key={section.title} className="notion-nav-section">
+                        {/* Section Header */}
+                        <button
+                            className="notion-section-header"
+                            onClick={() => toggleSection(section.title)}
+                        >
+                            {expandedSections[section.title] ? (
+                                <ChevronDown size={14} />
+                            ) : (
+                                <ChevronRight size={14} />
+                            )}
+                            <span className="section-title">{section.title}</span>
+                            <Plus size={14} className="section-add" />
+                        </button>
+
+                        {/* Section Items */}
+                        {expandedSections[section.title] && (
+                            <div className="notion-section-items">
+                                {section.items.map((item) => (
+                                    <a
+                                        key={item.href}
+                                        href={item.href}
+                                        className={`notion-nav-item ${location.pathname === item.href ? 'active' : ''}`}
+                                    >
+                                        <span className="nav-item-icon">{item.icon}</span>
+                                        <span className="nav-item-label">{item.label}</span>
+                                    </a>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                ))}
+            </div>
+
             {/* Bottom Actions */}
-            <div className="py-2 border-t border-[#e9e9e8] px-1">
-                <a href="/" className="notion-sidebar-item flex items-center px-3 py-1 min-h-[28px] text-[#5f5e5b] hover:bg-[#e9e9e8] rounded-sm text-sm transition-colors decoration-0">
-                    <span className="notion-sidebar-item-icon mr-2 flex items-center justify-center"><FaHome size={16} /></span>
-                    <span>Home</span>
+            <div className="notion-sidebar-footer">
+                <a href="/" className="notion-footer-item">
+                    <FaHome size={16} className="footer-item-icon" />
+                    <span className="footer-item-label">Home</span>
                 </a>
+                <button className="notion-footer-item">
+                    <Settings size={16} className="footer-item-icon" />
+                    <span className="footer-item-label">Settings</span>
+                </button>
+                <div className="notion-footer-separator" />
+                <button className="notion-footer-item notion-logout">
+                    <LogOut size={16} className="footer-item-icon" />
+                    <span className="footer-item-label">Log out</span>
+                </button>
             </div>
         </nav>
     );
