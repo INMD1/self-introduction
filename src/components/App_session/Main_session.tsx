@@ -43,15 +43,15 @@ function First() {
 
                         <div className="flex items-center gap-1">
                             <a href="https://github.com/INMD1" target="_blank" rel="noreferrer"
-                               className="p-2 text-[#8a8f98] hover:text-[#f7f8f8] hover:bg-[#141516] rounded-md transition-all">
+                                className="p-2 text-[#8a8f98] hover:text-[#f7f8f8] hover:bg-[#141516] rounded-md transition-all">
                                 <Github size={18} />
                             </a>
                             <a href="https://www.linkedin.com/in/inmd1/" target="_blank" rel="noreferrer"
-                               className="p-2 text-[#8a8f98] hover:text-[#f7f8f8] hover:bg-[#141516] rounded-md transition-all">
+                                className="p-2 text-[#8a8f98] hover:text-[#f7f8f8] hover:bg-[#141516] rounded-md transition-all">
                                 <Linkedin size={18} />
                             </a>
                             <a href="mailto:lyw514549@gmail.com"
-                               className="p-2 text-[#8a8f98] hover:text-[#f7f8f8] hover:bg-[#141516] rounded-md transition-all">
+                                className="p-2 text-[#8a8f98] hover:text-[#f7f8f8] hover:bg-[#141516] rounded-md transition-all">
                                 <Mail size={18} />
                             </a>
                         </div>
@@ -62,7 +62,7 @@ function First() {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6, delay: 0.15 }}
-                        className="flex justify-center lg:justify-end"
+                        className="hidden sm:flex sm:justify-center lg:justify-end"
                     >
                         <div className="relative">
                             <div className="absolute -inset-6 bg-gradient-to-br from-[#5e6ad2]/20 to-[#828fff]/10 rounded-2xl blur-2xl" />
@@ -84,18 +84,18 @@ function First() {
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.35 }}
-                    className="mt-20 pt-8 border-t border-[#23252a] grid grid-cols-3 gap-8 max-w-sm"
+                    className="mt-20 md:mt-10 pt-8 border-t border-[#23252a] grid grid-cols-3 gap-8 max-w-sm"
                 >
                     <div>
-                        <p className="text-3xl font-semibold text-[#f7f8f8]">3+</p>
+                        <p className="text-3xl font-semibold text-[#f7f8f8]">5+</p>
                         <p className="text-xs text-[#8a8f98] mt-1 font-medium uppercase tracking-wide">Years Coding</p>
                     </div>
                     <div>
-                        <p className="text-3xl font-semibold text-[#f7f8f8]">3</p>
+                        <p className="text-3xl font-semibold text-[#f7f8f8]">10+</p>
                         <p className="text-xs text-[#8a8f98] mt-1 font-medium uppercase tracking-wide">Projects</p>
                     </div>
                     <div>
-                        <p className="text-3xl font-semibold text-[#f7f8f8]">1</p>
+                        <p className="text-3xl font-semibold text-[#f7f8f8]">2</p>
                         <p className="text-xs text-[#8a8f98] mt-1 font-medium uppercase tracking-wide">Award</p>
                     </div>
                 </motion.div>

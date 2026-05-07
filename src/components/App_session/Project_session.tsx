@@ -4,6 +4,26 @@ import { BookOpen, Github, ExternalLink } from 'lucide-react';
 
 const projects = [
     {
+        title: 'Opnestack_Dloud-Dashboard',
+        description: 'Openstack 기반의 클라우드 시스템을 사용자가 자유롭게 생성하거나 수정할수 있게 도와주는 클라우드 대시보드입니다.',
+        tags: ['React', 'SQLite', 'MySQL'],
+        liveUrl: '/projects/main',
+        githubUrl: 'https://github.com/INMD1/Opnestack_Dloud-Dashboard',
+        accent: 'bg-[#5e6ad2]',
+        accentLight: 'bg-[#5e6ad2]/10',
+        category: 'Cloud Infrastructure',
+    },
+    {
+        title: 'skyline-apiserver-extenstion',
+        description: '오픈스택의 차세대 대시보드인 Skyline을 수정해서 Opnestack_Dloud-Dashboard와 Openstack간 원활한 소통이 가능하게 하는 중계자 백엔드시스템 입니다.',
+        tags: ['Python', 'MySQL'],
+        liveUrl: '/projects/skylineextenstion',
+        githubUrl: 'https://github.com/INMD1/skyline-apiserver-extenstion',
+        accent: 'bg-[#5e6ad2]',
+        accentLight: 'bg-[#5e6ad2]/10',
+        category: 'Cloud Infrastructure',
+    },
+    {
         title: 'D Cloud Platform',
         description: 'Proxmox 가상화 기반에서 API 를 가져와서 관리하는 클라우드 플랫폼 시스템입니다.',
         tags: ['React', 'PHP', 'MySQL'],
@@ -48,7 +68,7 @@ export default function Project_session() {
                 >
                     <p className="text-[#5e6ad2] text-xs font-bold uppercase tracking-widest mb-3">Work</p>
                     <h2 className="text-4xl lg:text-5xl font-semibold text-[#f7f8f8] mb-4">주요 프로젝트</h2>
-                    <p className="text-[#8a8f98] text-sm">제가 참여하고 이끌었던 주요 프로젝트들입니다.</p>
+                    <p className="text-[#8a8f98] text-sm">제가 진행했던 주요 프로젝트들입니다.</p>
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
