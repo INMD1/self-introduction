@@ -14,6 +14,7 @@ ReactDOM.createRoot(root).render(
       <Route path='/projects/aswdcp' element={<Notion />} />
       <Route path='/projects/ASW-PSMT' element={<Notion />} />
       <Route path='/projects/APSU' element={<Notion />} />
+      <Route path='/projects/skylineex' element={<Notion />} />
     </Routes>
   </BrowserRouter>
 );

@@ -37,7 +37,7 @@ ASW-PSMT는 동의대학교 응용소프트웨어학과의 교육 및 실습 환
 ```php
     $result = Request::Request("/nodes/computer6/qemu/{$sourceVmid}/clone", $cloneParams, 'POST');
 ```
-> 해당 API는 [("라이브 보려가기")](https://github.com/Saleh7/ProxmoxVE_PHP_API) 이곳을 클릭해주시면 좀더 많은 사용법을 보실수 있습니다.
+> 해당 API는 [라이브 보려가기](https://github.com/Saleh7/ProxmoxVE_PHP_API) 이곳을 클릭해주시면 좀더 많은 사용법을 보실수 있습니다.
 
 이렇게 서버가 생성을 다하면 백엔드쪽에서 관리자가 이미 설정한 네트워크와 사용자가 입력한 비빈과 ID을 이메일로 전송하게 됨니다.
 
