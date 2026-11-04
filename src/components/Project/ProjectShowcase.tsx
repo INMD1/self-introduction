@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Calendar, Tag, User } from 'lucide-react';
 import "./notion.css";
+import { projects } from "@/data/projects";
 
 interface TocHeading {
     level: number;
@@ -38,65 +39,6 @@ const extractHeadings = (text: string): TocHeading[] => {
     return result;
 };
 
-interface ProjectConfig {
-    title: string;
-    icon: string;
-    cover: string;
-    properties: {
-        status?: string;
-        date?: string;
-        tags?: string[];
-        author?: string;
-    };
-}
-
-const PROJECT_CONFIGS: Record<string, ProjectConfig> = {
-    aswdcp: {
-        title: "Welecome To INMD1 Projects!",
-        icon: "☁️",
-        cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=2068&h=600&fit=crop",
-        properties: {
-            status: "Published",
-            date: "2024.01.15",
-            tags: [""],
-            author: "INMD1",
-        },
-    },
-    "ASW-PSMT": {
-        title: "ASW-PSMT",
-        icon: "🎓",
-        cover: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=2068&h=600&fit=crop",
-        properties: {
-            status: "Published",
-            date: "2024.03.20",
-            tags: ["React", "PHP", "MySQL", "Education"],
-            author: "INMD1",
-        },
-    },
-    apsu: {
-        title: "APSU",
-        icon: "📱",
-        cover: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=2068&h=600&fit=crop",
-        properties: {
-            status: "Published",
-            date: "2023.11.10",
-            tags: ["Vue", "Strapi", "PWA", "Mobile"],
-            author: "INMD1",
-        },
-    },
-    skylineex: {
-        title: "OpenStack 기반 DCloud 확장 API 서버 (Skyline API Server Extension)",
-        icon: "📱",
-        cover: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=2068&h=600&fit=crop",
-        properties: {
-            status: "Published",
-            date: "2025.07.10",
-            tags: ["Python", "Cloud", "Mysql"],
-            author: "INMD1",
-        },
-    },
-};
-
 interface ProjectShowcaseProps {
     id?: string;
     onHeadingsExtracted?: (headings: TocHeading[]) => void;
@@ -108,7 +50,7 @@ export default function ProjectShowcase({ id, onHeadingsExtracted }: ProjectShow
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
-    const config = useMemo(() => PROJECT_CONFIGS[parms] || PROJECT_CONFIGS["aswdcp"], [parms]);
+    const config = useMemo(() => projects.find(project => project.id === parms) || projects.find(project => project.id === "aswdcp")!, [parms]);
 
     useEffect(() => {
         setLoading(true);
@@ -143,12 +85,8 @@ export default function ProjectShowcase({ id, onHeadingsExtracted }: ProjectShow
                 <img src={config.cover} alt="cover" className="notion-cover" />
                 <div className="notion-cover-overlay" />
             </div>
-
+            <br/>
             <div className="notion-content-container">
-                <div className="notion-icon-wrapper">
-                    <div className="notion-icon">{config.icon}</div>
-                </div>
-
                 <div className="notion-title-wrapper">
                     <h1 className="notion-title">
                         {loading ? "로딩 중..." : config.title}
@@ -160,34 +98,34 @@ export default function ProjectShowcase({ id, onHeadingsExtracted }: ProjectShow
                         <span className="property-icon">●</span>
                         <span className="property-label">Status</span>
                         <span className="property-separator">:</span>
-                        <span className="property-value-status published">{config.properties.status}</span>
+                        <span className="property-value-status published">{config.status}</span>
                     </div>
 
-                    {config.properties.date && (
+                    {config.date && (
                         <div className="notion-inline-property notion-property-date">
                             <Calendar size={12} className="property-icon" />
                             <span className="property-label">Created</span>
                             <span className="property-separator">:</span>
-                            <span className="property-value">{config.properties.date}</span>
+                            <span className="property-value">{config.date}</span>
                         </div>
                     )}
 
-                    {config.properties.author && (
+                    {config.author && (
                         <div className="notion-inline-property notion-property-author">
                             <User size={12} className="property-icon" />
                             <span className="property-label">Author</span>
                             <span className="property-separator">:</span>
-                            <span className="property-value">{config.properties.author}</span>
+                            <span className="property-value">{config.author}</span>
                         </div>
                     )}
 
-                    {config.properties.tags && (
+                    {config.tags && (
                         <div className="notion-inline-property notion-property-tags">
                             <Tag size={12} className="property-icon" />
                             <span className="property-label">Tags</span>
                             <span className="property-separator">:</span>
                             <div className="property-value-tags">
-                                {config.properties.tags.map(tag => (
+                                {config.tags.map(tag => (
                                     <span key={tag} className="property-tag">{tag}</span>
                                 ))}
                             </div>
@@ -226,6 +164,11 @@ export default function ProjectShowcase({ id, onHeadingsExtracted }: ProjectShow
                                     h3: ({ node, ...props }) => <h3 id={slugify(getNodeText(node))} className="notion-h3" {...props} />,
                                     a: ({ node, href, children, ...props }) => (
                                         <a href={href} target="_blank" rel="noopener noreferrer" className="notion-link" {...props}>{children}</a>
+                                    ),
+                                    table: ({ node, children, ...props }) => (
+                                        <div className="notion-table-scroll" role="region" aria-label="프로젝트 비교 표" tabIndex={0}>
+                                            <table {...props}>{children}</table>
+                                        </div>
                                     ),
                                     p: ({ node, ...props }) => <p className="notion-p" {...props} />,
                                     img: ({ node, ...props }) => (

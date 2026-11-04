@@ -3,34 +3,17 @@ import { useState, useEffect, useCallback } from "react";
 import { useLocation } from "react-router";
 import { Menu, X, ChevronDown, ChevronRight, Search, Settings, LogOut, Plus } from 'lucide-react';
 import { FaHome } from "react-icons/fa";
+import { projectNavigationSections } from "@/data/projects";
 
-interface NavItem {
-    label: string;
-    href: string;
-    icon?: string;
-}
-
-interface NavSection {
-    title: string;
-    items: NavItem[];
-}
-
-const navSections: NavSection[] = [
-    {
-        title: "Projects",
-        items: [
-            { label: "D Cloud Platform", href: "/projects/aswdcp", icon: "☁️" },
-            { label: "ASW-PSMT", href: "/projects/ASW-PSMT", icon: "🎓" },
-            { label: "APSU", href: "/projects/APSU", icon: "📱" },
-        ],
-    },
-];
+const navSections = projectNavigationSections;
 
 export default function Moblie_Sidebar() {
     const location = useLocation();
     const [isOpen, setIsOpen] = useState(false);
     const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({
         Projects: true,
+        'Infra Cloud': true,
+        Research: true,
     });
 
     // Prevent body scroll when sidebar is open
@@ -69,6 +52,8 @@ export default function Moblie_Sidebar() {
                     className="notion-mobile-menu-btn"
                     onClick={toggleSidebar}
                     aria-label="메뉴 열기"
+                    aria-expanded={isOpen}
+                    aria-controls="project-mobile-menu"
                 >
                     <Menu size={20} color="#37352f" />
                 </button>
@@ -86,12 +71,14 @@ export default function Moblie_Sidebar() {
             {/* Slide-over Sidebar */}
             <aside
                 className={`notion-mobile-sidebar ${isOpen ? 'open' : ''}`}
+                id="project-mobile-menu"
                 aria-label="사이드바 메뉴"
+                aria-hidden={!isOpen}
+                inert={!isOpen}
             >
                 {/* Sidebar Header */}
                 <div className="notion-mobile-sidebar-header">
                     <div className="notion-workspace-row">
-                        <span className="workspace-icon">🤠</span>
                         <span className="workspace-name">INMD1's Workspace</span>
                         <ChevronDown size={16} className="workspace-chevron" />
                     </div>
@@ -147,7 +134,6 @@ export default function Moblie_Sidebar() {
                                         className={`notion-nav-item ${location.pathname === item.href ? 'active' : ''}`}
                                         onClick={toggleSidebar}
                                     >
-                                        <span className="nav-item-icon">{item.icon}</span>
                                         <span className="nav-item-label">{item.label}</span>
                                     </a>
                                 ))}

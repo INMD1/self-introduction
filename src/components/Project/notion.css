@@ -963,3 +963,97 @@ tr:hover {
         opacity: 1;
     }
 }
+
+/* Project pages share the same navigation at desktop and mobile widths. */
+.project-layout {
+    display: flex;
+    height: 100dvh;
+    overflow: hidden;
+    background: white;
+    color: #37352f;
+}
+
+.project-main {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.notion-table-scroll {
+    width: 100%;
+    overflow-x: auto;
+    margin: 16px 0;
+}
+
+.notion-table-scroll table {
+    min-width: 560px;
+    margin: 0;
+}
+
+.notion-table-scroll:focus-visible {
+    outline: 2px solid #5e6ad2;
+    outline-offset: 2px;
+}
+
+.notion-title,
+.breadcrumb-item.active {
+    overflow-wrap: anywhere;
+}
+
+.notion-section-items.expanded {
+    max-height: none;
+    overflow: visible;
+}
+
+@media (max-width: 768px) {
+    .project-layout {
+        display: block;
+        height: auto;
+        min-height: 100dvh;
+        overflow: visible;
+    }
+
+    .project-main {
+        height: auto;
+        overflow: visible;
+    }
+
+    .notion-content-container {
+        padding-left: calc(16px + env(safe-area-inset-left));
+        padding-right: calc(16px + env(safe-area-inset-right));
+        padding-bottom: 48px;
+    }
+
+    .notion-title {
+        font-size: 28px;
+    }
+
+    .notion-inline-properties {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .notion-breadcrumb {
+        flex-wrap: wrap;
+    }
+}
+
+.property-value-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.property-tag {
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: #f1f1ef;
+    color: #37352f;
+    font-size: 12px;
+}
+
+.notion-property-tags {
+    align-items: flex-start;
+    min-width: 0;
+}

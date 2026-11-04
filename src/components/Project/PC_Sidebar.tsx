@@ -2,6 +2,7 @@ import * as React from "react";
 import { useState } from "react";
 import { useLocation } from "react-router";
 import { FaHome } from "react-icons/fa";
+import { projectNavigationSections } from "@/data/projects";
 import { ChevronDown, ChevronRight, Plus } from 'lucide-react';
 
 interface TocHeading {
@@ -10,28 +11,7 @@ interface TocHeading {
     id: string;
 }
 
-interface NavItem {
-    label: string;
-    href: string;
-    icon?: string;
-}
-
-interface NavSection {
-    title: string;
-    items: NavItem[];
-}
-
-const navSections: NavSection[] = [
-    {
-        title: "Projects",
-        items: [
-            { label: "D Cloud Platform", href: "/projects/aswdcp", icon: "" },
-            { label: "ASW-PSMT", href: "/projects/ASW-PSMT", icon: "" },
-            { label: "APSU", href: "/projects/APSU", icon: "" },
-            { label: "Skyline-extenstion", href: "/projects/skylineex", icon: "" },
-        ],
-    },
-];
+const navSections = projectNavigationSections;
 
 interface PC_SidebarProps {
     headings?: TocHeading[];
@@ -41,6 +21,8 @@ export default function PC_Sidebar({ headings = [] }: PC_SidebarProps) {
     const location = useLocation();
     const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({
         Projects: true,
+        'Infra Cloud': true,
+        Research: true,
         toc: true,
     });
 
@@ -89,7 +71,6 @@ export default function PC_Sidebar({ headings = [] }: PC_SidebarProps) {
                                         href={item.href}
                                         className={`notion-nav-item ${location.pathname === item.href ? 'active' : ''}`}
                                     >
-                                        <span className="nav-item-icon">{item.icon}</span>
                                         <span className="nav-item-label">{item.label}</span>
                                     </a>
                                 ))}
