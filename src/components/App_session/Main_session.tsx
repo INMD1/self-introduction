@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowRight, Mail } from 'lucide-react';
+import { FaGithub as Github, FaLinkedin as Linkedin } from 'react-icons/fa';
 import * as React from "react";
 
 function First() {

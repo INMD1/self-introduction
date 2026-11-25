@@ -1,6 +1,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import { Terminal, Github, Mail, Code2 } from "lucide-react";
+import { Terminal, Mail, Code2 } from "lucide-react";
+import { FaGithub as Github } from "react-icons/fa";
 
 const skills = [
   "React",

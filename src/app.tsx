@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import * as React from "react";
-import { Github, Linkedin, Mail, Menu, X } from 'lucide-react';
+import { Mail, Menu, X } from 'lucide-react';
+import { FaGithub as Github, FaLinkedin as Linkedin } from 'react-icons/fa';
 import First from './components/App_session/Main_session';
 import Sklls_ui from './components/App_session/Sklls_ui';
 import Project_session from './components/App_session/Project_session';

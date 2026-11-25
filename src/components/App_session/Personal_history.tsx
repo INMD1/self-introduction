@@ -11,6 +11,13 @@ const experiences = [
         description: "Nextjs 기반 회사 프로그램 유지보수를 하고 기존 패키지를 최신화 작업을 했습니다.",
     },
     {
+        role: "학생우수논문상",
+        company: "한국정보통신학회",
+        creater: "한국멀티미디어학회",
+        type: "festival" as const,
+        period: "2026",
+    },
+    {
         role: "우수상",
         company: "한국멀티미디어학회 추계학술발표 대회",
         creater: "한국멀티미디어학회",
@@ -31,6 +38,13 @@ const experiences = [
         period: "2024 - 2026",
         description: "Next,Nest.js 를 이용해서 프론트와 백엔드 작업을 했으면 현재 SNS 와 AI 연동 작업을 하고 있습니다.",
     },
+    {
+        role: "Infra/Research Intern",
+        company: "Kisti(한국과학기술정보연구원)",
+        type: "Inc" as const,
+        period: "2026.7 - 2026.10",
+        description: "Kisti(한국과학기술정보연구원)에서 인프라 관련 업무를 수행하며, 서버 관리 및 네트워크 최적화 네트워크 시물레이션 제작 작업을 했습니다.",
+    }
 ];
 
 // --- 애니메이션 설정 ---
@@ -118,7 +132,10 @@ function ExperienceCard({ exp, index }: { exp: typeof experiences[number], index
                                 )}
                                 {isInc && (
                                     <span className="text-xs text-[#8a8f98] font-medium">
-                                        {exp.type === "Inc" ? "기업" : ""}
+
+                                        {
+                                            exp.type === "Inc" ? "기업 " : ""
+                                        }
                                     </span>
                                 )}
                             </div>
